@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lu-Xing Yang 杨橹星 | Deakin University</title>
+<meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in the School of Information Technology at Deakin University, Melbourne, working on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and (multi-agent) reinforcement learning.">
+<meta name="author" content="Lu-Xing Yang">
+<link rel="canonical" href="https://lyang910920.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Lu-Xing Yang 杨橹星">
+<meta property="og:description" content="Senior Lecturer, School of Information Technology, Deakin University. Cyber threat dynamics and intelligent defense, with game theory, optimal control and reinforcement learning.">
+<meta property="og:url" content="https://lyang910920.github.io/">
+<meta property="og:image" content="https://lyang910920.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10171D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/serif-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sans.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+/* Pick the language before first paint: ?lang= in the URL, then the visitor's last choice, then the browser language. */
+(function(){var l="en";try{var q=new URLSearchParams(location.search).get("lang");var s=localStorage.getItem("lang");if(q==="zh"||q==="en")l=q;else if(s==="zh"||s==="en")l=s;else if(/^zh\b/i.test(navigator.language||""))l="zh";}catch(e){}var r=document.documentElement;r.setAttribute("data-lang",l);r.lang=l==="zh"?"zh-Hans":"en";})();
+</script>
+<style>
+/* ---------- Fonts (self-hosted, so the page also loads quickly in mainland China) ---------- */
+@font-face{font-family:"LXY Serif";src:url("assets/fonts/serif-roman.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"LXY Serif";src:url("assets/fonts/serif-italic.woff2") format("woff2");font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:"LXY Sans";src:url("assets/fonts/sans.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"LXY Serif SC";src:url("assets/fonts/serif-sc.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap;unicode-range:U+2E80-2FDF,U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF}
+
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#F3F5F4;
+  --surface:#FFFFFF;
+  --ink:#16212B;
+  --ink-2:#47535F;
+  --ink-3:#66717C;
+  --rule:#D3D9DC;
+  --rule-2:#E2E7E8;
+  --edge:#C2CBCF;
+  --teal:#18665F;
+  --teal-2:#0F4C47;
+  --crimson:#B3373B;
+  --serif:"LXY Serif","LXY Serif SC","Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,Georgia,serif;
+  --sans:"LXY Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1200px;
+  --gutter:clamp(16px,4vw,48px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10171D;--surface:#151F27;--ink:#E3E9EC;--ink-2:#AAB5BD;--ink-3:#8C98A1;
+    --rule:#28343D;--rule-2:#1E2930;--edge:#33424C;--teal:#64B9AF;--teal-2:#8ED2C8;--crimson:#E3686C;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10171D;--surface:#151F27;--ink:#E3E9EC;--ink-2:#AAB5BD;--ink-3:#8C98A1;
+  --rule:#28343D;--rule-2:#1E2930;--edge:#33424C;--teal:#64B9AF;--teal-2:#8ED2C8;--crimson:#E3686C;
+  color-scheme:dark;
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.62;font-optical-sizing:auto;font-variant-numeric:oldstyle-nums proportional-nums;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+:root[data-lang="zh"] body{line-height:1.8}
+[hidden]{display:none!important}
+:root[data-lang="zh"] .en{display:none!important}
+:root:not([data-lang="zh"]) .zh{display:none!important}
+a{color:var(--teal);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:color-mix(in srgb,var(--teal) 40%,transparent)}
+a:hover{color:var(--teal-2);text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+::selection{background:color-mix(in srgb,var(--teal) 24%,transparent)}
+h1,h2,h3,h4,p,ol,ul,dl,dd,figure{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:var(--gutter);top:-48px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:4px;font-family:var(--sans);font-size:.875rem;z-index:20}
+.skip:focus{top:12px}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:0;z-index:10;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .25s ease}
+.top.scrolled{border-bottom-color:var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
+.brand{color:var(--ink);text-decoration:none;font-weight:600;font-size:1.0625rem;letter-spacing:-.005em;white-space:nowrap}
+.brand:hover{color:var(--ink)}
+.brand .cn{font-weight:400;color:var(--ink-3);margin-left:.55em}
+.brand .cn:lang(zh-Hans){letter-spacing:.06em}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);font-family:var(--sans);font-size:.9375rem}
+.nav a{color:var(--ink-2);text-decoration:none}
+.nav a:hover{color:var(--ink)}
+.lang{font:inherit;font-size:.875rem;line-height:1;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:7px 13px;cursor:pointer}
+.lang:hover{border-color:var(--ink-3)}
+@media (max-width:900px){.nav a{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(24px,4vw,40px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5.5vw,80px);align-items:start}
+@media (max-width:980px){.hero .wrap{grid-template-columns:minmax(0,1fr)}}
+.intro{padding-top:clamp(0px,2vw,24px)}
+.name{font-weight:500;font-size:clamp(2.75rem,1.7rem + 3.4vw,4.5rem);line-height:1.02;letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.name .zh{letter-spacing:.04em;font-weight:600}
+.name-sub{display:block;margin-top:.5em;font-size:.36em;line-height:1.2;font-weight:400;letter-spacing:.14em;color:var(--ink-2)}
+.name .zh .name-sub{letter-spacing:.01em;font-weight:400;margin-top:.55em}
+.role{margin-top:1.6rem;font-family:var(--sans);font-size:1rem;line-height:1.55;color:var(--ink-2)}
+.statement{margin-top:1.5rem;font-size:clamp(1.3125rem,1.15rem + .55vw,1.5625rem);line-height:1.38;letter-spacing:-.005em;color:var(--ink);max-width:22em}
+:root[data-lang="zh"] .statement{line-height:1.6;letter-spacing:.01em;font-size:clamp(1.1875rem,1.05rem + .45vw,1.375rem)}
+.statement-2{margin-top:.9rem;font-size:1.0625rem;line-height:1.65;color:var(--ink-2);max-width:36em}
+:root[data-lang="zh"] .statement-2{line-height:1.9;font-size:1rem}
+.nw{white-space:nowrap}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:1.6rem;padding:0;list-style:none;font-family:var(--sans);font-size:.9375rem}
+.links a{text-decoration-color:color-mix(in srgb,var(--teal) 32%,transparent)}
+.facts{margin-top:1.6rem;padding:0;list-style:none;font-family:var(--sans);font-size:.875rem;line-height:1.5;color:var(--ink-2);display:grid;gap:4px}
+.facts a{color:inherit;text-decoration-color:var(--rule)}
+.facts a:hover{color:var(--ink);text-decoration-color:currentColor}
+.num{font-variant-numeric:lining-nums tabular-nums;color:var(--ink);font-weight:600}
+
+/* ---------- Figure ---------- */
+.fig{margin:0}
+.plate{background:var(--surface);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.panel{position:relative}
+.tag{position:absolute;left:14px;top:10px;font-style:italic;font-size:.9375rem;color:var(--ink-2);pointer-events:none;user-select:none}
+#net{display:block;width:100%;aspect-ratio:16/10.5;touch-action:manipulation}
+#plot{display:block;width:100%;height:96px}
+.panel.plot{border-top:1px solid var(--rule-2)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{font-family:var(--sans);font-size:.8125rem;line-height:1;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:8px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.btn:hover{border-color:var(--ink-3)}
+.btn .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 2px color-mix(in srgb,var(--teal) 22%,transparent)}
+.btn[aria-pressed="false"] .dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink-3)}
+figcaption{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2);max-width:68ch}
+:root[data-lang="zh"] figcaption{line-height:1.8}
+.fig-no{color:var(--ink);font-weight:600;font-variant-numeric:lining-nums}
+@media (max-width:640px){#net{aspect-ratio:4/3.4}}
+
+/* ---------- Sections ---------- */
+.sec{padding-top:clamp(64px,9vw,120px)}
+.sec>.wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(20px,4vw,64px)}
+.side{align-self:start;position:sticky;top:88px}
+.sec-h{font-weight:500;font-size:1.5rem;line-height:1.25;letter-spacing:-.01em}
+:root[data-lang="zh"] .sec-h{letter-spacing:.04em}
+.side-note{margin-top:.75rem;font-family:var(--sans);font-size:.875rem;line-height:1.5;color:var(--ink-3);max-width:22ch}
+@media (max-width:860px){
+  .sec>.wrap{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+  .side-note{max-width:none}
+}
+.body{min-width:0}
+.prose{max-width:66ch}
+.prose p+p{margin-top:1em}
+.portrait{display:block;width:min(100%,184px);aspect-ratio:4/5;object-fit:cover;border-radius:4px;margin-top:22px;background:var(--rule-2)}
+@media (max-width:860px){.portrait{width:132px;margin-top:16px}}
+
+/* Research */
+.lead-h{font-weight:600;font-size:1.375rem;line-height:1.3;letter-spacing:-.01em}
+:root[data-lang="zh"] .lead-h{letter-spacing:.04em}
+.lead{margin-top:.8rem;max-width:68ch;font-size:1.0625rem;line-height:1.65}
+:root[data-lang="zh"] .lead{line-height:1.9}
+.themes{list-style:none;padding:0;margin-top:36px}
+.theme{padding:26px 0 28px;border-top:1px solid var(--rule)}
+.theme h4{font-weight:600;font-size:1.1875rem;line-height:1.35;letter-spacing:-.005em;max-width:60ch}
+:root[data-lang="zh"] .theme h4{letter-spacing:.03em}
+.theme p{margin-top:.6rem;max-width:68ch;font-size:1rem;line-height:1.65;color:var(--ink-2)}
+:root[data-lang="zh"] .theme p{line-height:1.9}
+.theme .rep{margin-top:.85rem;font-family:var(--sans);font-size:.875rem;line-height:1.6;color:var(--ink-3)}
+.rep a{white-space:nowrap}
+
+/* Publications */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.chip{font-family:var(--sans);font-size:.875rem;line-height:1;color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip .n{font-variant-numeric:lining-nums tabular-nums;opacity:.7;margin-left:.35em}
+.years{list-style:none;padding:0}
+.year{display:grid;grid-template-columns:4.25rem minmax(0,1fr);gap:0 24px;padding:22px 0;border-top:1px solid var(--rule-2)}
+.year.first{border-top:0}
+.year-n{font-weight:500;font-size:1.0625rem;line-height:1.45;color:var(--ink-3);font-variant-numeric:lining-nums tabular-nums}
+.plist{list-style:none;padding:0;display:grid;gap:20px}
+.pub-t{display:inline;font-weight:600;font-size:1.0625rem;line-height:1.42;color:var(--ink);text-decoration:none}
+.pub-t:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--teal)}
+.pub-a{margin-top:5px;font-family:var(--sans);font-size:.875rem;line-height:1.5;color:var(--ink-2)}
+.pub-a b{font-weight:600;color:var(--ink)}
+.pub-v{margin-top:2px;font-size:.9375rem;line-height:1.5;color:var(--ink-2);font-variant-numeric:lining-nums}
+.pub{border-radius:4px;margin-inline:-10px;padding:4px 10px}
+.pub:target{animation:hl 2.6s ease-out 1}
+@keyframes hl{from{background:color-mix(in srgb,var(--teal) 16%,transparent)}to{background:transparent}}
+@media (prefers-reduced-motion: reduce){.pub:target{animation:none;background:color-mix(in srgb,var(--teal) 10%,transparent)}}
+.full{margin-top:28px;font-family:var(--sans);font-size:.9375rem;color:var(--ink-2)}
+@media (max-width:560px){
+  .year{grid-template-columns:minmax(0,1fr);gap:10px}
+}
+
+/* Lists: recognition, projects, students */
+.items{list-style:none;padding:0}
+.items>li{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:4px 24px;padding:16px 0;border-top:1px solid var(--rule-2)}
+.items>li:first-child{border-top:0;padding-top:4px}
+.when{font-family:var(--sans);font-size:.875rem;line-height:1.75;color:var(--ink-3);font-variant-numeric:lining-nums tabular-nums}
+.what{font-size:1.0625rem;line-height:1.5}
+.what small{display:block;margin-top:3px;font-family:var(--sans);font-size:.875rem;line-height:1.5;color:var(--ink-2)}
+.sub-h{font-family:var(--sans);font-weight:600;font-size:.9375rem;color:var(--ink-2);margin:0 0 10px}
+.body>.sub-h~.sub-h{margin-top:48px}
+.intro-line{margin:0 0 12px;max-width:68ch;font-size:1rem;line-height:1.62;color:var(--ink-2)}
+:root[data-lang="zh"] .intro-line{line-height:1.85}
+.items+.intro-line{margin-top:26px}
+.pub-note{margin-top:4px;font-family:var(--sans);font-size:.8125rem;font-weight:600;color:var(--teal)}
+@media (max-width:560px){.items>li{grid-template-columns:minmax(0,1fr)}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:14px 24px}
+.contact dt{font-family:var(--sans);font-size:.875rem;line-height:1.75;color:var(--ink-3)}
+.contact dd{font-size:1.0625rem;line-height:1.6}
+.contact .row{display:flex;flex-wrap:wrap;gap:4px 18px;font-family:var(--sans);font-size:.9375rem}
+@media (max-width:560px){.contact{grid-template-columns:minmax(0,1fr);gap:4px}.contact dd{margin-bottom:14px}}
+
+/* Footer */
+.foot{margin-top:clamp(72px,10vw,128px);border-top:1px solid var(--rule)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:24px;padding-bottom:40px;font-family:var(--sans);font-size:.8125rem;color:var(--ink-3)}
+
+@media print{
+  .top,.controls,.filters,.skip{display:none!important}
+  body{background:#fff}
+  .side{position:static}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lu-Xing Yang",
+  "alternateName": ["杨橹星", "Luxing Yang"],
+  "jobTitle": "Senior Lecturer",
+  "worksFor": {"@type": "CollegeOrUniversity", "name": "Deakin University"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Chongqing University"},
+  "email": "mailto:y.luxing@deakin.edu.au",
+  "address": {"@type": "PostalAddress", "streetAddress": "221 Burwood Highway", "addressLocality": "Burwood", "addressRegion": "VIC", "postalCode": "3125", "addressCountry": "AU"},
+  "url": "https://lyang910920.github.io/",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=Nhd2-XEAAAAJ",
+    "https://orcid.org/0000-0002-9229-5787",
+    "https://dblp.org/pid/59/10736.html",
+    "https://research.com/u/lu-xing-yang",
+    "https://experts.deakin.edu.au/43777-luxing-yang"
+  ],
+  "knowsAbout": ["Cybersecurity", "Cyber threat dynamics", "Attack-defense games", "Game theory", "Optimal control", "Reinforcement learning", "Multi-agent reinforcement learning", "Malware propagation", "Rumor control", "Advanced persistent threats"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh" lang="zh-Hans">跳到正文</span></a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="en">Lu&#8209;Xing Yang<span class="cn" lang="zh-Hans">杨橹星</span></span><span class="zh" lang="zh-Hans">杨橹星<span class="cn" lang="en">Lu&#8209;Xing Yang</span></span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about"><span class="en">About</span><span class="zh" lang="zh-Hans">简介</span></a>
+      <a href="#research"><span class="en">Research</span><span class="zh" lang="zh-Hans">研究方向</span></a>
+      <a href="#publications"><span class="en">Publications</span><span class="zh" lang="zh-Hans">论文</span></a>
+      <a href="#teaching"><span class="en">Teaching</span><span class="zh" lang="zh-Hans">教学</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系</span></a>
+      <button class="lang" id="lang" type="button"><span class="en" lang="zh-Hans">中文</span><span class="zh" lang="en">English</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== Hero ===================== -->
+<section class="hero" aria-labelledby="name">
+  <div class="wrap">
+    <div class="intro">
+      <h1 class="name" id="name">
+        <span class="en">Lu&#8209;Xing Yang<span class="name-sub" lang="zh-Hans">杨橹星</span></span>
+        <span class="zh" lang="zh-Hans">杨橹星<span class="name-sub" lang="en">Lu&#8209;Xing Yang</span></span>
+      </h1>
+      <p class="role">
+        <span class="en">Senior Lecturer (equivalent to Associate Professor)<br>School of Information Technology, Deakin University, Melbourne</span>
+        <span class="zh" lang="zh-Hans">高级讲师（相当于北美体系副教授）<br>澳大利亚迪肯大学 信息技术学院</span>
+      </p>
+      <p class="statement">
+        <span class="en">I study how cyber threats evolve across networks, and how to defend against them intelligently.</span>
+        <span class="zh" lang="zh-Hans">我研究网络空间威胁如何演化，以及如何对其进行智能防御。</span>
+      </p>
+      <p class="statement-2">
+        <span class="en">My work covers malware, advanced persistent threats, social engineering and rumors, and asks how defenders should act under incomplete information, limited resources and adaptive attackers. I build on complex network dynamics, game theory and optimal control, combined with reinforcement learning and multi-agent reinforcement learning.</span>
+        <span class="zh" lang="zh-Hans">研究对象涵盖恶意软件、高级持续性威胁、社会工程攻击与谣言，关注在信息不完备、资源受限且攻击者不断调整策略时防御方如何决策。方法上以复杂网络动力学、博弈论与最优控制为基础，融合强化学习与多智能体强化学习。</span>
+      </p>
+      <ul class="links">
+        <li><a href="mailto:y.luxing@deakin.edu.au"><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0000-0002-9229-5787">ORCID</a></li>
+        <li><a href="https://dblp.org/pid/59/10736.html">dblp</a></li>
+        <li><a href="https://experts.deakin.edu.au/43777-luxing-yang"><span class="en">Deakin profile</span><span class="zh" lang="zh-Hans">Deakin 主页</span></a></li>
+      </ul>
+      <ul class="facts">
+        <li><a href="https://research.com/u/lu-xing-yang"><span class="en">Research.com Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com 2026 全球最佳计算机科学家榜单</span></a></li>
+        <li><span class="en">Google Scholar: <span class="num">3,988</span> citations, h-index <span class="num">36</span> (October 2026)</span><span class="zh" lang="zh-Hans">Google Scholar 引用 <span class="num">3,988</span> 次，h 指数 <span class="num">36</span>（2026 年 10 月）</span></li>
+      </ul>
+    </div>
+
+    <figure class="fig" id="fig" aria-labelledby="fig-cap">
+      <div class="plate">
+        <div class="panel net">
+          <span class="tag" aria-hidden="true">(a)</span>
+          <canvas id="net" role="img" aria-label="Animated attack–defense model: malware spreads across a network of 72 hosts while a defender patches infected hosts."></canvas>
+        </div>
+        <div class="panel plot">
+          <span class="tag" aria-hidden="true">(b)</span>
+          <canvas id="plot" role="img" aria-label="Share of infected and patched hosts over time."></canvas>
+        </div>
+      </div>
+      <div class="controls" role="group" aria-label="Figure controls">
+        <button type="button" class="btn" id="f-play">Pause</button>
+        <button type="button" class="btn" id="f-def" aria-pressed="true"><span class="dot" aria-hidden="true"></span><span class="lbl">Defense on</span></button>
+        <button type="button" class="btn" id="f-reset">Reset</button>
+      </div>
+      <figcaption id="fig-cap">
+        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts: malware spreads from host to host while a defender with a limited patching budget responds. (a) Red hosts are infected, teal hosts have been patched, and red links show where the infection can spread next. (b) Share of hosts infected and patched over time. With defense on, the budget goes first to the infected hosts with the most susceptible neighbors. Click any host to infect&nbsp;it.</p>
+        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　无标度网络（72 台主机）上的攻防模型：恶意软件在主机间传播，防御方以有限的修复预算应对。(a) 红色为已感染主机，青色为已修复主机，红色连线表示感染可能继续扩散的路径。(b) 感染与已修复主机所占比例随时间的变化。开启防御后，预算优先分配给易感邻居最多的感染主机。点击任一主机<span class="nw">即可使其感染。</span></p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== About ===================== -->
+<section class="sec" id="about" aria-labelledby="h-about">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-about"><span class="en">About</span><span class="zh" lang="zh-Hans">简介</span></h2>
+      <!-- To show a portrait, save a photo as assets/photo.jpg (portrait orientation, about 720 × 900 px). -->
+      <img class="portrait" src="assets/photo.jpg" alt="Lu-Xing Yang" width="360" height="450" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="body prose">
+      <p class="en">Lu-Xing Yang is a Senior Lecturer (equivalent to Associate Professor in the North American system) in the School of Information Technology at Deakin University, Melbourne, where he leads the Adaptive and Intelligent Cyber-Modelling and Decision-Making stream of the Deakin Cyber Research and Innovation Centre. He received his PhD in Computer Science from Chongqing University in 2015 and held research positions at Imperial College London, Delft University of Technology and Deakin University before joining the Deakin faculty in 2019.</p>
+      <p class="en">His research on cyber threat dynamics and intelligent defense spans threat propagation in complex networks, dynamic attack–defense games, rumor control and learning-based autonomous defense, drawing on complex network dynamics, game theory, optimal control and reinforcement learning, including multi-agent reinforcement learning. He pioneered node-level epidemic models of attack–defense dynamics for advanced persistent threats (APTs), together with optimal-control and differential-game defense strategies; introduced impulsive control theory into cyber-warfare modeling; and gave the first rigorous analysis of multiple viruses (competing malware, opinions or products) spreading over complex networks, laying the theoretical basis for malware suppression, rumor containment and word-of-mouth marketing.</p>
+      <p class="en">He has published over 100 papers, including eight in IEEE TIFS and others in IEEE TDSC, TSMC, TNSE and TCSS, as well as more than ten at CORE A*/A conferences such as IJCAI, AsiaCCS and PAKDD. As a chief investigator he has attracted over AUD 1.2 million in research funding. He is an IEEE Senior Member and an Academic Editor of PLOS ONE. He was named among Research.com’s Best Computer Science Scientists 2026, and in 2021 The Australian’s Research Magazine recognized him among Australia’s top 40 early career researchers.</p>
+
+      <p class="zh" lang="zh-Hans">杨橹星，澳大利亚迪肯大学（Deakin University）信息技术学院高级讲师（相当于北美体系的副教授），在 Deakin 网络安全研究与创新中心（Deakin Cyber Research and Innovation Centre）牵头自适应智能网络建模与决策（Adaptive and Intelligent Cyber-Modelling and Decision-Making）研究方向。2015 年获重庆大学计算机科学博士学位，先后在英国帝国理工学院、荷兰代尔夫特理工大学和迪肯大学从事研究工作，2019 年起任教于迪肯大学。</p>
+      <p class="zh" lang="zh-Hans">他的研究方向为网络空间威胁演化与智能防御，涵盖复杂网络中的威胁传播与风险演化、动态攻防博弈与资源约束下的协同防御、谣言控制建模，以及机理与学习融合的自主防御，综合运用复杂网络动力学、博弈论、最优控制、强化学习与多智能体强化学习。他率先建立了 APT 攻防的节点级传播模型，并提出基于最优控制与微分博弈的 APT 防御策略；将脉冲控制理论引入网络战建模；首次对复杂网络上多种病毒（相互竞争的恶意软件、观点或产品）的传播给出严格分析，为恶意软件抑制、谣言遏制和口碑营销奠定了理论基础。</p>
+      <p class="zh" lang="zh-Hans">已发表论文 100 余篇，其中 IEEE TIFS 论文 8 篇，另有 IEEE TDSC、TSMC、TNSE、TCSS 等期刊论文，以及 IJCAI、AsiaCCS、PAKDD 等 CORE A*/A 类会议论文 10 余篇。作为主要研究者（CI）获得科研经费逾 120 万澳元。现为 IEEE 高级会员、PLOS ONE 学术编辑。2026 年入选 Research.com 全球最佳计算机科学家榜单（Best Computer Science Scientists 2026）；2021 年入选《澳大利亚人报》（The Australian）Research Magazine 评选的澳大利亚 40 位顶尖青年学者。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Research ===================== -->
+<section class="sec" id="research" aria-labelledby="h-research">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-research"><span class="en">Research</span><span class="zh" lang="zh-Hans">研究方向</span></h2>
+    </div>
+    <div class="body">
+      <h3 class="lead-h"><span class="en">Cyber threat dynamics and intelligent defense</span><span class="zh" lang="zh-Hans">网络空间威胁演化与智能防御</span></h3>
+      <p class="lead en">This research studies how malware, advanced persistent threats, social engineering and malicious information evolve across computer networks, the Internet of Things and online social platforms, and how network structure, individual behavior and attack–defense strategies jointly shape security outcomes. Building on complex network dynamics, game theory and control theory, and integrating data-driven learning and artificial intelligence, it connects threat modeling, dynamic risk assessment, strategic resource allocation and adaptive defense. The aim is interpretable, theoretically grounded and operationally feasible defense under incomplete information, limited resources and evolving adversaries.</p>
+      <p class="lead zh" lang="zh-Hans">面向计算机网络、物联网与在线社交平台中的恶意软件、高级持续性威胁、社会工程攻击及恶意信息传播，研究网络结构、个体行为与攻防策略共同作用下的威胁演化规律和有效防御方法。以复杂网络动力学、博弈论和控制理论为基础，融合数据驱动学习与人工智能技术，贯通威胁传播建模、动态风险评估、攻防策略优化和自适应防御，重点解决信息不完备、资源受限及攻击策略持续变化条件下的安全决策问题，为网络空间安全提供具有机理解释、理论支撑和实际可执行性的防御方法。</p>
+
+      <ol class="themes">
+        <li class="theme">
+          <h4><span class="en">Threat propagation and risk dynamics in complex networks</span><span class="zh" lang="zh-Hans">复杂网络中的威胁传播与风险演化</span></h4>
+          <p class="en">How malware, harmful rumors and manipulative information spread across heterogeneous, multilayer and time-varying networks, and how connectivity, individual cognition and behavior, and interacting spreading processes shape diffusion, persistence and accumulated risk. Distinguishing technical infection from information-driven behavioral change, this theme models their coupling through social engineering, analyzes propagation thresholds and long-term behavior, and extends to data-informed model identification, risk prediction, and risk amplification involving generative AI and automated accounts.</p>
+          <p class="zh" lang="zh-Hans">研究恶意软件、网络谣言及操纵性信息在异质、多层和时变网络中的传播规律，揭示网络连接、个体认知与行为、不同传播过程之间的相互作用如何影响威胁扩散、持续存在和风险累积。在区分技术感染与信息影响机制的基础上，刻画社会工程攻击中技术漏洞与人的行为之间的耦合，分析传播阈值、长期演化和关键干预因素；并结合观测数据开展模型识别与风险预测，研究生成式人工智能和自动化账号参与下的信息传播与风险放大机制。</p>
+          <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#amc-2013">Appl. Math. Comput. 2013</a>, <a href="#plos-2015">PLOS ONE 2015</a>, <a href="#tnse-2018">IEEE TNSE 2018</a>, <a href="#tifs-2025">IEEE TIFS 2025</a>, <a href="#tcss-2026">IEEE TCSS 2026</a></p>
+        </li>
+        <li class="theme">
+          <h4><span class="en">Dynamic attack–defense games and resource-constrained cooperative defense</span><span class="zh" lang="zh-Hans">动态攻防博弈与资源约束下的协同防御</span></h4>
+          <p class="en">Dynamic interactions among attackers, defenders and other stakeholders in persistent intrusions, lateral movement, malware propagation and adversarial information campaigns. Using differential games, optimal control and feedback control, this theme decides when, where and how intensively to deploy isolation, remediation, patching and information interventions with limited, shared resources. It weighs adaptive adversaries against defense costs and long-term security, and studies strategic equilibria, closed-loop stability and defensive effectiveness, so that policies adapt to evolving threats while preserving service continuity.</p>
+          <p class="zh" lang="zh-Hans">面向持续渗透、横向移动、恶意软件扩散和网络信息对抗，研究攻击者、防御者及其他参与方之间的动态策略互动与有限防御资源的协同配置。以微分博弈、最优控制和反馈控制为核心，优化隔离、修复、补丁部署与信息干预的时机、对象和强度，揭示攻击者适应行为、防御成本与长期安全收益之间的权衡；研究策略均衡、闭环稳定性和防御效果，形成兼顾安全收益、运行成本和业务连续性的可执行防御策略。</p>
+          <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#tifs-2019">IEEE TIFS 2019</a>, <a href="#tdsc-2020">IEEE TDSC 2020</a>, <a href="#tsmc-2021">IEEE TSMC 2021</a>, <a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tifs-2026">IEEE TIFS 2026</a></p>
+        </li>
+        <li class="theme">
+          <h4><span class="en">Model-informed learning for trustworthy autonomous defense</span><span class="zh" lang="zh-Hans">机理与学习融合的可信自主防御</span></h4>
+          <p class="en">Autonomous defense that combines mechanistic security models with data-driven learning under partial observability, model uncertainty and changing attacker strategies. Propagation dynamics, game structure and resource constraints are built into reinforcement learning and multi-agent decision-making for data-efficient state estimation, policy adaptation and coordinated execution, and large language models are explored for hierarchical decision-making alongside feedback and model predictive control. Key questions are generalization across networks, adaptation to changing adversaries and constraint satisfaction, supported by human oversight and safe fallback.</p>
+          <p class="zh" lang="zh-Hans">针对威胁状态难以完整观测、传播模型存在偏差和攻击策略不断变化的环境，将传播动力学、博弈结构与资源约束融入强化学习和多智能体决策，探索数据高效的状态估计、策略学习与协同执行；结合大模型的语义理解和任务规划能力，研究与反馈控制、模型预测控制相衔接的分层决策机制。重点解决策略跨网络泛化、对手变化下的适应性与约束满足问题，并通过人机协同和安全回退机制提高自主防御的可靠性。</p>
+          <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#cose-2025">Computers &amp; Security 2025</a></p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Publications =====================
+     To add a paper, copy one <li class="pub"> block into the right year.
+     data-topics takes one or more of: apt malware info platform  -->
+<section class="sec" id="publications" aria-labelledby="h-pubs">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-pubs"><span class="en">Selected publications</span><span class="zh" lang="zh-Hans">代表性论文</span></h2>
+      <p class="side-note"><span class="en">The full list is on <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a> and <a href="https://dblp.org/pid/59/10736.html">dblp</a>.</span><span class="zh" lang="zh-Hans">完整论文列表见 <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a> 与 <a href="https://dblp.org/pid/59/10736.html">dblp</a>。</span></p>
+    </div>
+    <div class="body">
+      <div class="filters" role="group" aria-label="Filter publications by topic">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true"><span class="en">All</span><span class="zh" lang="zh-Hans">全部</span><span class="n">21</span></button>
+        <button type="button" class="chip" data-filter="apt" aria-pressed="false"><span class="en">APT and insider threats</span><span class="zh" lang="zh-Hans">APT 与内部威胁</span><span class="n">7</span></button>
+        <button type="button" class="chip" data-filter="malware" aria-pressed="false"><span class="en">Malware</span><span class="zh" lang="zh-Hans">恶意软件</span><span class="n">8</span></button>
+        <button type="button" class="chip" data-filter="info" aria-pressed="false"><span class="en">Rumors and social engineering</span><span class="zh" lang="zh-Hans">谣言与社会工程攻击</span><span class="n">5</span></button>
+        <button type="button" class="chip" data-filter="learning" aria-pressed="false"><span class="en">Learning-based defense</span><span class="zh" lang="zh-Hans">学习驱动防御</span><span class="n">1</span></button>
+        <button type="button" class="chip" data-filter="platform" aria-pressed="false"><span class="en">Online platforms</span><span class="zh" lang="zh-Hans">在线平台</span><span class="n">2</span></button>
+      </div>
+
+      <ol class="years">
+        <li class="year first">
+          <h3 class="year-n">2026</h3>
+          <ol class="plist">
+            <li class="pub" id="tdsc-2026" data-topics="apt">
+              <span class="pub-t">A Stackelberg Differential Game Framework for Cost-Effective Promotion of Employee Security Compliance</span>
+              <p class="pub-a">Yang Qin, Xiaofan Yang, <b>Lu-Xing Yang</b>, Yushu Zhang, Tianqing Zhu, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Dependable and Secure Computing</i>, <span class="en">to appear</span><span class="zh" lang="zh-Hans">录用待刊</span></p>
+            </li>
+            <li class="pub" id="tifs-2026" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2026.3675443">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game Approach</a>
+              <p class="pub-a">Yang Qin, <b>Lu-Xing Yang</b>, Xiaofan Yang, Gang Li, Robin Doss</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 21, pp. 3153–3168, 2026</p>
+            </li>
+            <li class="pub" id="tcss-2026" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1109/TCSS.2025.3635013">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats Propagation</a>
+              <p class="pub-a">Mousa Tayseer Jafar, Wei Ren, <b>Lu-Xing Yang</b>, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Computational Social Systems</i>, vol. 13, no. 2, pp. 2288–2307, 2026</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2025</h3>
+          <ol class="plist">
+            <li class="pub" id="tifs-2025" data-topics="info malware">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2025.3630005">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control Approaches</a>
+              <p class="pub-a">Xiaojuan Cheng, <b>Lu-Xing Yang</b>, Gang Li, Zenan Ma, Tianqing Zhu, Lidan Wang, Shukai Duan</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 20, pp. 12231–12244, 2025</p>
+            </li>
+            <li class="pub" id="tcss-2025" data-topics="info">
+              <a class="pub-t" href="https://doi.org/10.1109/TCSS.2024.3522889">Impulse Strategies for Suppressing Cyber Propaganda With Awareness</a>
+              <p class="pub-a">Xiaojuan Cheng, <b>Lu-Xing Yang</b>, Qingyi Zhu, Chenquan Gan, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Computational Social Systems</i>, vol. 12, no. 5, pp. 2685–2695, 2025</p>
+            </li>
+            <li class="pub" id="tnse-2025" data-topics="info">
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2025.3556927">Mitigating Social Engineering Attacks Through Cost-Effective Security Awareness Training Policy</a>
+              <p class="pub-a">Yang Qin, Xiaofan Yang, <b>Lu-Xing Yang</b>, Kaifan Huang</p>
+              <p class="pub-v"><i>IEEE Transactions on Network Science and Engineering</i>, vol. 12, no. 4, pp. 3145–3158, 2025</p>
+            </li>
+            <li class="pub" id="cose-2025" data-topics="malware learning">
+              <a class="pub-t" href="https://doi.org/10.1016/j.cose.2024.104186">An innovative practical roadmap for optimal control strategies in malware propagation through the integration of RL with MPC</a>
+              <p class="pub-a">Mousa Tayseer Jafar, <b>Lu-Xing Yang</b>, Gang Li</p>
+              <p class="pub-v"><i>Computers &amp; Security</i>, vol. 148, 104186, 2025</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2024</h3>
+          <ol class="plist">
+            <li class="pub" id="tifs-2024a" data-topics="info">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2024.3468903">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game</a>
+              <p class="pub-a">Xiaojuan Cheng, <b>Lu-Xing Yang</b>, Qingyi Zhu, Chenquan Gan, Xiaofan Yang, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 19, pp. 9789–9802, 2024</p>
+              <p class="pub-note"><span class="en">Nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span></p>
+            </li>
+            <li class="pub" id="tifs-2024b" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2024.3463965">Minimizing Malware Propagation in Internet of Things Networks: An Optimal Control Using Feedback Loop Approach</a>
+              <p class="pub-a">Mousa Tayseer Jafar, <b>Lu-Xing Yang</b>, Gang Li, Qingyi Zhu, Chenquan Gan</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 19, pp. 9682–9697, 2024</p>
+            </li>
+            <li class="pub" id="tsmc-2024" data-topics="platform">
+              <a class="pub-t" href="https://doi.org/10.1109/TSMC.2024.3379408">Cost-Effective Company Response Policy for Product Co-Creation in Company-Sponsored Online Community</a>
+              <p class="pub-a">Jiamin Hu, <b>Lu-Xing Yang</b>, Xiaofan Yang, Kaifan Huang, Gang Li, Yong Xiang</p>
+              <p class="pub-v"><i>IEEE Transactions on Systems, Man, and Cybernetics: Systems</i>, vol. 54, no. 7, pp. 4494–4506, 2024</p>
+            </li>
+            <li class="pub" id="tnse-2024" data-topics="info">
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2023.3331333">Mitigating the Impact of a False Message Through Sequential Release of Clarifying Messages</a>
+              <p class="pub-a">Kaifan Huang, Xiaofan Yang, <b>Lu-Xing Yang</b>, Ye Zhu, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Network Science and Engineering</i>, vol. 11, no. 2, pp. 1785–1798, 2024</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2023</h3>
+          <ol class="plist">
+            <li class="pub" id="tifs-2023" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2023.3284564">Impulsive Artificial Defense Against Advanced Persistent Threat</a>
+              <p class="pub-a">Hao Sun, Xiaofan Yang, <b>Lu-Xing Yang</b>, Kaifan Huang, Gang Li</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 18, pp. 3506–3516, 2023</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2022</h3>
+          <ol class="plist">
+            <li class="pub" id="tsmc-2022" data-topics="platform">
+              <a class="pub-t" href="https://doi.org/10.1109/TSMC.2021.3096008">Effective Multiplatform Advertising Policy</a>
+              <p class="pub-a">Kaifan Huang, <b>Lu-Xing Yang</b>, Xiaofan Yang, Yuan Yan Tang</p>
+              <p class="pub-v"><i>IEEE Transactions on Systems, Man, and Cybernetics: Systems</i>, vol. 52, no. 7, pp. 4483–4493, 2022</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2021</h3>
+          <ol class="plist">
+            <li class="pub" id="tsmc-2021" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TSMC.2019.2956860">Effective Quarantine and Recovery Scheme Against Advanced Persistent Threat</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Pengdeng Li, Xiaofan Yang, Yong Xiang, Frank Jiang, Wanlei Zhou</p>
+              <p class="pub-v"><i>IEEE Transactions on Systems, Man, and Cybernetics: Systems</i>, vol. 51, no. 10, pp. 5977–5991, 2021</p>
+            </li>
+            <li class="pub" id="tnse-2021" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2020.3040247">Defense Against Advanced Persistent Threat Through Data Backup and Recovery</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Kaifan Huang, Xiaofan Yang, Yushu Zhang, Yong Xiang, Yuan Yan Tang</p>
+              <p class="pub-v"><i>IEEE Transactions on Network Science and Engineering</i>, vol. 8, no. 3, pp. 2001–2013, 2021</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2020</h3>
+          <ol class="plist">
+            <li class="pub" id="tdsc-2020" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TDSC.2018.2858786">A Risk Management Approach to Defending Against the Advanced Persistent Threat</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Pengdeng Li, Xiaofan Yang, Yuan Yan Tang</p>
+              <p class="pub-v"><i>IEEE Transactions on Dependable and Secure Computing</i>, vol. 17, no. 6, pp. 1163–1172, 2020</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2019</h3>
+          <ol class="plist">
+            <li class="pub" id="tifs-2019" data-topics="apt">
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2018.2885251">Effective Repair Strategy Against Advanced Persistent Threat: A Differential Game Approach</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Pengdeng Li, Yushu Zhang, Xiaofan Yang, Yong Xiang, Wanlei Zhou</p>
+              <p class="pub-v"><i>IEEE Transactions on Information Forensics and Security</i>, vol. 14, no. 7, pp. 1713–1728, 2019</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2018</h3>
+          <ol class="plist">
+            <li class="pub" id="tnse-2018" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2017.2734075">A Bi-Virus Competing Spreading Model with Generic Infection Rates</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Xiaofan Yang, Yuan Yan Tang</p>
+              <p class="pub-v"><i>IEEE Transactions on Network Science and Engineering</i>, vol. 5, no. 1, pp. 2–13, 2018</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2016</h3>
+          <ol class="plist">
+            <li class="pub" id="physa-2016" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1016/j.physa.2016.01.026">The optimal dynamic immunization under a controlled heterogeneous node-based SIRS model</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Moez Draief, Xiaofan Yang</p>
+              <p class="pub-v"><i>Physica A: Statistical Mechanics and its Applications</i>, vol. 450, pp. 403–415, 2016</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2015</h3>
+          <ol class="plist">
+            <li class="pub" id="plos-2015" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1371/journal.pone.0134507">The Impact of the Network Topology on the Viral Prevalence: A Node-Based Approach</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Moez Draief, Xiaofan Yang</p>
+              <p class="pub-v"><i>PLOS ONE</i>, vol. 10, no. 7, e0134507, 2015</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year">
+          <h3 class="year-n">2013</h3>
+          <ol class="plist">
+            <li class="pub" id="amc-2013" data-topics="malware">
+              <a class="pub-t" href="https://doi.org/10.1016/j.amc.2013.02.031">Epidemics of computer viruses: A complex-network approach</a>
+              <p class="pub-a"><b>Lu-Xing Yang</b>, Xiaofan Yang, Jiming Liu, Qingyi Zhu, Chenquan Gan</p>
+              <p class="pub-v"><i>Applied Mathematics and Computation</i>, vol. 219, no. 16, pp. 8705–8717, 2013</p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Funding and recognition ===================== -->
+<section class="sec" id="recognition" aria-labelledby="h-recognition">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-recognition"><span class="en">Funding and recognition</span><span class="zh" lang="zh-Hans">科研项目与荣誉</span></h2>
+    </div>
+    <div class="body">
+      <h3 class="sub-h"><span class="en">Research funding</span><span class="zh" lang="zh-Hans">科研项目</span></h3>
+      <p class="intro-line"><span class="en">Chief investigator on three external and four internal grants, totalling over AUD 1.2 million.</span><span class="zh" lang="zh-Hans">作为主要研究者（CI）主持外部项目 3 项、校内项目 4 项，经费合计逾 120 万澳元。</span></p>
+      <ul class="items">
+        <li>
+          <span class="when">2025–2026</span>
+          <p class="what"><span class="en">Quantum Automation for Cyber Defence</span><span class="zh" lang="zh-Hans">Quantum Automation for Cyber Defence（面向网络防御的量子自动化）</span>
+            <small><span class="en">Australia’s Economic Accelerator (AEA) Ignite Program, AUD 479,960, chief investigator</span><span class="zh" lang="zh-Hans">澳大利亚经济加速器（AEA）Ignite 计划，479,960 澳元，主要研究者（CI）</span></small></p>
+        </li>
+        <li>
+          <span class="when">2023–2024</span>
+          <p class="what"><span class="en">Privacy-Respecting and Compliant Digital Credential Wallet (PRCDCAT)</span><span class="zh" lang="zh-Hans">Privacy-Respecting and Compliant Digital Credential Wallet（隐私保护且合规的数字凭证钱包）</span>
+            <small><span class="en">Cyber Security Cooperative Research Centre (CSCRC), AUD 325,000, chief investigator</span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC），325,000 澳元，主要研究者（CI）</span></small></p>
+        </li>
+        <li>
+          <span class="when">2022–2024</span>
+          <p class="what"><span class="en">Augmenting Cyber Defence Capability (ACDC)</span><span class="zh" lang="zh-Hans">Augmenting Cyber Defence Capability（增强网络防御能力）</span>
+            <small><span class="en">Cyber Security Cooperative Research Centre (CSCRC), AUD 390,000, chief investigator</span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC），390,000 澳元，主要研究者（CI）</span></small></p>
+        </li>
+      </ul>
+
+      <h3 class="sub-h"><span class="en">Awards and recognition</span><span class="zh" lang="zh-Hans">荣誉与奖励</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when"><span class="en">May 2026</span><span class="zh" lang="zh-Hans">2026 年 5 月</span></span>
+          <p class="what"><span class="en">Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com 全球最佳计算机科学家榜单</span>
+            <small><a href="https://research.com/u/lu-xing-yang">Research.com</a></small></p>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <p class="what"><span class="en">Nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span>
+            <small><span class="en">For “Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game”, IEEE TIFS</span><span class="zh" lang="zh-Hans">论文 Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game（IEEE TIFS）</span></small></p>
+        </li>
+        <li>
+          <span class="when">2024</span>
+          <p class="what"><span class="en">Best Poster Award</span><span class="zh" lang="zh-Hans">最佳海报奖</span>
+            <small>AsiaCCS 2024</small></p>
+        </li>
+        <li>
+          <span class="when">2021</span>
+          <p class="what"><span class="en">Top 40 early career researchers in Australia</span><span class="zh" lang="zh-Hans">澳大利亚 40 位顶尖青年学者</span>
+            <small><span class="en">The Australian’s Research Magazine</span><span class="zh" lang="zh-Hans">《澳大利亚人报》（The Australian）Research Magazine</span></small></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Teaching and supervision ===================== -->
+<section class="sec" id="teaching" aria-labelledby="h-teaching">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-teaching"><span class="en">Teaching and supervision</span><span class="zh" lang="zh-Hans">教学与研究生指导</span></h2>
+    </div>
+    <div class="body">
+      <h3 class="sub-h"><span class="en">Teaching</span><span class="zh" lang="zh-Hans">教学</span></h3>
+      <p class="intro-line"><span class="en">Teaching expertise in cybersecurity, applied mathematics, computer programming and data science fundamentals. Graduate Certificate of Higher Education (Learning and Teaching), Deakin University, 2022.</span><span class="zh" lang="zh-Hans">教学专长为网络安全、应用数学、程序设计与数据科学基础。2022 年获迪肯大学高等教育教学研究生证书（Graduate Certificate of Higher Education, Learning and Teaching）。</span></p>
+      <ul class="items">
+        <li>
+          <span class="when">SIT281</span>
+          <p class="what"><span class="en">Cryptography</span><span class="zh" lang="zh-Hans">密码学（Cryptography）</span>
+            <small><span class="en">Trimester 2 every year, 2020–2026</span><span class="zh" lang="zh-Hans">2020–2026 年每年第 2 学期</span></small></p>
+        </li>
+        <li>
+          <span class="when">SIT103/772</span>
+          <p class="what"><span class="en">Database Fundamentals</span><span class="zh" lang="zh-Hans">数据库基础（Database Fundamentals）</span>
+            <small>2019 T3, 2021 T2, 2022 T2, 2024 T3, 2025 T3, 2026 T2</small></p>
+        </li>
+        <li>
+          <span class="when">SIT102</span>
+          <p class="what"><span class="en">Introduction to Programming</span><span class="zh" lang="zh-Hans">程序设计导论（Introduction to Programming）</span>
+            <small>2019 T3, 2020 T2–T3, 2021 T1</small></p>
+        </li>
+        <li>
+          <span class="when">SIT374/764<br>SIT378/782</span>
+          <p class="what"><span class="en">Capstone Program</span><span class="zh" lang="zh-Hans">毕业设计项目（Capstone Program）</span>
+            <small>2022 T1, 2023 T1</small></p>
+        </li>
+        <li>
+          <span class="when">SIT374</span>
+          <p class="what"><span class="en">Software Project Management, taught offshore at Southwest University, China</span><span class="zh" lang="zh-Hans">软件项目管理（Software Project Management），在中国西南大学海外授课</span>
+            <small><span class="en">May 2022, 2023, 2024 and 2026</span><span class="zh" lang="zh-Hans">2022、2023、2024、2026 年 5 月</span></small></p>
+        </li>
+      </ul>
+
+      <h3 class="sub-h"><span class="en">Current doctoral students</span><span class="zh" lang="zh-Hans">在读博士生</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when"><span class="en">In progress</span><span class="zh" lang="zh-Hans">在读</span></span>
+          <p class="what"><i>Domain-Invariant Sequence Modeling for Unsupervised Domain-Adaptive Point Cloud Completion</i>
+            <small>Yinghui Li</small></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">In progress</span><span class="zh" lang="zh-Hans">在读</span></span>
+          <p class="what"><i>Isolation-based Models for Unsupervised Learning</i>
+            <small>Xiaoyu Qin</small></p>
+        </li>
+      </ul>
+
+      <h3 class="sub-h"><span class="en">Completed doctoral students</span><span class="zh" lang="zh-Hans">已毕业博士生</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when">2026</span>
+          <p class="what"><i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>
+            <small>Mousa Tayseer Mousa Ja’far</small></p>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <p class="what"><i>Modeling and Analysis of Cyberwar</i>
+            <small>Xiaojuan Cheng</small></p>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <p class="what"><i>Generative Model for Tabular Data Generation</i>
+            <small>Yishuo Zhang</small></p>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <p class="what"><i>Identification of Abnormal Status in Natural Gas Wells</i>
+            <small>Yang Cao</small></p>
+        </li>
+        <li>
+          <span class="when">2023</span>
+          <p class="what"><i>New Methods for Distributed Denial-of-Service Attack Detection</i>
+            <small>Lu Zhou</small></p>
+        </li>
+        <li>
+          <span class="when">2023</span>
+          <p class="what"><i>Detection and Prevention of Harmful Information Propagation in Cyberspace</i>
+            <small>Shu Li</small></p>
+        </li>
+        <li>
+          <span class="when">2022</span>
+          <p class="what"><i>Location Privacy Protection Ensuring Utility of Services</i>
+            <small>Nisha Nisha</small></p>
+        </li>
+        <li>
+          <span class="when">2020</span>
+          <p class="what"><i>Improving PDF Maldoc Detection via Data-Driven Feature Engineering</i>
+            <small>Ahmed Falah</small></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Experience and education ===================== -->
+<section class="sec" id="experience" aria-labelledby="h-experience">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-experience"><span class="en">Experience and education</span><span class="zh" lang="zh-Hans">经历与教育</span></h2>
+    </div>
+    <div class="body">
+      <h3 class="sub-h"><span class="en">Appointments</span><span class="zh" lang="zh-Hans">工作经历</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when"><span class="en">Jan 2026 – present</span><span class="zh" lang="zh-Hans">2026.01 至今</span></span>
+          <p class="what"><span class="en">Senior Lecturer (equivalent to Associate Professor)</span><span class="zh" lang="zh-Hans">高级讲师（相当于北美副教授）</span>
+            <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学 Deakin 网络安全研究与创新中心、信息技术学院</span></small></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Oct 2019 – Dec 2025</span><span class="zh" lang="zh-Hans">2019.10 – 2025.12</span></span>
+          <p class="what"><span class="en">Lecturer (equivalent to Assistant Professor)</span><span class="zh" lang="zh-Hans">讲师（相当于北美助理教授）</span>
+            <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学 Deakin 网络安全研究与创新中心、信息技术学院</span></small></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Feb 2018 – Oct 2019</span><span class="zh" lang="zh-Hans">2018.02 – 2019.10</span></span>
+          <p class="what"><span class="en">Alfred Deakin Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">Alfred Deakin 博士后研究员</span>
+            <small><span class="en">Deakin University, with Prof. Yong Xiang and Prof. Wanlei Zhou</span><span class="zh" lang="zh-Hans">迪肯大学，合作导师：Yong Xiang 教授、Wanlei Zhou 教授</span></small></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Mar 2016 – Sep 2017</span><span class="zh" lang="zh-Hans">2016.03 – 2017.09</span></span>
+          <p class="what"><span class="en">Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">博士后研究员</span>
+            <small><span class="en">Delft University of Technology, the Netherlands, with Prof. Piet Van Mieghem</span><span class="zh" lang="zh-Hans">荷兰代尔夫特理工大学，合作导师：Piet Van Mieghem 教授</span></small></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Oct 2014 – Oct 2015</span><span class="zh" lang="zh-Hans">2014.10 – 2015.10</span></span>
+          <p class="what"><span class="en">Research Associate, joint PhD training program</span><span class="zh" lang="zh-Hans">Research Associate（博士联合培养）</span>
+            <small><span class="en">Imperial College London, United Kingdom, with Prof. Moez Draief</span><span class="zh" lang="zh-Hans">英国帝国理工学院，合作导师：Moez Draief 教授</span></small></p>
+        </li>
+      </ul>
+
+      <h3 class="sub-h"><span class="en">Education</span><span class="zh" lang="zh-Hans">教育背景</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when">2022</span>
+          <p class="what"><span class="en">Graduate Certificate of Higher Education (Learning and Teaching)</span><span class="zh" lang="zh-Hans">高等教育教学研究生证书</span>
+            <small><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></small></p>
+        </li>
+        <li>
+          <span class="when">2015</span>
+          <p class="what"><span class="en">PhD in Computer Science</span><span class="zh" lang="zh-Hans">计算机科学博士</span>
+            <small><span class="en">Chongqing University, China; advisor Prof. Xiaofan Yang</span><span class="zh" lang="zh-Hans">重庆大学，导师：Xiaofan Yang 教授</span></small></p>
+        </li>
+        <li>
+          <span class="when">2012</span>
+          <p class="what"><span class="en">BSc in Applied Mathematics</span><span class="zh" lang="zh-Hans">应用数学学士</span>
+            <small><span class="en">Chongqing University, China</span><span class="zh" lang="zh-Hans">重庆大学</span></small></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Service ===================== -->
+<section class="sec" id="service" aria-labelledby="h-service">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-service"><span class="en">Service</span><span class="zh" lang="zh-Hans">学术服务</span></h2>
+    </div>
+    <div class="body">
+      <h3 class="sub-h"><span class="en">Editorial roles</span><span class="zh" lang="zh-Hans">编辑工作</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when"><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span>
+          <p class="what"><span class="en">Academic Editor, <i>PLOS ONE</i></span><span class="zh" lang="zh-Hans"><i>PLOS ONE</i> 学术编辑</span></p>
+        </li>
+      </ul>
+      <p class="intro-line"><span class="en">Guest Editor of nine special issues:</span><span class="zh" lang="zh-Hans">担任 9 个专刊的客座编辑：</span></p>
+      <ul class="items">
+        <li>
+          <span class="when">Apr 2025</span>
+          <p class="what">Cyber-Physical System: Security and Defense
+            <small><i>Applied Sciences</i></small></p>
+        </li>
+        <li>
+          <span class="when">Nov 2023</span>
+          <p class="what">Mathematical Modeling and Strategic Decision-Making of Cyber Conflicts
+            <small><i>Mathematical Biosciences and Engineering</i></small></p>
+        </li>
+        <li>
+          <span class="when">Nov 2022</span>
+          <p class="what">Propagation Dynamics and Control of Disinformation in Online Social Platforms
+            <small><i>Mathematical Biosciences and Engineering</i></small></p>
+        </li>
+        <li>
+          <span class="when">Dec 2021</span>
+          <p class="what">Network Structural Perturbation and Its Applications for Controlling Misinformation Diffusion
+            <small><i>Security and Communication Networks</i></small></p>
+        </li>
+        <li>
+          <span class="when">Nov 2021</span>
+          <p class="what">Epidemic Spreading Dynamics on Temporal Networks
+            <small><i>Complexity</i></small></p>
+        </li>
+        <li>
+          <span class="when">Sep 2020</span>
+          <p class="what">Coevolving Spreading Dynamics of Complex Networks
+            <small><i>Complexity</i></small></p>
+        </li>
+        <li>
+          <span class="when">Apr 2020</span>
+          <p class="what">Mathematical Models for New Types of Cyberattack and Associated Defense Strategies
+            <small><i>Security and Communication Networks</i></small></p>
+        </li>
+        <li>
+          <span class="when">Sep 2017</span>
+          <p class="what">Mathematical Models for Malware Propagation
+            <small><i>Security and Communication Networks</i></small></p>
+        </li>
+        <li>
+          <span class="when">Dec 2016</span>
+          <p class="what">Epidemic Processes on Complex Networks
+            <small><i>Discrete Dynamics in Nature and Society</i></small></p>
+        </li>
+      </ul>
+
+      <h3 class="sub-h"><span class="en">Reviewing</span><span class="zh" lang="zh-Hans">审稿</span></h3>
+      <p class="intro-line"><span class="en">Regular reviewer for IEEE Transactions on Information Forensics and Security, IEEE Transactions on Dependable and Secure Computing, IEEE/ACM Transactions on Networking, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics: Systems, IEEE Transactions on Network Science and Engineering and other leading journals.</span><span class="zh" lang="zh-Hans">长期为 IEEE TIFS、IEEE TDSC、IEEE/ACM Transactions on Networking、IEEE Transactions on Cybernetics、IEEE TSMC、IEEE TNSE 等期刊审稿。</span></p>
+
+      <h3 class="sub-h"><span class="en">University service and membership</span><span class="zh" lang="zh-Hans">校内服务与学术兼职</span></h3>
+      <ul class="items">
+        <li>
+          <span class="when">2022–2024</span>
+          <p class="what"><span class="en">HDR Coordinator, Deakin Cyber Research and Innovation Centre</span><span class="zh" lang="zh-Hans">Deakin 网络安全研究与创新中心 研究生（HDR）协调人</span></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span>
+          <p class="what"><span class="en">Member, Cyber Security Course Team</span><span class="zh" lang="zh-Hans">网络安全专业课程组成员</span></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span>
+          <p class="what"><span class="en">Member, Faculty Human Ethics Advisory Group</span><span class="zh" lang="zh-Hans">学院人类研究伦理咨询组成员</span></p>
+        </li>
+        <li>
+          <span class="when"><span class="en">Since Feb 2025</span><span class="zh" lang="zh-Hans">2025 年 2 月起</span></span>
+          <p class="what"><span class="en">IEEE Senior Member</span><span class="zh" lang="zh-Hans">IEEE 高级会员</span></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Contact ===================== -->
+<section class="sec" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="sec-h" id="h-contact"><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系方式</span></h2>
+    </div>
+    <div class="body">
+      <dl class="contact">
+        <dt><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></dt>
+        <dd><a href="mailto:y.luxing@deakin.edu.au">y.luxing@deakin.edu.au</a><br><a href="mailto:ylx910920@gmail.com">ylx910920@gmail.com</a></dd>
+        <dt><span class="en">Address</span><span class="zh" lang="zh-Hans">地址</span></dt>
+        <dd><span class="en">Office T3.19, School of Information Technology<br>Deakin University, Melbourne Burwood Campus<br>221 Burwood Highway, Burwood VIC 3125, Australia</span><span class="zh" lang="zh-Hans">迪肯大学信息技术学院 T3.19 办公室<br>墨尔本 Burwood 校区<br>221 Burwood Highway, Burwood VIC 3125, Australia</span></dd>
+        <dt><span class="en">Profiles</span><span class="zh" lang="zh-Hans">学术主页</span></dt>
+        <dd class="row">
+          <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>
+          <a href="https://orcid.org/0000-0002-9229-5787">ORCID</a>
+          <a href="https://dblp.org/pid/59/10736.html">dblp</a>
+          <a href="https://research.com/u/lu-xing-yang">Research.com</a>
+          <a href="https://experts.deakin.edu.au/43777-luxing-yang">Deakin Experts</a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span><span class="en">© 2026 Lu-Xing Yang</span><span class="zh" lang="zh-Hans">© 2026 杨橹星</span></span>
+    <span><span class="en">Last updated October 2026</span><span class="zh" lang="zh-Hans">最后更新：2026 年 10 月</span></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+
+  /* ---------------- Language ---------------- */
+  var TITLES = { en: "Lu-Xing Yang 杨橹星 | Deakin University", zh: "杨橹星 Lu-Xing Yang | 迪肯大学" };
+  var langBtn = document.getElementById("lang");
+  function lang() { return root.getAttribute("data-lang") === "zh" ? "zh" : "en"; }
+  function syncLang() {
+    var l = lang();
+    document.title = TITLES[l];
+    langBtn.setAttribute("aria-label", l === "zh" ? "Switch to English" : "切换到中文");
+    if (figure) figure.relabel();
+  }
+  function setLang(l) {
+    root.setAttribute("data-lang", l);
+    root.setAttribute("lang", l === "zh" ? "zh-Hans" : "en");
+    try { localStorage.setItem("lang", l); } catch (e) {}
+    syncLang();
+  }
+  langBtn.addEventListener("click", function () { setLang(lang() === "zh" ? "en" : "zh"); });
+
+  /* ---------------- Header rule on scroll ---------------- */
+  var top = document.querySelector(".top");
+  function onScroll() { top.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------------- Publication filter ---------------- */
+  var chips = [].slice.call(document.querySelectorAll(".chip"));
+  var pubs = [].slice.call(document.querySelectorAll(".pub"));
+  var years = [].slice.call(document.querySelectorAll(".year"));
+  function filter(f) {
+    chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-filter") === f)); });
+    pubs.forEach(function (p) {
+      var t = " " + p.getAttribute("data-topics") + " ";
+      p.hidden = !(f === "all" || t.indexOf(" " + f + " ") > -1);
+    });
+    var first = true;
+    years.forEach(function (y) {
+      y.hidden = !y.querySelector(".pub:not([hidden])");
+      y.classList.toggle("first", !y.hidden && first);
+      if (!y.hidden) first = false;
+    });
+  }
+  chips.forEach(function (c) { c.addEventListener("click", function () { filter(c.getAttribute("data-filter")); }); });
+  [].forEach.call(document.querySelectorAll('.rep a[href^="#"]'), function (a) {
+    a.addEventListener("click", function () { filter("all"); });
+  });
+
+  /* ---------------- Fig. 1: malware spreading and patching on a network ---------------- */
+  var figure = (function () {
+    var netC = document.getElementById("net"), plotC = document.getElementById("plot");
+    if (!netC || !netC.getContext) return null;
+    var nctx = netC.getContext("2d"), pctx = plotC.getContext("2d");
+    var reduceMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var darkMQ = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // Model parameters (per step): infection probability per infected-susceptible link, natural
+    // recovery, patches per step, detection delay (steps), immunity length (steps).
+    var N = 72, M = 2, STEP_MS = 150, BETA = 0.06, GAMMA = 0.004, BUDGET = 0.6, CAP = 1.5, DELAY = 10, WANE = 110;
+    var QUIET = 16, HIST = 220;
+    var S = 0, I = 1, R = 2;
+
+    function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+    // Scale-free network (Barabási–Albert, m = 2), fixed seed so the drawing is the same on every visit.
+    var rnd = mulberry32(20261015), adj = [], i, k;
+    for (i = 0; i < N; i++) adj.push({});
+    function link(a, b) { adj[a][b] = 1; adj[b][a] = 1; }
+    link(0, 1); link(0, 2); link(1, 2);
+    var pool = [0, 0, 1, 1, 2, 2];
+    for (var v = 3; v < N; v++) {
+      var picked = {}, cnt = 0;
+      while (cnt < M) { var u = pool[Math.floor(rnd() * pool.length)]; if (!picked[u]) { picked[u] = 1; cnt++; } }
+      Object.keys(picked).forEach(function (s) { var w = +s; link(v, w); pool.push(w, v); });
+    }
+    var nbr = adj.map(function (o) { return Object.keys(o).map(Number); });
+    var deg = nbr.map(function (a) { return a.length; });
+    var edges = [];
+    for (i = 0; i < N; i++) nbr[i].forEach(function (j) { if (i < j) edges.push([i, j]); });
+
+    // Force-directed layout (Fruchterman–Reingold) for a box with aspect ratio A.
+    function layout(A) {
+      var r = mulberry32(11), pos = [], kk = Math.sqrt(A / N), temp = 0.1 * Math.max(A, 1), a, b, e;
+      for (a = 0; a < N; a++) pos.push([r() * A, r()]);
+      for (var it = 0; it < 450; it++) {
+        var dx = new Float64Array(N), dy = new Float64Array(N);
+        for (a = 0; a < N; a++) for (b = a + 1; b < N; b++) {
+          var ex = pos[a][0] - pos[b][0], ey = pos[a][1] - pos[b][1], d2 = ex * ex + ey * ey + 1e-6, f = kk * kk / d2;
+          dx[a] += ex * f; dy[a] += ey * f; dx[b] -= ex * f; dy[b] -= ey * f;
+        }
+        for (e = 0; e < edges.length; e++) {
+          a = edges[e][0]; b = edges[e][1];
+          var fx = pos[a][0] - pos[b][0], fy = pos[a][1] - pos[b][1], d = Math.sqrt(fx * fx + fy * fy) + 1e-6, g = d / kk;
+          dx[a] -= fx * g; dy[a] -= fy * g; dx[b] += fx * g; dy[b] += fy * g;
+        }
+        for (a = 0; a < N; a++) {
+          dx[a] += (A / 2 - pos[a][0]) * 0.9; dy[a] += (0.5 - pos[a][1]) * 0.9;
+          var L = Math.sqrt(dx[a] * dx[a] + dy[a] * dy[a]) + 1e-9, s = Math.min(L, temp) / L;
+          pos[a][0] += dx[a] * s;
+          pos[a][1] += dy[a] * s;
+        }
+        temp = Math.max(0.0015, temp * 0.988);
+      }
+      var x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+      pos.forEach(function (p) { x0 = Math.min(x0, p[0]); x1 = Math.max(x1, p[0]); y0 = Math.min(y0, p[1]); y1 = Math.max(y1, p[1]); });
+      return pos.map(function (p) { return [(p[0] - x0) / ((x1 - x0) || 1), (p[1] - y0) / ((y1 - y0) || 1)]; });
+    }
+
+    // State
+    var st = new Uint8Array(N), imm = new Int16Array(N), tInf = new Int32Array(N);
+    var fxInf = new Float64Array(N).fill(-1e9), fxPatch = new Float64Array(N).fill(-1e9);
+    var tick = 0, bucket = 0, quiet = 0, hist = [], defence = true, running = false;
+
+    function exposure(x) { var c = 0, a = nbr[x]; for (var q = 0; q < a.length; q++) if (st[a[q]] === S) c++; return c; }
+    function infect(x, now) { st[x] = I; tInf[x] = tick; fxInf[x] = now; }
+    // A new outbreak starts on a moderately connected host and one of its neighbours.
+    function seedRandom(now) {
+      var c = [], q;
+      for (q = 0; q < N; q++) if (st[q] === S && deg[q] >= 3 && deg[q] <= 8) c.push(q);
+      if (!c.length) for (q = 0; q < N; q++) if (st[q] === S) c.push(q);
+      if (!c.length) return;
+      var x = c[Math.floor(Math.random() * c.length)];
+      infect(x, now);
+      var nb = nbr[x].filter(function (y) { return st[y] === S; });
+      if (nb.length) infect(nb[Math.floor(Math.random() * nb.length)], now);
+    }
+    function record() {
+      var ni = 0, nr = 0;
+      for (var x = 0; x < N; x++) { if (st[x] === I) ni++; else if (st[x] === R) nr++; }
+      hist.push([ni / N, nr / N]); if (hist.length > HIST) hist.shift();
+      return ni;
+    }
+    function step(now) {
+      tick++;
+      var nx = st.slice(), x, q;
+      for (x = 0; x < N; x++) {
+        if (st[x] === I) {
+          var a = nbr[x];
+          for (q = 0; q < a.length; q++) { var y = a[q]; if (st[y] === S && nx[y] === S && Math.random() < BETA) { nx[y] = I; tInf[y] = tick; fxInf[y] = now; } }
+          if (Math.random() < GAMMA) { nx[x] = R; imm[x] = WANE; }
+        } else if (st[x] === R) { if (--imm[x] <= 0) nx[x] = S; }
+      }
+      if (defence) {
+        bucket = Math.min(bucket + BUDGET, CAP);
+        var c = [];
+        for (x = 0; x < N; x++) if (st[x] === I && nx[x] === I && tick - tInf[x] >= DELAY) c.push(x);
+        c.sort(function (p, r) { return exposure(r) - exposure(p) || deg[r] - deg[p]; });
+        while (bucket >= 1 && c.length) { x = c.shift(); nx[x] = R; imm[x] = WANE; fxPatch[x] = now; bucket -= 1; }
+      }
+      st = nx;
+      if (record() === 0) { if (++quiet > QUIET) { quiet = 0; seedRandom(now); } } else quiet = 0;
+    }
+    function reset(now) {
+      st = new Uint8Array(N); imm = new Int16Array(N); tick = 0; bucket = 0; quiet = 0; hist = [];
+      fxInf.fill(-1e9); fxPatch.fill(-1e9);
+      seedRandom(now); record();
+    }
+
+    // Drawing
+    var W = 0, H = 0, PW = 0, PH = 0, dpr = 1, P = null, A0 = 0, pts = [], col = {};
+    var SANS = '"LXY Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif';
+    function readColors() {
+      var cs = getComputedStyle(root);
+      ["--ink", "--ink-2", "--ink-3", "--rule", "--rule-2", "--edge", "--teal", "--crimson", "--surface"].forEach(function (n) { col[n] = cs.getPropertyValue(n).trim(); });
+    }
+    function rgba(hex, a) {
+      var h = hex.replace("#", "");
+      if (h.length === 3) h = h.replace(/(.)/g, "$1$1");
+      var n = parseInt(h, 16);
+      return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")";
+    }
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+    function radius(x) { return 2.3 + 1.2 * Math.sqrt(deg[x]); }
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var r = netC.getBoundingClientRect(); W = r.width; H = r.height;
+      if (!W || !H) return;
+      netC.width = Math.round(W * dpr); netC.height = Math.round(H * dpr);
+      var r2 = plotC.getBoundingClientRect(); PW = r2.width; PH = r2.height;
+      plotC.width = Math.round(PW * dpr); plotC.height = Math.round(PH * dpr);
+      var A = W / H;
+      if (!P || Math.abs(A - A0) / A0 > 0.1) { P = layout(A); A0 = A; }
+      var padX = Math.max(22, W * 0.05), padY = Math.max(22, H * 0.07);
+      pts = P.map(function (p) { return [padX + p[0] * (W - 2 * padX), padY + p[1] * (H - 2 * padY)]; });
+      draw(performance.now());
+    }
+    function draw(now) {
+      if (!W) return;
+      var c = nctx, animate = !reduceMQ.matches, e, a, b, x;
+      c.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c.clearRect(0, 0, W, H);
+      c.lineCap = "round";
+      var hot = [];
+      c.strokeStyle = col["--edge"]; c.lineWidth = 1; c.beginPath();
+      for (e = 0; e < edges.length; e++) {
+        a = edges[e][0]; b = edges[e][1];
+        if ((st[a] === I && st[b] === S) || (st[b] === I && st[a] === S)) { hot.push(e); continue; }
+        c.moveTo(pts[a][0], pts[a][1]); c.lineTo(pts[b][0], pts[b][1]);
+      }
+      c.stroke();
+      if (hot.length) {
+        c.strokeStyle = rgba(col["--crimson"], 0.42); c.lineWidth = 1.3; c.beginPath();
+        for (e = 0; e < hot.length; e++) { a = edges[hot[e]][0]; b = edges[hot[e]][1]; c.moveTo(pts[a][0], pts[a][1]); c.lineTo(pts[b][0], pts[b][1]); }
+        c.stroke();
+      }
+      for (x = 0; x < N; x++) {
+        var p = pts[x], r = radius(x);
+        if (st[x] === I) {
+          var k1 = animate ? Math.min(1, (now - fxInf[x]) / 360) : 1;
+          c.fillStyle = col["--crimson"];
+          c.beginPath(); c.arc(p[0], p[1], (r + 0.5) * (0.5 + 0.5 * easeOut(k1)), 0, 6.2832); c.fill();
+        } else if (st[x] === R) {
+          c.fillStyle = col["--teal"];
+          c.beginPath(); c.arc(p[0], p[1], r, 0, 6.2832); c.fill();
+        } else {
+          c.fillStyle = col["--surface"]; c.strokeStyle = col["--ink-2"]; c.lineWidth = 1.15;
+          c.beginPath(); c.arc(p[0], p[1], r - 0.4, 0, 6.2832); c.fill(); c.stroke();
+        }
+        var dt = now - fxPatch[x];
+        if (animate && dt >= 0 && dt < 800) {
+          var q = dt / 800;
+          c.strokeStyle = rgba(col["--teal"], 0.65 * (1 - q)); c.lineWidth = 1.2;
+          c.beginPath(); c.arc(p[0], p[1], r + 2 + 10 * easeOut(q), 0, 6.2832); c.stroke();
+        }
+      }
+      drawPlot();
+    }
+    function pct(v) { return Math.round(v * 100) + "%"; }
+    function drawPlot() {
+      if (!PW) return;
+      var c = pctx, l = lang();
+      c.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c.clearRect(0, 0, PW, PH);
+      var x0 = 72, x1 = PW - (l === "zh" ? 96 : 104), y0 = PH - 16, y1 = 18;
+      c.strokeStyle = col["--rule"]; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(x0, Math.round(y0) + 0.5); c.lineTo(x1, Math.round(y0) + 0.5); c.stroke();
+      c.setLineDash([2, 3]); c.beginPath(); c.moveTo(x0, Math.round(y1) + 0.5); c.lineTo(x1, Math.round(y1) + 0.5); c.stroke(); c.setLineDash([]);
+      c.font = "11px " + SANS; c.fillStyle = col["--ink-3"]; c.textBaseline = "middle"; c.textAlign = "right";
+      c.fillText("100%", x0 - 8, y1);
+      c.fillText("0", x0 - 8, y0);
+      // The trace is drawn from the left edge; once the window is full it scrolls.
+      var xEnd = x0 + (x1 - x0) * Math.max(0, hist.length - 1) / (HIST - 1);
+      function series(idx, color) {
+        if (hist.length < 2) return;
+        c.strokeStyle = color; c.lineWidth = 1.7; c.lineJoin = "round"; c.beginPath();
+        for (var t = 0; t < hist.length; t++) {
+          var X = x0 + (x1 - x0) * t / (HIST - 1), Y = y0 - (y0 - y1) * hist[t][idx];
+          if (t) c.lineTo(X, Y); else c.moveTo(X, Y);
+        }
+        c.stroke();
+      }
+      series(1, col["--teal"]);
+      series(0, col["--crimson"]);
+      var last = hist.length ? hist[hist.length - 1] : [0, 0];
+      // Direct labels at the line ends, kept inside the panel and at least GAP px apart.
+      var lo = y1 + 6, hi = y0 - 6, GAP = 14;
+      var ys = [last[0], last[1]].map(function (v) { return Math.max(lo, Math.min(hi, y0 - (y0 - y1) * v)); });
+      var upper = ys[0] < ys[1] ? 0 : (ys[1] < ys[0] ? 1 : (last[0] >= last[1] ? 0 : 1)), lower = 1 - upper;
+      if (ys[lower] - ys[upper] < GAP) {
+        var m = (ys[0] + ys[1]) / 2;
+        ys[upper] = m - GAP / 2; ys[lower] = m + GAP / 2;
+        if (ys[lower] > hi) { ys[lower] = hi; ys[upper] = hi - GAP; }
+        if (ys[upper] < lo) { ys[upper] = lo; ys[lower] = lo + GAP; }
+      }
+      c.textAlign = "left"; c.font = "12px " + SANS;
+      var names = l === "zh" ? ["感染 ", "已修复 "] : ["infected ", "patched "];
+      [[0, col["--crimson"]], [1, col["--teal"]]].forEach(function (s) {
+        c.fillStyle = s[1];
+        c.fillText(names[s[0]] + pct(last[s[0]]), xEnd + 8, ys[s[0]]);
+      });
+    }
+
+    // Controls
+    var bPlay = document.getElementById("f-play"), bDef = document.getElementById("f-def"), bReset = document.getElementById("f-reset");
+    var TXT = { en: { pause: "Pause", play: "Play", on: "Defense on", off: "Defense off", reset: "Reset" },
+                zh: { pause: "暂停", play: "播放", on: "防御：开", off: "防御：关", reset: "重置" } };
+    function relabel() {
+      var t = TXT[lang()];
+      bPlay.textContent = running ? t.pause : t.play;
+      bDef.querySelector(".lbl").textContent = defence ? t.on : t.off;
+      bDef.setAttribute("aria-pressed", String(defence));
+      bReset.textContent = t.reset;
+      drawPlot();
+    }
+
+    // Animation loop: runs only while playing, on screen and in a visible tab.
+    var raf = 0, last = 0, onScreen = true;
+    function frame(now) {
+      raf = 0;
+      if (!running || !onScreen || document.hidden) return;
+      if (now - last >= STEP_MS) { last = now; step(now); }
+      draw(now);
+      raf = requestAnimationFrame(frame);
+    }
+    function kick() { if (running && onScreen && !document.hidden && !raf) raf = requestAnimationFrame(frame); }
+    function play() { running = true; relabel(); kick(); }
+    function pause() { running = false; relabel(); if (raf) { cancelAnimationFrame(raf); raf = 0; } draw(performance.now()); }
+
+    bPlay.addEventListener("click", function () { running ? pause() : play(); });
+    bDef.addEventListener("click", function () { defence = !defence; bucket = 0; relabel(); });
+    bReset.addEventListener("click", function () { reset(performance.now()); draw(performance.now()); });
+
+    function hit(ev) {
+      if (!pts.length) return -1;
+      var r = netC.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top, best = -1, bd = 1e9;
+      for (var q = 0; q < N; q++) { var dx = pts[q][0] - mx, dy = pts[q][1] - my, d = dx * dx + dy * dy; if (d < bd) { bd = d; best = q; } }
+      return best >= 0 && bd < Math.pow(radius(best) + 9, 2) ? best : -1;
+    }
+    netC.addEventListener("click", function (ev) {
+      var x = hit(ev);
+      if (x < 0) return;
+      if (st[x] !== I) { infect(x, performance.now()); quiet = 0; }
+      if (!running) { record(); draw(performance.now()); }
+    });
+    netC.addEventListener("pointermove", function (ev) { netC.style.cursor = hit(ev) >= 0 ? "pointer" : "default"; });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(netC);
+    }
+    document.addEventListener("visibilitychange", kick);
+    if ("ResizeObserver" in window) new ResizeObserver(function () { size(); }).observe(netC);
+    else window.addEventListener("resize", size);
+    function recolor() { readColors(); draw(performance.now()); }
+    if (darkMQ.addEventListener) darkMQ.addEventListener("change", recolor);
+    if (reduceMQ.addEventListener) reduceMQ.addEventListener("change", function () { if (reduceMQ.matches) pause(); });
+
+    readColors();
+    reset(performance.now());
+    if (reduceMQ.matches) {
+      // No autoplay: show a still from part-way through an outbreak; the Play button starts it.
+      for (k = 0; k < 34; k++) step(0);
+      running = false;
+    } else {
+      running = true;
+    }
+    size();
+    relabel();
+    kick();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { drawPlot(); });
+
+    return { relabel: relabel };
+  })();
+
+  syncLang();
+})();
+</script>
+</body>
+</html>
