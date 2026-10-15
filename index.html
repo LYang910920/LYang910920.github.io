@@ -6,8 +6,7 @@
 <title>Lu-Xing Yang 杨橹星 | Deakin University</title>
 <meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in the School of Information Technology at Deakin University, Melbourne. He works on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and reinforcement learning.">
 <meta name="author" content="Lu-Xing Yang">
-<link rel="canonical" href="https://lyang910920.github.io/">
-<link rel="alternate" hreflang="en" href="https://lyang910920.github.io/?lang=en">
+<link rel="alternate" hreflang="en" href="https://lyang910920.github.io/">
 <link rel="alternate" hreflang="zh-Hans" href="https://lyang910920.github.io/?lang=zh">
 <link rel="alternate" hreflang="x-default" href="https://lyang910920.github.io/">
 <meta property="og:type" content="profile">
@@ -30,7 +29,7 @@
 <link rel="preload" href="assets/fonts/sans.woff2" as="font" type="font/woff2" crossorigin>
 <script>
 /* Before first paint: pick the language (?lang=, then last choice, then browser language) and the colour theme (last choice, else the system setting). */
-(function(){var r=document.documentElement,l="en";try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("lang"),t=localStorage.getItem("theme");if(q==="zh"||q==="en")l=q;else if(s==="zh"||s==="en")l=s;else if(/^zh\b/i.test(navigator.language||""))l="zh";if(t==="light"||t==="dark")r.setAttribute("data-theme",t);}catch(e){}r.setAttribute("data-lang",l);r.lang=l==="zh"?"zh-Hans":"en";r.className+=" js";})();
+(function(){var r=document.documentElement,l="en";try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("lang"),t=localStorage.getItem("theme");if(q==="zh"||q==="en")l=q;else if(s==="zh"||s==="en")l=s;else if(/^zh\b/i.test(navigator.language||""))l="zh";if(t==="light"||t==="dark")r.setAttribute("data-theme",t);if(localStorage.getItem("still")==="1")r.className+=" still";}catch(e){}r.setAttribute("data-lang",l);r.lang=l==="zh"?"zh-Hans":"en";var c=document.createElement("link");c.rel="canonical";c.href="https://lyang910920.github.io/"+(q==="zh"?"?lang=zh":"");document.head.appendChild(c);r.className+=" js";})();
 </script>
 <style>
 /* ---------- Fonts (self-hosted, so the page also loads quickly in mainland China) ---------- */
@@ -101,7 +100,6 @@ button{font:inherit;color:inherit}
 .skip:focus{top:12px}
 .nw{white-space:nowrap}
 .i{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.125em}
-.i.fill{fill:currentColor;stroke:none}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* ---------- Header ---------- */
@@ -152,7 +150,6 @@ button{font:inherit;color:inherit}
 .name-sub{display:block;margin-top:.5em;font-size:.36em;line-height:1.2;font-weight:400;letter-spacing:.14em;color:var(--ink-2)}
 .name .zh .name-sub{letter-spacing:.01em;font-weight:400;margin-top:.55em}
 .role{margin-top:1.4rem;font-family:var(--sans);font-size:1rem;line-height:1.55;color:var(--ink-2)}
-.role .eq{color:var(--ink-3)}
 .statement{margin-top:1.4rem;font-size:clamp(1.3125rem,1.15rem + .55vw,1.5625rem);line-height:1.38;letter-spacing:-.005em;color:var(--ink);max-width:23em}
 :root[data-lang="zh"] .statement{line-height:1.6;letter-spacing:.01em;font-size:clamp(1.1875rem,1.05rem + .45vw,1.375rem)}
 .statement-2{margin-top:.9rem;font-size:1.0625rem;line-height:1.65;color:var(--ink-2);max-width:36em}
@@ -216,9 +213,11 @@ button{font:inherit;color:inherit}
 .btn{font-family:var(--sans);font-size:.8125rem;line-height:1;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:6px;height:34px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:border-color .2s}
 .btn:hover{border-color:var(--ink-3)}
 .btn .i{font-size:.95rem}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:6px;background:var(--surface);overflow:hidden}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
 .seg button{font-family:var(--sans);font-size:.8125rem;line-height:1;height:32px;padding:0 11px;border:0;border-left:1px solid var(--rule);background:transparent;color:var(--ink-2);cursor:pointer;transition:background-color .2s,color .2s}
-.seg button:first-child{border-left:0}
+.seg button:first-child{border-left:0;border-radius:5px 0 0 5px}
+.seg button:last-child{border-radius:0 5px 5px 0}
+.seg button:focus-visible{position:relative;z-index:1}
 .seg button:hover{color:var(--ink)}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 figcaption{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2);max-width:70ch}
@@ -291,8 +290,8 @@ abbr[title]{text-decoration:none;cursor:help}
 .fig2 figcaption{margin-top:10px}
 .lab{font-family:var(--sans);font-size:11px;fill:var(--ink-3)}
 .lab-b{font-family:var(--sans);font-size:12px;font-weight:600}
-.f-def{fill:var(--blue)}.f-att{fill:var(--crimson)}.f-ink{fill:var(--ink)}.f-ink2{fill:var(--ink-2)}
-.s-rule{stroke:var(--rule)}.s-edge{stroke:var(--edge)}.s-ink2{stroke:var(--ink-2)}.s-def{stroke:var(--blue)}.s-att{stroke:var(--crimson)}.s-teal{stroke:var(--teal)}
+.f-def{fill:var(--blue)}.f-att{fill:var(--crimson)}
+.s-rule{stroke:var(--rule)}.s-ink2{stroke:var(--ink-2)}.s-def{stroke:var(--blue)}
 .scan-cursor{animation:sweep 8s linear infinite}
 .scan-win{fill:var(--blue);opacity:.16}
 .att-win{fill:var(--crimson);opacity:.85;transform-box:fill-box;transform-origin:left center;animation:attack 8s ease-in-out infinite}
@@ -307,8 +306,6 @@ abbr[title]{text-decoration:none;cursor:help}
 .pulse{position:relative;width:8px;height:8px;border-radius:50%;background:var(--teal)}
 .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--teal);opacity:0;animation:ping 2.2s var(--ease) infinite}
 @keyframes ping{0%{transform:scale(.4);opacity:.7}100%{transform:scale(1.6);opacity:0}}
-.focus-h{margin-top:8px;font-weight:600;font-size:1.25rem;line-height:1.3;letter-spacing:-.008em}
-:root[data-lang="zh"] .focus-h{letter-spacing:.03em}
 .focus-intro{margin-top:.5rem;max-width:68ch;font-size:1rem;line-height:1.62;color:var(--ink-2)}
 :root[data-lang="zh"] .focus-intro{line-height:1.85}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px;margin:18px 0 0;padding:0;list-style:none}
@@ -364,17 +361,16 @@ abbr[title]{text-decoration:none;cursor:help}
 @keyframes draw{0%{stroke-dashoffset:var(--len)}55%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
 .blink{animation:blink 6s infinite}
 @keyframes blink{0%,20%{opacity:0}26%,85%{opacity:1}100%{opacity:0}}
-.travel{offset-rotate:0deg;animation:travel 3.2s linear infinite}
-@keyframes travel{from{offset-distance:0%}to{offset-distance:100%}}
 .sweep-x{animation:sweepx 6s linear infinite}
 @keyframes sweepx{from{transform:translateX(0)}to{transform:translateX(var(--dx))}}
 .bob{animation:bob 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes bob{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
 @media (prefers-reduced-motion: reduce){
-  .sp .nd,.draw,.blink,.travel,.sweep-x,.bob,.scan-cursor,.att-win,.pulse::after{animation:none!important}
+  .sp .nd,.draw,.blink,.sweep-x,.bob,.scan-cursor,.att-win,.pulse::after{animation:none!important}
   .draw{stroke-dashoffset:0}
   .att-win{transform:none;opacity:.85}
-  .travel{offset-distance:40%}
+  .sp .nd:nth-of-type(-n+3){fill:var(--teal);stroke:var(--teal)}
+  .sp .nd:nth-of-type(n+4):nth-of-type(-n+5){fill:var(--crimson);stroke:var(--crimson)}
 }
 
 /* ---------- Publications ---------- */
@@ -383,7 +379,8 @@ abbr[title]{text-decoration:none;cursor:help}
 .chip .i{font-size:.95rem}
 .chip:hover{border-color:var(--ink-3);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.chip .n{font-variant-numeric:lining-nums tabular-nums;opacity:.7}
+.chip .n{font-variant-numeric:lining-nums tabular-nums;color:var(--ink-3)}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.75}
 .years{list-style:none;padding:0}
 .year{display:grid;grid-template-columns:4.25rem minmax(0,1fr);gap:0 24px;padding:22px 0;border-top:1px solid var(--rule-2)}
 .year.first{border-top:0}
@@ -418,7 +415,6 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 .review p{margin-top:6px;font-family:var(--sans);font-size:.8438rem;line-height:1.55;color:var(--ink-2)}
 @media (max-width:860px){.review{max-width:none}}
 .review .chips{margin-top:10px}
-.full{margin-top:28px;font-family:var(--sans);font-size:.9375rem;color:var(--ink-2)}
 @media (max-width:560px){.year{grid-template-columns:minmax(0,1fr);gap:10px}}
 
 /* ---------- Funding & awards ---------- */
@@ -480,7 +476,6 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 .tl>li:last-child{padding-bottom:0}
 .tl>li::before{content:"";position:absolute;left:1px;top:.42em;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--edge)}
 .tl>li.now::before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 20%,transparent)}
-.tl .org{display:inline-flex;align-items:center;gap:6px}
 .tl .now-b{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;font-family:var(--sans);font-size:.6875rem;font-weight:600;letter-spacing:.04em;vertical-align:2px;color:var(--teal);background:var(--teal-w)}
 @media (max-width:560px){.tl>li{grid-template-columns:minmax(0,1fr)}}
 
@@ -493,7 +488,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 .editor{display:flex;align-items:center;gap:14px;padding:14px 16px;margin-bottom:22px}
 .editor .aic{background:var(--teal-w);color:var(--teal)}
 .editor b{display:block;font-weight:600;font-size:1.0625rem}
-.editor span{font-family:var(--sans);font-size:.8438rem;color:var(--ink-2)}
+.editor div>span{font-family:var(--sans);font-size:.8438rem;color:var(--ink-2)}
 
 /* ---------- Contact ---------- */
 .ccards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin:0;padding:0;list-style:none}
@@ -545,6 +540,40 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 @media (max-width:860px){.news-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:520px){.news-list li{grid-template-columns:30px minmax(0,1fr)}.news-list time{grid-column:2;line-height:1.4}.news-list .nic{grid-row:1 / span 2}}
 
+
+/* ---------- Layout refinements ---------- */
+.lang{white-space:nowrap;flex:none}
+.tools>*{flex:none}
+@media (max-width:480px){.mbtn{display:none}}
+@media (max-width:360px){.top .wrap{gap:10px}.tools{gap:6px}.lang{padding:0 10px}}
+.mnav .mrow{grid-column:1 / -1}
+.mnav .mtoggle{display:flex;align-items:center;gap:10px;width:100%;padding:12px 4px;border:0;border-bottom:1px solid var(--rule-2);background:none;color:var(--ink);font:inherit;cursor:pointer;text-align:left}
+.mnav .mtoggle .i{color:var(--teal)}
+.mtoggle .i-play,.mtoggle .t-play{display:none}
+:root.still .mtoggle .i-play,:root.still .mtoggle .t-play{display:inline}
+:root.still .mtoggle .i-pause,:root.still .mtoggle .t-pause{display:none}
+@media (min-width:981px){.mnav{right:max(var(--gutter),calc((100% - var(--wrap)) / 2 + var(--gutter)))}}
+@media (min-width:981px){.hero .fig{position:sticky;top:84px}.links{max-width:25rem}}
+h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
+.prose p,.fcard p,.theme .tb,.news-list p,.statement,.statement-2,figcaption p,.case p{text-wrap:pretty}
+.pub-note{border-radius:12px}
+.qcard .set{align-items:flex-start;line-height:1.3;min-height:2.6em}
+.qcard .set .i{margin-top:.05em}
+.case-k{align-items:flex-start;text-transform:none;letter-spacing:.01em;font-size:.8125rem}
+.case-k .i{margin-top:.2em}
+.focus-k,.series .kick,.lectures .ln,.theme .th-no,.ccard h3{text-transform:none;letter-spacing:.01em;font-size:.8125rem}
+:root[data-lang="zh"] .focus-k,:root[data-lang="zh"] .series .kick,:root[data-lang="zh"] .ccard h3{letter-spacing:.06em}
+@media (min-width:620px){.awards>li:first-child{grid-column:1 / -1}}
+@media (max-width:640px){.cmp-row{grid-template-columns:7.8rem minmax(0,1fr) 2.6rem}}
+@media (max-width:420px){.controls{gap:6px}.btn,.seg button{padding:0 9px}}
+@media (max-width:860px){.focus{padding:20px 0 0;background:none;border:0;box-shadow:none;border-radius:0}}
+@media (max-width:360px){.fcard .ill .lab{font-size:12px}}
+.fig2-key{display:none;margin:0 0 8px;font-family:var(--sans);font-size:.8125rem;color:var(--ink-2)}
+.fig2-key b{font-weight:600}
+.fig2-key .f-def-t{color:var(--blue)}.fig2-key .f-att-t2{color:var(--crimson)}
+@media (max-width:420px){.fig2-key{display:block}.fig2 .lab-b,.fig2 .sub,.fig2 .waits{display:none}}
+.news-h{font-size:1.625rem;letter-spacing:-.012em}
+
 /* ---------- Illustration details ---------- */
 .now-k{display:inline-block;margin-right:6px;padding:0 8px;border-radius:999px;font-family:var(--sans);font-size:.6875rem;font-weight:600;letter-spacing:.08em;line-height:1.75;text-transform:uppercase;color:var(--teal);border:1px solid color-mix(in srgb,var(--teal) 35%,transparent);background:var(--surface);vertical-align:2px}
 .now-go{display:inline-flex;align-items:center;gap:4px;min-height:24px;margin-left:4px;font-family:var(--sans);font-size:.875rem;white-space:nowrap}
@@ -574,8 +603,6 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 .fz-cage .zone.red{fill:var(--crimson-w);stroke:color-mix(in srgb,var(--crimson) 35%,transparent)}
 .fz-cage .atk{fill:none;stroke:var(--crimson);stroke-width:1.6;stroke-dasharray:4 3;stroke-linecap:round}
 .fz-cage .lab{font-size:10px}
-.travel-r{animation:travelr 3.6s var(--ease) infinite}
-@keyframes travelr{0%{transform:translateX(0);opacity:0}10%{opacity:1}55%{transform:translateX(-46px);opacity:1}100%{transform:translate(-100px,-28px);opacity:0}}
 .fz-war .rn circle{fill:var(--crimson-w);stroke:var(--crimson);stroke-width:1.4}
 .fz-war .bn circle{fill:var(--blue-w);stroke:var(--blue);stroke-width:1.4}
 .fz-war .arr-r{fill:none;stroke:var(--crimson);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
@@ -592,7 +619,17 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 :root[data-lang="zh"] .series .kick{letter-spacing:.14em}
 .lectures .lq{display:block;margin-top:3px;font-family:var(--sans);font-size:.8125rem;line-height:1.45;color:var(--ink-2)}
 .lectures li{align-items:start}
-@media (prefers-reduced-motion: reduce){.loop .orbit,.travel-r,.travel-x{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.loop .orbit,.travel-x{animation:none!important}}
+
+/* Visitors can stop all decorative motion with the pause button in the header (class "still" on the root). */
+:root.still .sp .nd,:root.still .draw,:root.still .blink,:root.still .sweep-x,:root.still .bob,:root.still .scan-cursor,:root.still .att-win,:root.still .pulse::after,:root.still .loop .orbit,:root.still .travel-x{animation:none!important}
+:root.still .draw{stroke-dashoffset:0}
+:root.still .att-win{transform:none;opacity:.85}
+:root.still .sp .nd:nth-of-type(-n+3){fill:var(--teal);stroke:var(--teal)}
+:root.still .sp .nd:nth-of-type(n+4):nth-of-type(-n+5){fill:var(--crimson);stroke:var(--crimson)}
+.mbtn .i-play{display:none}
+:root.still .mbtn .i-play{display:inline}
+:root.still .mbtn .i-pause{display:none}
 
 /* Decorative SVG animations run only while their figure is on screen (class added by the script). */
 .js svg.anim:not(.live) *{animation-play-state:paused!important}
@@ -613,6 +650,16 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 }
 
 @media print{
+  :root:root:root{--bg:#fff;--surface:#fff;--panel:#F6F8F8;--ink:#16212B;--ink-2:#47535F;--ink-3:#5D6873;--rule:#D3D9DC;--rule-2:#E2E7E8;--edge:#C2CBCF;--teal:#18665F;--teal-2:#0F4C47;--crimson:#B3373B;--blue:#245C81;color-scheme:light}
+  .links a.primary{background:none;color:var(--ink);border-color:var(--rule)}
+  .links a.primary .i{color:var(--teal)}
+  .news-list li.more{display:grid}
+  .news-more{display:none!important}
+  .sp .nd,.draw,.blink,.travel-x,.sweep-x,.bob,.scan-cursor,.att-win,.pulse::after,.loop .orbit{animation:none!important}
+  .draw{stroke-dashoffset:0}
+  .att-win{transform:none;opacity:.85}
+  .sp .nd:nth-of-type(-n+3){fill:var(--teal);stroke:var(--teal)}
+  .sp .nd:nth-of-type(n+4):nth-of-type(-n+5){fill:var(--crimson);stroke:var(--crimson)}
   .top,.controls,.filters,.skip,.to-top,.copy,.mnav{display:none!important}
   body{background:#fff}
   .side{position:static}
@@ -724,8 +771,9 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
       <a href="#experience"><span class="en">Experience</span><span class="zh" lang="zh-Hans">经历</span></a>
       <a href="#contact"><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系</span></a>
       <span class="tools">
+        <button class="icon-btn mbtn" id="motion" type="button" aria-pressed="false"><svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i-play" aria-hidden="true"><use href="#i-play"/></svg><span class="sr"><span class="en">Pause animations</span><span class="zh" lang="zh-Hans">暂停动画</span></span></button>
         <button class="icon-btn tbtn" id="theme" type="button" aria-pressed="false"><svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg><span class="sr" id="theme-lbl">Dark mode</span></button>
-        <button class="lang" id="lang" type="button"><span class="en" lang="zh-Hans">中文</span><span class="zh" lang="en">English</span></button>
+        <button class="lang" id="lang" type="button"><span class="en"><span class="sr">Switch to </span><span lang="zh-Hans">中文</span></span><span class="zh"><span class="sr" lang="zh-Hans">切换到</span><span lang="en">English</span></span></button>
         <button class="icon-btn menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="mnav"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr"><span class="en">Menu</span><span class="zh" lang="zh-Hans">菜单</span></span></button>
       </span>
     </nav>
@@ -741,6 +789,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
       <li><a href="#experience"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span class="en">Experience</span><span class="zh" lang="zh-Hans">经历</span></a></li>
       <li><a href="#service"><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg><span class="en">Service</span><span class="zh" lang="zh-Hans">学术服务</span></a></li>
       <li><a href="#contact"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系</span></a></li>
+      <li class="mrow"><button type="button" class="mtoggle" id="motion2" aria-pressed="false"><svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i-play" aria-hidden="true"><use href="#i-play"/></svg><span class="t-pause"><span class="en">Pause animations</span><span class="zh" lang="zh-Hans">暂停动画</span></span><span class="t-play"><span class="en">Play animations</span><span class="zh" lang="zh-Hans">播放动画</span></span></button></li>
     </ul>
   </nav>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -765,14 +814,14 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
       </p>
       <p class="statement" style="--k:3">
         <span class="en">My research gives defenders a mathematical basis for deciding when, where and how hard to act against threats that spread through networks.</span>
-        <span class="zh" lang="zh-Hans">威胁在网络里扩散时，防御方该在什么时候、对哪里、用多大力度出手？我的研究为这些决定提供数学依据。</span>
+        <span class="zh" lang="zh-Hans">威胁在网络里扩散时，防御方该在什么时候、在哪里、用多大力度出手？我的研究为这些决定提供数学依据。</span>
       </p>
       <p class="statement-2" style="--k:4">
         <span class="en">My work covers malware, advanced persistent threats, social engineering and rumors. In each case the defender has incomplete information and limited resources, and the attacker adapts. To work out what the defender should do, I combine complex network dynamics, game theory and optimal control with single- and multi-agent reinforcement learning.</span>
         <span class="zh" lang="zh-Hans">研究对象有恶意软件、高级持续性威胁、社会工程攻击和谣言。防御方往往信息不全、资源有限，攻击者还会不断调整做法，我关心的是这时该怎样决策。方法上以复杂网络动力学、博弈论和最优控制为基础，结合强化学习和多智能体强化学习。</span>
       </p>
-      <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我始终致力于做经得起推敲、也能真正落地的网络安全研究，并培养能把这些工作继续推进的研究者。</span></span></p>
-      <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to disinformation containment. I am also combining large language models with cybersecurity and game theory.</span><span class="zh" lang="zh-Hans">目前的研究重心是分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；大语言模型与网络安全、博弈论的结合也是我的一个重点。</span> <a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">当前重点</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
+      <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我致力于做数学上严谨、实际中用得上的网络安全研究，也重视培养能把这些工作继续推进的研究者。</span></span></p>
+      <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to disinformation containment. I am also combining large language models with cybersecurity and game theory.</span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span> <a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">见下文</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
       <ul class="links" style="--k:6">
         <li><a class="primary" href="mailto:y.luxing@deakin.edu.au"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>Google Scholar</a></li>
@@ -783,7 +832,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
       <ul class="creds" style="--k:7">
         <li><svg class="i" aria-hidden="true"><use href="#i-star"/></svg><a href="https://research.com/u/lu-xing-yang"><span class="en">Research.com Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com 2026 全球最佳计算机科学家榜单</span></a></li>
         <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span class="en">IEEE Senior Member</span><span class="zh" lang="zh-Hans">IEEE 高级会员</span></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg><span class="en">Academic Editor, <i>PLOS ONE</i></span><span class="zh" lang="zh-Hans"><i>PLOS ONE</i> 学术编辑</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg><span class="en">Academic Editor, <i>PLOS ONE</i></span><span class="zh" lang="zh-Hans"><i lang="en">PLOS ONE</i> 学术编辑</span></li>
       </ul>
     </div>
 
@@ -822,8 +871,8 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
         <button type="button" class="btn" id="f-reset"><svg class="i" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl">Reset</span></button>
       </div>
       <figcaption id="fig-cap">
-        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host, and a defender with a limited patching budget responds. (a) Red hosts are infected; teal hosts have recovered, either patched by the defender or on their own, and stay immune for a while. Red links show where the infection can spread next. Click any host to infect&nbsp;it. (b) Share of hosts infected and recovered over time. (c) Mean share of hosts infected over 300 steps, averaged over 60 simulated runs on the same network (a new outbreak starts whenever the previous one dies out), under three strategies: no defense; random patching, which patches detected infections in random order; and targeted patching, which goes first to the infected hosts with the most susceptible neighbors. Both patching strategies use the same budget. The switch below the figure runs the live model under any of the&nbsp;three.</p>
-        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播，防御方用有限的修补预算应对。(a) 红色是已感染主机；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复，之后一段时间内免疫。红色连线表示感染下一步可能沿它传过去。点击任一主机，它就会被感染。(b) 感染和已恢复主机所占比例随时间的变化。(c) 在同一张网络上模拟 60 次、每次 300 步（一次爆发平息后会引入新的爆发），三种做法下被感染主机的平均比例：不防御；随机修补，按随机顺序修补已发现的感染主机；定向修补，先修补易感邻居最多的感染主机。两种修补做法的预算相同。图下方的按钮可以让模型按任一种做法<span class="nw">实时运行。</span></p>
+        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host, and a defender with a limited patching budget responds. (a) Red hosts are infected; teal hosts have recovered, either patched by the defender or on their own, and stay immune for a while. Red links show where the infection can spread next. Click any host to infect&nbsp;it. (b) Share of hosts infected and recovered over time. (c) Mean share of hosts infected over 300 steps, averaged over 60 simulated runs on the same network (a new outbreak starts whenever the previous one dies out), under three strategies: no defense; random patching, which patches detected infections in random order; and targeted patching, which goes first to the infected hosts with the most susceptible neighbors. Both patching strategies act only on detected infections and use the same budget. The switch below the figure runs the live model under any of the&nbsp;three.</p>
+        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播，防御方用有限的修补预算应对。(a) 红色是已感染主机；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复的，之后一段时间内免疫。红色连线表示感染下一步可能沿它传过去。点击任一主机，它就会被感染。(b) 感染和已恢复主机所占比例随时间的变化。(c) 在同一张网络上模拟 60 次、每次 300 步（一次爆发平息后会引入新的爆发），三种做法下被感染主机的平均比例：不防御；随机修补，按随机顺序修补已发现的感染主机；定向修补，先修补易感邻居最多的感染主机。两种修补做法都只处理已发现的感染，预算也相同。图下方的按钮可以让模型按任一种做法<span class="nw">实时运行。</span></p>
       </figcaption>
     </figure>
     </div>
@@ -852,12 +901,12 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           <li>
             <time datetime="2026-10-08"><span class="en">8 Oct 2026</span><span class="zh" lang="zh-Hans">2026.10.08</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-file"/></svg></span>
-            <p><span class="en">Paper accepted in <i>Applied Mathematical Modelling</i>: “<a href="#amm-2026">Compromise-age malware dynamics and shared-capacity defense on directed networks</a>,” with Xiaofan Yang.</span><span class="zh" lang="zh-Hans">论文被 <i>Applied Mathematical Modelling</i> 录用：<a href="#amm-2026">Compromise-age malware dynamics and shared-capacity defense on directed networks</a>（与 Xiaofan Yang 合作）。</span></p>
+            <p><span class="en">“<a href="#amm-2026">Compromise-age malware dynamics and shared-capacity defense on directed networks</a>” accepted in <i>Applied Mathematical Modelling</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#amm-2026" lang="en">Compromise-age malware dynamics and shared-capacity defense on directed networks</a> 被 <i lang="en">Applied Mathematical Modelling</i> 录用。</span></p>
           </li>
           <li>
             <time datetime="2026-05-07"><span class="en">7 May 2026</span><span class="zh" lang="zh-Hans">2026.05.07</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-cap"/></svg></span>
-            <p><span class="en">Congratulations to Dr Mousa Tayseer Mousa Ja’far, whose PhD thesis, <i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Mousa Tayseer Mousa Ja’far 博士毕业，博士论文 <i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i> 已获批授予学位。</span></p>
+            <p><span class="en">Congratulations to Dr Mousa Tayseer Mousa Ja’far, whose PhD thesis, <i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Mousa Tayseer Mousa Ja’far 获批授予博士学位，博士论文为 <i lang="en">A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>。</span></p>
           </li>
           <li>
             <time datetime="2026-05"><span class="en">May 2026</span><span class="zh" lang="zh-Hans">2026.05</span></time>
@@ -867,12 +916,12 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           <li>
             <time datetime="2026-03-16"><span class="en">16 Mar 2026</span><span class="zh" lang="zh-Hans">2026.03.16</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-file"/></svg></span>
-            <p><span class="en">“<a href="#tifs-2026">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game Approach</a>” accepted in <i>IEEE Transactions on Information Forensics and Security</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2026">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game Approach</a> 被 <i>IEEE TIFS</i> 录用。</span></p>
+            <p><span class="en">“<a href="#tifs-2026">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game Approach</a>” accepted in <i>IEEE Transactions on Information Forensics and Security</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2026" lang="en">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game Approach</a> 被 <i>IEEE TIFS</i> 录用。</span></p>
           </li>
           <li>
             <time datetime="2026-01-23"><span class="en">23 Jan 2026</span><span class="zh" lang="zh-Hans">2026.01.23</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-award"/></svg></span>
-            <p><span class="en">“<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a>” (IEEE TIFS) was selected as an IEEE Signal Processing Society Paper Spotlight.</span><span class="zh" lang="zh-Hans">IEEE TIFS 论文 <a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a> 入选 IEEE 信号处理学会（Signal Processing Society）Paper Spotlight。</span></p>
+            <p><span class="en">“<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a>” (IEEE TIFS) was selected as an IEEE Signal Processing Society Paper Spotlight.</span><span class="zh" lang="zh-Hans">IEEE TIFS 论文 <a href="#tifs-2025" lang="en">Modeling and Mitigating Social Engineering Malware</a> 入选 IEEE 信号处理学会（Signal Processing Society）Paper Spotlight。</span></p>
           </li>
           <li>
             <time datetime="2026-01"><span class="en">Jan 2026</span><span class="zh" lang="zh-Hans">2026.01</span></time>
@@ -882,17 +931,17 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           <li>
             <time datetime="2025-12-03"><span class="en">3 Dec 2025</span><span class="zh" lang="zh-Hans">2025.12.03</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-cap"/></svg></span>
-            <p><span class="en">Congratulations to Dr Xiaojuan Cheng, whose PhD thesis, <i>Modeling and Analysis of Cyberwar</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Xiaojuan Cheng 博士毕业，博士论文 <i>Modeling and Analysis of Cyberwar</i> 已获批授予学位。</span></p>
+            <p><span class="en">Congratulations to Dr Xiaojuan Cheng, whose PhD thesis, <i>Modeling and Analysis of Cyberwar</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Xiaojuan Cheng 获批授予博士学位，博士论文为 <i lang="en">Modeling and Analysis of Cyberwar</i>。</span></p>
           </li>
           <li>
             <time datetime="2025-11-17"><span class="en">17 Nov 2025</span><span class="zh" lang="zh-Hans">2025.11.17</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-file"/></svg></span>
-            <p><span class="en">“<a href="#tcss-2026">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats Propagation</a>” accepted in <i>IEEE Transactions on Computational Social Systems</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tcss-2026">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats Propagation</a> 被 <i>IEEE TCSS</i> 录用。</span></p>
+            <p><span class="en">“<a href="#tcss-2026">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats Propagation</a>” accepted in <i>IEEE Transactions on Computational Social Systems</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tcss-2026" lang="en">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats Propagation</a> 被 <i>IEEE TCSS</i> 录用。</span></p>
           </li>
           <li>
             <time datetime="2025-11-02"><span class="en">2 Nov 2025</span><span class="zh" lang="zh-Hans">2025.11.02</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-file"/></svg></span>
-            <p><span class="en">“<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control Approaches</a>” accepted in <i>IEEE Transactions on Information Forensics and Security</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control Approaches</a> 被 <i>IEEE TIFS</i> 录用。</span></p>
+            <p><span class="en">“<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control Approaches</a>” accepted in <i>IEEE Transactions on Information Forensics and Security</i>.</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2025" lang="en">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control Approaches</a> 被 <i>IEEE TIFS</i> 录用。</span></p>
           </li>
           <li>
             <time datetime="2025-02"><span class="en">Feb 2025</span><span class="zh" lang="zh-Hans">2025.02</span></time>
@@ -912,8 +961,8 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
     <div class="side">
       <p class="sec-no" aria-hidden="true">01</p>
       <h2 class="sec-h" id="h-about"><span class="en">About</span><span class="zh" lang="zh-Hans">简介</span></h2>
-      <!-- To show a portrait, save a photo as assets/photo.jpg (portrait orientation, about 720 × 900 px). -->
-      <img class="portrait" src="assets/photo.jpg" alt="Lu-Xing Yang" width="360" height="450" loading="lazy" onerror="this.remove()">
+      <!-- To show a portrait, save a photo as assets/photo.jpg (portrait orientation, about 720 × 900 px) and uncomment the next line. -->
+      <!-- <img class="portrait" src="assets/photo.jpg" alt="Lu-Xing Yang" width="360" height="450" loading="lazy"> -->
       <ul class="glance">
         <li><svg class="i" aria-hidden="true"><use href="#i-uni"/></svg><span><b><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></b><span class="en">Senior Lecturer since 2026; on faculty since 2019</span><span class="zh" lang="zh-Hans">2026 年起任高级讲师，2019 年起任教</span></span></li>
         <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><b><span class="en">PhD, Chongqing University</span><span class="zh" lang="zh-Hans">重庆大学博士</span></b><span class="en">Computer Science, 2015</span><span class="zh" lang="zh-Hans">计算机科学，2015 年</span></span></li>
@@ -953,7 +1002,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
         <p class="focus-intro"><span class="en">These directions grow out of the three longer-standing themes below.</span><span class="zh" lang="zh-Hans">这些是我眼下在做的研究，都是从后面三个长期方向延伸出来的。</span></p>
         <ul class="fgrid">
           <li class="fcard">
-            <svg class="ill fz-hold anim" viewBox="0 0 280 112" role="img" aria-label="A command held constant between update times while the network state keeps changing" data-zh="两次更新之间命令保持不变，网络状态继续变化">
+            <svg class="ill fz-hold anim" viewBox="0 -8 280 124" role="img" aria-label="A command held constant between update times while the network state keeps changing" data-zh="两次更新之间命令保持不变，网络状态继续变化">
               <path class="s-rule" d="M12 98h256" stroke-width="1"/>
               <path class="upd" d="M72 14v84M132 14v84M192 14v84"/>
               <path class="st draw" pathLength="100" style="--len:100" d="M12 82C40 72 60 76 72 72S110 58 132 64 170 78 192 68 240 48 268 54"/>
@@ -963,13 +1012,13 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
               <text class="lab" x="72" y="109" text-anchor="middle"><tspan class="en">update</tspan><tspan class="zh" lang="zh-Hans">更新</tspan></text>
               <text class="lab" x="132" y="109" text-anchor="middle"><tspan class="en">update</tspan><tspan class="zh" lang="zh-Hans">更新</tspan></text>
               <text class="lab" x="192" y="109" text-anchor="middle"><tspan class="en">update</tspan><tspan class="zh" lang="zh-Hans">更新</tspan></text>
-              <path class="cmd" d="M200 12h12"/><text class="lab" x="216" y="15"><tspan class="en">command</tspan><tspan class="zh" lang="zh-Hans">命令</tspan></text>
-              <path class="st" d="M200 24h12"/><text class="lab" x="216" y="27"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
+              <path class="cmd" d="M200 4h12"/><text class="lab" x="216" y="7"><tspan class="en">command</tspan><tspan class="zh" lang="zh-Hans">命令</tspan></text>
+              <path class="st" d="M200 16h12"/><text class="lab" x="216" y="19"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
             </svg>
             <h4><span class="en">Piecewise-constant (HOLD) games and their extensions</span><span class="zh" lang="zh-Hans">分段常数（HOLD）博弈及其扩展</span></h4>
             <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计费用。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Piecewise-constant games</span><span class="zh" lang="zh-Hans">分段常数博弈</span></li><li class="chip-s"><span class="en">Zero-order hold</span><span class="zh" lang="zh-Hans">零阶保持</span></li><li class="chip-s"><span class="en">Shared capacity</span><span class="zh" lang="zh-Hans">共享容量</span></li></ul>
-            <p class="rel"><span class="en">Related papers:</span><span class="zh" lang="zh-Hans">相关论文：</span> <a href="#amm-2026">Appl. Math. Model. 2026</a> <span class="en">(shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享容量防御）</span></p>
+            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享容量防御）</span></p>
           </li>
           <li class="fcard">
             <svg class="ill fz-cage anim" viewBox="0 0 280 112" role="img" aria-label="CAGE Challenge 4 network: four zones, five blue defender agents, and a red attacker entering through the contractor network" data-zh="CAGE Challenge 4 网络：四个区域、五个蓝方防御智能体，红方从承包商网络进入">
@@ -979,7 +1028,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
               <text class="lab" x="154" y="24"><tspan class="en">Deployed network 2</tspan><tspan class="zh" lang="zh-Hans">部署网络 2</tspan></text>
               <text class="lab" x="16" y="76"><tspan class="en">Headquarters</tspan><tspan class="zh" lang="zh-Hans">总部</tspan></text>
               <text class="lab" x="154" y="76"><tspan class="en">Contractor</tspan><tspan class="zh" lang="zh-Hans">承包商网络</tspan></text>
-              <g class="c-blue"><use class="ic bob" href="#i-shield" x="16" y="30" width="16" height="16"/><use class="ic bob" href="#i-shield" x="36" y="30" width="16" height="16" style="animation-delay:-.7s"/><use class="ic bob" href="#i-shield" x="154" y="30" width="16" height="16" style="animation-delay:-1.4s"/><use class="ic bob" href="#i-shield" x="174" y="30" width="16" height="16" style="animation-delay:-2.1s"/><use class="ic bob" href="#i-shield" x="16" y="82" width="16" height="16" style="animation-delay:-1s"/></g>
+              <g class="c-blue"><g transform="translate(16 30)"><use class="ic bob" href="#i-shield" width="16" height="16"/></g><g transform="translate(36 30)"><use class="ic bob" href="#i-shield" width="16" height="16" style="animation-delay:-.7s"/></g><g transform="translate(154 30)"><use class="ic bob" href="#i-shield" width="16" height="16" style="animation-delay:-1.4s"/></g><g transform="translate(174 30)"><use class="ic bob" href="#i-shield" width="16" height="16" style="animation-delay:-2.1s"/></g><g transform="translate(16 82)"><use class="ic bob" href="#i-shield" width="16" height="16" style="animation-delay:-1s"/></g></g>
               <path class="atk" d="M272 94H118"/>
               <g class="travel-x" style="--dx:-150px;animation-duration:3.6s"><circle class="f-att" cx="270" cy="94" r="3.6"/></g>
               <text class="lab f-att-t" x="262" y="76" text-anchor="end"><tspan class="en">red enters</tspan><tspan class="zh" lang="zh-Hans">红方进入</tspan></text>
@@ -1004,7 +1053,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
             <h4><span class="en">Disinformation and bilateral cyber warfare</span><span class="zh" lang="zh-Hans">信息战与双边网络战</span></h4>
             <p><span class="en">HOLD games and multi-agent learning also apply to containing rumors and disinformation in information warfare. In the bilateral setting each side attacks the other’s network and defends its own. The propaganda war game in our 2024 IEEE TIFS paper is one example: each side pushes its messages into the other’s network and counters the opponent’s messages at home. I am extending both methods to these two-sided contests.</span><span class="zh" lang="zh-Hans">分段常数博弈和多智能体学习也用在谣言和虚假信息的遏制上，也就是信息战。双边的情形里，每一方都在攻击对方网络，同时守住自己的网络。我们 2024 年 IEEE TIFS 论文里的宣传战就是一例：每一方把自己的信息推向对方人群，同时在本地反宣传。我正把这两类方法扩展到这种双边对抗。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Rumors and disinformation</span><span class="zh" lang="zh-Hans">谣言与虚假信息</span></li><li class="chip-s"><span class="en">Information warfare</span><span class="zh" lang="zh-Hans">信息战</span></li><li class="chip-s"><span class="en">Bilateral cyber warfare</span><span class="zh" lang="zh-Hans">双边网络战</span></li></ul>
-            <p class="rel"><span class="en">Related papers:</span><span class="zh" lang="zh-Hans">相关论文：</span> <a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tcss-2025">IEEE TCSS 2025</a>, <a href="#tnse-2024">IEEE TNSE 2024</a></p>
+            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tcss-2025">IEEE TCSS 2025</a>, <a href="#tnse-2024">IEEE TNSE 2024</a></p>
           </li>
           <li class="fcard">
             <svg class="ill fz-llm anim" viewBox="0 0 280 112" role="img" aria-label="External text with a hidden instruction passes a detector before reaching a language-model agent; a game model frames attacker and defender" data-zh="带隐藏指令的外部文本先经过检测，再到达大模型智能体；用博弈模型刻画攻防双方">
@@ -1020,28 +1069,30 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
               <text class="lab" x="259" y="70" text-anchor="middle"><tspan class="en">game</tspan><tspan class="zh" lang="zh-Hans">博弈</tspan></text>
             </svg>
             <h4><span class="en">Language models, cybersecurity and game theory</span><span class="zh" lang="zh-Hans">大语言模型与网络安全、博弈论的结合</span></h4>
-            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark records such cases. I work in both directions: game theory to test such agents against attackers who adapt and to train detectors against injected text that keeps being rewritten to evade them, and language models to turn a written security scenario into a formal game for a solver to analyze.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件，AgentDojo 基准测试记录的就是这类情况。我从两个方向做：用博弈论评测这类智能体面对会调整策略的攻击者时怎样选择，训练检测器对付不断改写、专门绕过检测的注入文本；反过来，用语言模型把文字描述的安全情境整理成博弈模型，交给求解工具计算。</span></p>
+            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark (Debenedetti et al., 2024) records such cases. Game theory helps on two fronts: testing such agents against attackers who adapt, and training detectors against injected text that keeps being rewritten to evade them, as in DataSentinel (Liu et al., IEEE S&amp;P 2025). In the other direction, a language model can turn a written security scenario into a formal game for a solver to analyze, as in GameInterpreter (Deng, Wang and Savani, AAMAS 2025). Bringing language models, cybersecurity and game theory together is one of my current priorities.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件。AgentDojo 基准测试（Debenedetti 等，2024）记录的就是这类情况。博弈论在两方面能派上用场：一是评测这类智能体在会调整策略的攻击者面前怎样选择；二是训练检测器，对付不断改写、专门绕过检测的注入文本，DataSentinel（Liu 等，IEEE S&amp;P 2025）就是这样做的。反过来，语言模型也能把文字描述的安全情境整理成博弈模型，交给求解工具计算，例如 GameInterpreter（Deng、Wang 和 Savani，AAMAS 2025）。把大语言模型、网络安全和博弈论结合起来，是我当前的重点之一。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Large language models</span><span class="zh" lang="zh-Hans">大语言模型</span></li><li class="chip-s"><span class="en">Prompt injection</span><span class="zh" lang="zh-Hans">提示注入</span></li><li class="chip-s"><span class="en">Game modeling</span><span class="zh" lang="zh-Hans">博弈建模</span></li></ul>
           </li>
         </ul>
       </div>
 
+      <h3 class="sr"><span class="en">Approach and long-standing themes</span><span class="zh" lang="zh-Hans">研究思路与长期方向</span></h3>
       <ol class="steps rv" aria-label="Approach" data-zh="研究思路">
         <li class="step"><span class="step-ic" aria-hidden="true"><svg class="i"><use href="#i-net"/></svg></span>
-          <h4><span class="n">1</span><span class="en">Model the spread</span><span class="zh" lang="zh-Hans">刻画传播</span></h4>
+          <h4><span class="n">1</span> <span class="en">Model the spread</span><span class="zh" lang="zh-Hans">刻画传播</span></h4>
           <p><span class="en">Epidemic and opinion dynamics on networks: who can infect whom, and how fast.</span><span class="zh" lang="zh-Hans">在网络上建立传播模型：谁能感染谁，传得多快。</span></p></li>
         <li class="step"><span class="step-ic" aria-hidden="true"><svg class="i"><use href="#i-chart"/></svg></span>
-          <h4><span class="n">2</span><span class="en">Analyze the dynamics</span><span class="zh" lang="zh-Hans">分析演化</span></h4>
+          <h4><span class="n">2</span> <span class="en">Analyze the dynamics</span><span class="zh" lang="zh-Hans">分析演化</span></h4>
           <p><span class="en">Thresholds and long-run behavior: when a threat dies out and when it persists.</span><span class="zh" lang="zh-Hans">传播阈值和长期行为：威胁什么时候消退，什么时候一直存在。</span></p></li>
         <li class="step"><span class="step-ic" aria-hidden="true"><svg class="i"><use href="#i-scale"/></svg></span>
-          <h4><span class="n">3</span><span class="en">Decide the response</span><span class="zh" lang="zh-Hans">决定应对</span></h4>
+          <h4><span class="n">3</span> <span class="en">Decide the response</span><span class="zh" lang="zh-Hans">决定应对</span></h4>
           <p><span class="en">Optimal control and games: when, where and how hard to intervene against an attacker who adapts.</span><span class="zh" lang="zh-Hans">最优控制与博弈：对手会调整时，什么时候、对谁、用多大力度出手。</span></p></li>
         <li class="step"><span class="step-ic" aria-hidden="true"><svg class="i"><use href="#i-chip"/></svg></span>
-          <h4><span class="n">4</span><span class="en">Learn from data</span><span class="zh" lang="zh-Hans">从数据中学习</span></h4>
+          <h4><span class="n">4</span> <span class="en">Learn from data</span><span class="zh" lang="zh-Hans">从数据中学习</span></h4>
           <p><span class="en">Reinforcement learning when the model is uncertain and only part of the network is visible.</span><span class="zh" lang="zh-Hans">模型不准、只看得到部分网络时，用强化学习改进策略。</span></p></li>
       </ol>
 
       <figure class="fig2 card rv" aria-labelledby="fig2-cap">
+        <p class="fig2-key" aria-hidden="true"><span class="en"><b class="f-def-t">Blue</b>: defender’s daily scan · <b class="f-att-t2">red</b>: attacker’s activity</span><span class="zh" lang="zh-Hans"><b class="f-def-t">蓝色</b>：防御方每天的扫描 · <b class="f-att-t2">红色</b>：攻击方的活动</span></p>
         <svg class="anim" viewBox="0 0 520 152" role="img" aria-label="A scan schedule the attacker can observe: scans run at the same time each day and the attacker acts in the gaps after each scan." data-zh="攻击者看得到的扫描时间表：每天同一时间扫描，攻击者在每次扫描结束后的空档行动。">
           <defs><clipPath id="clip2"><rect x="78" y="0" width="434" height="152"/></clipPath></defs>
           <text class="lab-b f-def" x="0" y="44"><tspan class="en">Defender</tspan><tspan class="zh" lang="zh-Hans">防御方</tspan></text>
@@ -1060,9 +1111,9 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           </g>
           <text class="lab" x="119" y="147" text-anchor="middle"><tspan class="en">9:00 scan</tspan><tspan class="zh" lang="zh-Hans">9:00 扫描</tspan></text>
           <text class="lab" x="333" y="147" text-anchor="middle"><tspan class="en">next day 9:00</tspan><tspan class="zh" lang="zh-Hans">次日 9:00</tspan></text>
-          <text class="lab" x="210" y="81" text-anchor="middle"><tspan class="en">waits until the scan ends</tspan><tspan class="zh" lang="zh-Hans">等扫描结束再动手</tspan></text>
+          <text class="lab waits" x="210" y="81" text-anchor="middle"><tspan class="en">waits until the scan ends</tspan><tspan class="zh" lang="zh-Hans">等扫描结束再动手</tspan></text>
         </svg>
-        <figcaption id="fig2-cap"><span class="en"><b class="fig-no">Fig. 2.</b> Why the attacker is modeled as a player. If an organization always scans its hosts at 9:00, an attacker can learn the schedule and act after each scan ends. The scans still run, but they are less likely to catch the attack. Comparing scan plans therefore has to take the attacker’s response into account.</span><span class="zh" lang="zh-Hans"><b class="fig-no">图 2</b>　为什么要把攻击者当作博弈的一方。一个单位把主机扫描固定在每天上午九点，管理员很好安排，攻击者却也可能慢慢摸清这个规律，等扫描结束以后再活动。扫描照常进行，查到攻击的机会却变了。比较扫描计划时，就得把对手的这种回应考虑进去。</span></figcaption>
+        <figcaption id="fig2-cap"><span class="en"><b class="fig-no">Fig. 2.</b> Why the attacker is modeled as a player. If an organization always scans its hosts at 9:00, an attacker can learn the schedule and act after each scan ends. The scans still run, but they are less likely to catch the attack. Comparing scan plans therefore has to take the attacker’s response into account.</span><span class="zh" lang="zh-Hans"><b class="fig-no">图 2</b>　为什么要把攻击者当作博弈的一方。一个单位把主机扫描固定在每天上午九点，管理员很好安排，攻击者却也可能慢慢摸清这个规律，等扫描结束以后再活动。扫描照常进行，查到攻击的机会却小了。比较扫描计划时，就得把对手的这种回应考虑进去。</span></figcaption>
       </figure>
 
       <ol class="themes">
@@ -1084,8 +1135,8 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           <div>
             <h4><span class="en">Threat propagation and risk dynamics in complex networks</span><span class="zh" lang="zh-Hans">复杂网络中的威胁传播与风险演化</span></h4>
             <p class="q"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">What decides how far a threat spreads through a network, how long it persists and how much risk builds up?</span><span class="zh" lang="zh-Hans">网络连接和人的认知、行为，怎样影响恶意软件和谣言的扩散、持续与风险累积？</span></span></p>
-            <p class="tb"><span class="en">Malware, harmful rumors and manipulative information spread over networks that are heterogeneous, multilayer and time-varying. The answer depends on connectivity, on how individuals think and behave, and on how different spreading processes interact. Technical infection and information-driven behavior change are different mechanisms; social engineering couples them, and this theme models that coupling. The analysis covers propagation thresholds and long-run behavior, and extends to identifying models from data, predicting risk, and studying how generative AI and automated accounts amplify risk.</span><span class="zh" lang="zh-Hans">恶意软件、网络谣言和操纵性信息所在的网络，往往是异质的、多层的，还随时间变化。这里研究它们怎样传播：网络连接、个体的认知与行为、几种传播过程之间的相互作用，怎样影响威胁的扩散、持续和风险累积。技术感染和信息影响是两种不同的机制，先把它们分清，再刻画社会工程攻击里技术漏洞和人的行为怎样耦合，分析传播阈值、长期演化和关键的干预因素。结合观测数据，还可以识别模型、预测风险。生成式人工智能和自动化账号参与进来以后，信息怎样传播、风险怎样被放大，也是这里研究的问题。</span></p>
-            <ul class="chips" aria-label="Methods">
+            <p class="tb"><span class="en">Malware, harmful rumors and manipulative information spread over networks that are heterogeneous, multilayer and time-varying. The answer depends on connectivity, on how individuals think and behave, and on how different spreading processes interact. Technical infection and information-driven behavior change are different mechanisms; social engineering couples them, and this theme models that coupling. The analysis covers propagation thresholds and long-run behavior, and extends to identifying models from data, predicting risk and studying how generative AI and automated accounts amplify it.</span><span class="zh" lang="zh-Hans">恶意软件、网络谣言和操纵性信息所在的网络，往往是异质的、多层的，还随时间变化。这里研究它们怎样传播：网络连接、个体的认知与行为、几种传播过程之间的相互作用，怎样影响威胁的扩散、持续和风险累积。技术感染和信息影响是两种不同的机制，先把它们分清，再刻画社会工程攻击里技术漏洞和人的行为怎样耦合，分析传播阈值、长期演化和关键的干预因素。结合观测数据，还可以识别模型、预测风险。生成式人工智能和自动化账号参与进来以后，信息怎样传播、风险怎样被放大，也是这里研究的问题。</span></p>
+            <ul class="chips" aria-label="Methods" data-zh="方法">
               <li class="chip-s"><span class="en">Node-level epidemic models</span><span class="zh" lang="zh-Hans">节点级传播模型</span></li>
               <li class="chip-s"><span class="en">Competing spreading</span><span class="zh" lang="zh-Hans">竞争传播</span></li>
               <li class="chip-s"><span class="en">Malware-opinion coupling</span><span class="zh" lang="zh-Hans">恶意软件与观点耦合</span></li>
@@ -1093,17 +1144,17 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
             </ul>
             <div class="case">
               <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · patch the devices, train the people</span><span class="zh" lang="zh-Hans">案例 · 修补设备，也培训人</span></p>
-              <svg class="mini" viewBox="0 0 300 64" role="img" aria-label="Device compromise and human vigilance affect each other" data-zh="设备受侵和人员警觉相互影响">
-                <rect x="1" y="12" width="104" height="40" rx="8" class="mb-t"/><text class="lab-b mt-t" x="53" y="37" text-anchor="middle"><tspan class="en">Device compromise</tspan><tspan class="zh" lang="zh-Hans">设备受侵</tspan></text>
-                <rect x="195" y="12" width="104" height="40" rx="8" class="mb-v"/><text class="lab-b mt-v" x="247" y="37" text-anchor="middle"><tspan class="en">Human vigilance</tspan><tspan class="zh" lang="zh-Hans">人员警觉</tspan></text>
-                <path class="ma" d="M110 25h78m-6-5 6 5-6 5"/><path class="ma" d="M190 41h-78m6-5-6 5 6 5"/>
-                <text class="lab" x="150" y="18" text-anchor="middle"><tspan class="en">raises</tspan><tspan class="zh" lang="zh-Hans">提高警觉</tspan></text>
-                <text class="lab" x="150" y="60" text-anchor="middle"><tspan class="en">lowers infection pressure</tspan><tspan class="zh" lang="zh-Hans">降低感染压力</tspan></text>
+              <svg class="mini" viewBox="0 0 320 72" role="img" aria-label="Device compromise and human vigilance affect each other" data-zh="设备受侵和人员警觉相互影响">
+                <rect x="1" y="12" width="120" height="40" rx="8" class="mb-t"/><text class="lab-b mt-t" x="61" y="37" text-anchor="middle"><tspan class="en">Device compromise</tspan><tspan class="zh" lang="zh-Hans">设备受侵</tspan></text>
+                <rect x="199" y="12" width="120" height="40" rx="8" class="mb-v"/><text class="lab-b mt-v" x="259" y="37" text-anchor="middle"><tspan class="en">Human vigilance</tspan><tspan class="zh" lang="zh-Hans">人员警觉</tspan></text>
+                <path class="ma" d="M126 25h68m-6-5 6 5-6 5"/><path class="ma" d="M194 41h-68m6-5-6 5 6 5"/>
+                <text class="lab" x="160" y="18" text-anchor="middle"><tspan class="en">raises</tspan><tspan class="zh" lang="zh-Hans">提高警觉</tspan></text>
+                <text class="lab" x="160" y="68" text-anchor="middle"><tspan class="en">lowers infection pressure</tspan><tspan class="zh" lang="zh-Hans">降低感染压力</tspan></text>
               </svg>
               <p><span class="en">Compromise spreads through connected devices, and vigilance spreads among neighbors. Compromise raises vigilance, and vigilance lowers infection pressure. One defender schedules patching and training at fixed times and chooses how intense each round is, while infection keeps spreading between rounds. The study uses real network topologies; in the paper’s cost comparison, the computed schedule cost less than each of 100 sampled alternatives.</span><span class="zh" lang="zh-Hans">设备受侵会在相连的设备之间传播，警觉也会在邻居之间相互影响：受侵提高警觉，警觉降低感染压力。一位防御者在预定时刻统一安排修补和培训，每次用多大强度要算出来；两次干预之间，感染照样传播。研究使用真实网络拓扑；在论文的成本比较中，算出的方案比 100 个抽样方案的总成本都低。</span></p>
               <p class="src"><a href="#tifs-2025">Cheng et al., IEEE TIFS 2025</a> · <span class="en">IEEE Signal Processing Society Paper Spotlight</span><span class="zh" lang="zh-Hans">入选 IEEE 信号处理学会 Paper Spotlight</span></p>
             </div>
-            <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#amc-2013">Appl. Math. Comput. 2013</a>, <a href="#plos-2015">PLOS ONE 2015</a>, <a href="#tnse-2018">IEEE TNSE 2018</a>, <a href="#tifs-2025">IEEE TIFS 2025</a>, <a href="#tcss-2026">IEEE TCSS 2026</a>, <a href="#amm-2026">Appl. Math. Model. 2026</a></p>
+            <p class="rep"><span class="en">Representative work: </span><span class="zh" lang="zh-Hans">代表性工作：</span><a href="#amc-2013">Appl. Math. Comput. 2013</a>, <a href="#plos-2015">PLOS ONE 2015</a>, <a href="#tnse-2018">IEEE TNSE 2018</a>, <a href="#tifs-2025">IEEE TIFS 2025</a>, <a href="#tcss-2026">IEEE TCSS 2026</a>, <a href="#amm-2026">Appl. Math. Model. 2026</a></p>
           </div>
         </li>
         <li class="theme rv">
@@ -1121,9 +1172,9 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           </div>
           <div>
             <h4><span class="en">Dynamic attack–defense games and resource-constrained cooperative defense</span><span class="zh" lang="zh-Hans">动态攻防博弈与资源约束下的协同防御</span></h4>
-            <p class="q"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">When, where and how intensively should a defender with limited, shared resources isolate, remediate, patch or intervene?</span><span class="zh" lang="zh-Hans">资源有限、对手又会调整时，隔离、修复、补丁和信息干预该在什么时候、对谁、用多大力度？</span></span></p>
+            <p class="q"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">When, where and how intensively should a defender with limited, shared resources isolate, remediate, patch or intervene?</span><span class="zh" lang="zh-Hans">资源有限、又要共用时，防御方该在什么时候、在哪里、用多大力度去隔离、修复、打补丁或做信息干预？</span></span></p>
             <p class="tb"><span class="en">Attackers, defenders and other stakeholders interact over time in persistent intrusions, lateral movement, malware propagation and adversarial information campaigns. This theme uses differential games, optimal control and feedback control to time, target and size isolation, remediation, patching and information interventions. A good policy balances what an adaptive adversary will do against the cost of defense and long-term security. The analysis covers strategic equilibria, closed-loop stability and defensive effectiveness, with the goal of policies that adapt as threats evolve while keeping services running.</span><span class="zh" lang="zh-Hans">在持续渗透、横向移动、恶意软件扩散和网络信息对抗中，攻击者、防御者和其他参与方的互动会延续一段时间，防御资源有限，还要协同调配。这里以微分博弈、最优控制和反馈控制为主要工具，安排隔离、修复、补丁部署和信息干预的时机、对象和强度。攻击者会适应防御，防御要付出成本，长期的安全收益也要算进去，三者之间需要权衡。在此基础上研究策略均衡、闭环稳定性和防御效果，得到能执行的防御策略，同时顾及安全收益、运行成本和业务连续性。</span></p>
-            <ul class="chips" aria-label="Methods">
+            <ul class="chips" aria-label="Methods" data-zh="方法">
               <li class="chip-s"><span class="en">Differential games</span><span class="zh" lang="zh-Hans">微分博弈</span></li>
               <li class="chip-s"><span class="en">Stackelberg games</span><span class="zh" lang="zh-Hans">Stackelberg 博弈</span></li>
               <li class="chip-s"><span class="en">Optimal and impulsive control</span><span class="zh" lang="zh-Hans">最优控制与脉冲控制</span></li>
@@ -1134,7 +1185,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
               <p><span class="en">Each side keeps pushing its message into the other side’s network and, at scheduled times, runs counter-propaganda inside its own. Users are grouped by degree (number of contacts), and the model tracks the share of each group that is unaware, spreading the opponent’s message, or countering it. Each side chooses its continuous effort and the strength of each counter-propaganda impulse. The result is a two-player nonzero-sum differential game with continuous flow and state jumps.</span><span class="zh" lang="zh-Hans">红蓝双方平时持续向对方网络宣传，到预定时刻在自己的网络里集中反宣传。人群按联系数分组，各组记录未接触宣传、传播对方信息和参与反宣传的比例。每一方选择平时的投入路径和每次反制的强度，于是得到一个既有连续作用、又有状态跳变的双人非零和微分博弈。</span></p>
               <p class="src"><a href="#tifs-2024a">Cheng et al., IEEE TIFS 2024</a> · <span class="en">nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span></p>
             </div>
-            <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#tifs-2019">IEEE TIFS 2019</a>, <a href="#tdsc-2020">IEEE TDSC 2020</a>, <a href="#tsmc-2021">IEEE TSMC 2021</a>, <a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tifs-2026">IEEE TIFS 2026</a></p>
+            <p class="rep"><span class="en">Representative work: </span><span class="zh" lang="zh-Hans">代表性工作：</span><a href="#tifs-2019">IEEE TIFS 2019</a>, <a href="#tdsc-2020">IEEE TDSC 2020</a>, <a href="#tsmc-2021">IEEE TSMC 2021</a>, <a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tifs-2026">IEEE TIFS 2026</a></p>
           </div>
         </li>
         <li class="theme rv">
@@ -1155,8 +1206,8 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           <div>
             <h4><span class="en">Model-informed learning for trustworthy autonomous defense</span><span class="zh" lang="zh-Hans">机理与学习融合的可信自主防御</span></h4>
             <p class="q"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">How can a defender that learns from data act reliably when it sees only part of the network, its model is uncertain and the attacker keeps changing?</span><span class="zh" lang="zh-Hans">状态看不全、模型有偏差、对手还在变时，怎样让自主防御可靠？</span></span></p>
-            <p class="tb"><span class="en">Autonomous defense here combines mechanistic security models with data-driven learning. Propagation dynamics, game structure and resource constraints are built into reinforcement learning and multi-agent decision-making, so that state estimation needs less data and policies can adapt and be executed in coordination. Large language models are being explored for hierarchical decision-making alongside feedback control and model predictive control. The open questions are whether a policy generalizes across networks, adapts when the adversary changes and satisfies its constraints; human oversight and a safe fallback keep the system reliable.</span><span class="zh" lang="zh-Hans">实际网络中，威胁状态很难完整观测，传播模型有偏差，攻击策略也在变。这里把传播动力学、博弈结构和资源约束放进强化学习和多智能体决策，探索用较少的数据做状态估计、策略学习和协同执行。大模型能理解语义、规划任务，我们研究它怎样和反馈控制、模型预测控制衔接，组成分层决策。关键问题有策略的跨网络泛化、对手变化后的适应，以及约束满足。人机协同和安全回退机制用来提高自主防御的可靠性。</span></p>
-            <ul class="chips" aria-label="Methods">
+            <p class="tb"><span class="en">Autonomous defense here combines mechanistic security models with data-driven learning. Propagation dynamics, game structure and resource constraints are built into reinforcement learning and multi-agent decision-making, so that state estimation needs less data and policies can adapt and be executed in coordination. Large language models are being explored for hierarchical decision-making alongside feedback control and model predictive control. The open questions are whether a policy generalizes across networks, adapts when the adversary changes and satisfies its constraints. Human oversight and a safe fallback are there to make autonomous defense more reliable.</span><span class="zh" lang="zh-Hans">实际网络中，威胁状态很难完整观测，传播模型有偏差，攻击策略也在变。这里把传播动力学、博弈结构和资源约束放进强化学习和多智能体决策，探索用较少的数据做状态估计、策略学习和协同执行。大模型能理解语义、规划任务，我们研究它怎样和反馈控制、模型预测控制衔接，组成分层决策。关键问题有策略的跨网络泛化、对手变化后的适应，以及约束满足。人机协同和安全回退机制用来提高自主防御的可靠性。</span></p>
+            <ul class="chips" aria-label="Methods" data-zh="方法">
               <li class="chip-s"><span class="en">Reinforcement learning</span><span class="zh" lang="zh-Hans">强化学习</span></li>
               <li class="chip-s"><span class="en">Multi-agent RL</span><span class="zh" lang="zh-Hans">多智能体强化学习</span></li>
               <li class="chip-s"><span class="en">Model predictive control</span><span class="zh" lang="zh-Hans">模型预测控制</span></li>
@@ -1167,7 +1218,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
               <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际 IoT 网络里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。MPC 从当前状态出发，在控制限制下向前规划，只执行最前面一项；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 RLMPC 高感染设备峰值更低，也更早完成恢复。</span></p>
               <p class="src"><a href="#tifs-2024b">Jafar et al., IEEE TIFS 2024</a></p>
             </div>
-            <p class="rep"><span class="en">Representative work:</span><span class="zh" lang="zh-Hans">代表性工作：</span> <a href="#tifs-2024b">IEEE TIFS 2024</a>, <a href="#cose-2025">Computers &amp; Security 2025</a></p>
+            <p class="rep"><span class="en">Representative work: </span><span class="zh" lang="zh-Hans">代表性工作：</span><a href="#tifs-2024b">IEEE TIFS 2024</a>, <a href="#cose-2025">Computers &amp; Security 2025</a></p>
           </div>
         </li>
       </ol>
@@ -1180,32 +1231,32 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-coins"/></svg><span class="en">APT defense · fixed resources</span><span class="zh" lang="zh-Hans">APT 防御 · 资源固定</span></span>
             <span class="qq"><span class="en">Where should a fixed budget go?</span><span class="zh" lang="zh-Hans">固定的预算该投向哪里？</span></span>
             <span class="how"><span class="en">Allocate repair across connected hosts.</span><span class="zh" lang="zh-Hans">在相互连接的主机之间分配修复投入。</span></span>
-            <span class="study">Yang et al., IEEE TDSC 2020<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Yang et al., IEEE TDSC 2020<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2019">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span class="en">APT defense · changing risk</span><span class="zh" lang="zh-Hans">APT 防御 · 风险在变</span></span>
             <span class="qq"><span class="en">How should repair change over time?</span><span class="zh" lang="zh-Hans">修复力度该怎样随时间调整？</span></span>
             <span class="how"><span class="en">Adjust effort while attacks continue.</span><span class="zh" lang="zh-Hans">攻击还在继续，修复投入边做边调。</span></span>
-            <span class="study">Yang et al., IEEE TIFS 2019<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Yang et al., IEEE TIFS 2019<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2025">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><span class="en">Malware and users · devices and vigilance</span><span class="zh" lang="zh-Hans">恶意软件与用户 · 设备与警觉</span></span>
             <span class="qq"><span class="en">How should patching and training work together?</span><span class="zh" lang="zh-Hans">修补和培训怎样配合？</span></span>
             <span class="how"><span class="en">Coordinate protection and user training.</span><span class="zh" lang="zh-Hans">设备防护和人员培训一起安排。</span></span>
-            <span class="study">Cheng et al., IEEE TIFS 2025<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Cheng et al., IEEE TIFS 2025<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2024a">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-msg"/></svg><span class="en">Propaganda · competing campaigns</span><span class="zh" lang="zh-Hans">宣传战 · 双方竞争</span></span>
             <span class="qq"><span class="en">How should different interventions combine?</span><span class="zh" lang="zh-Hans">不同的干预手段怎样组合？</span></span>
             <span class="how"><span class="en">Combine ongoing and focused responses.</span><span class="zh" lang="zh-Hans">把持续投入和集中反制结合起来。</span></span>
-            <span class="study">Cheng et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Cheng et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2026">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg><span class="en">Insider-assisted APT · three decision makers</span><span class="zh" lang="zh-Hans">内部人协助的 APT · 三方决策</span></span>
             <span class="qq"><span class="en">What changes when an insider helps?</span><span class="zh" lang="zh-Hans">有内部人帮忙时，局面有什么不同？</span></span>
             <span class="how"><span class="en">Consider the insider’s own incentives.</span><span class="zh" lang="zh-Hans">把内部人自己的得失也算进去。</span></span>
-            <span class="study">Qin et al., IEEE TIFS 2026<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Qin et al., IEEE TIFS 2026<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2024b">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg><span class="en">IoT response · recovery under attack</span><span class="zh" lang="zh-Hans">物联网响应 · 边受攻击边恢复</span></span>
             <span class="qq"><span class="en">How can feedback improve the plan?</span><span class="zh" lang="zh-Hans">反馈怎样帮助改进计划？</span></span>
             <span class="how"><span class="en">Learn from measurements and replan.</span><span class="zh" lang="zh-Hans">根据测量结果学习，再重新规划。</span></span>
-            <span class="study">Jafar et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Jafar et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
         </ul>
       </div>
     </div>
@@ -1248,7 +1299,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
         <button type="button" class="chip" data-filter="platform" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><span class="en">Online platforms</span><span class="zh" lang="zh-Hans">在线平台</span><span class="n">2</span></button>
       </div>
 
-      <ol class="years">
+      <ol class="years" lang="en">
         <li class="year first">
           <h3 class="year-n">2026</h3>
           <ol class="plist">
@@ -1488,13 +1539,13 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
             <span class="aic" aria-hidden="true"><svg class="i"><use href="#i-award"/></svg></span>
             <div><p class="when"><span class="en">Jan 2026</span><span class="zh" lang="zh-Hans">2026 年 1 月</span></p>
               <p class="what"><span class="en">IEEE Signal Processing Society Paper Spotlight</span><span class="zh" lang="zh-Hans">入选 IEEE 信号处理学会 Paper Spotlight</span></p>
-              <small><span class="en">For “<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a>,” IEEE TIFS</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a>（IEEE TIFS）</span></small></div>
+              <small><span class="en">For “<a href="#tifs-2025">Modeling and Mitigating Social Engineering Malware</a>,” IEEE TIFS</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2025" lang="en">Modeling and Mitigating Social Engineering Malware</a>（IEEE TIFS）</span></small></div>
           </li>
           <li class="award card lift">
             <span class="aic" aria-hidden="true"><svg class="i"><use href="#i-trophy"/></svg></span>
             <div><p class="when">2025</p>
               <p class="what"><span class="en">Nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span></p>
-              <small><span class="en">For “<a href="#tifs-2024a">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game</a>,” IEEE TIFS</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2024a">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game</a>（IEEE TIFS）</span></small></div>
+              <small><span class="en">For “<a href="#tifs-2024a">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game</a>,” IEEE TIFS</span><span class="zh" lang="zh-Hans">论文 <a href="#tifs-2024a" lang="en">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War Game</a>（IEEE TIFS）</span></small></div>
           </li>
           <li class="award card lift">
             <span class="aic" aria-hidden="true"><svg class="i"><use href="#i-poster"/></svg></span>
@@ -1524,7 +1575,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
     <div class="body">
       <div class="block rv">
         <h3 class="sub-h"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg><span class="en">Teaching</span><span class="zh" lang="zh-Hans">教学</span></h3>
-        <p class="intro-line"><span class="en">Teaching areas: cybersecurity, applied mathematics, computer programming and data science fundamentals. Graduate Certificate of Higher Education (Learning and Teaching), Deakin University, 2022.</span><span class="zh" lang="zh-Hans">能讲授网络安全、应用数学、程序设计和数据科学基础方面的课程。2022 年获迪肯大学高等教育教学研究生证书（Graduate Certificate of Higher Education, Learning and Teaching）。</span></p>
+        <p class="intro-line"><span class="en">Teaching areas: cybersecurity, applied mathematics, computer programming and data science fundamentals. Graduate Certificate of Higher Education (Learning and Teaching), Deakin University, 2022.</span><span class="zh" lang="zh-Hans">教学方向：网络安全、应用数学、程序设计和数据科学基础。2022 年获迪肯大学高等教育教学研究生证书（Graduate Certificate of Higher Education, Learning and Teaching）。</span></p>
         <ul class="items">
           <li>
             <span class="when"><span class="code">SIT281</span></span>
@@ -1548,7 +1599,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
           </li>
           <li>
             <span class="when"><span class="code">SIT374</span></span>
-            <p class="what"><span class="en">Software Project Management, taught offshore at Southwest University, China</span><span class="zh" lang="zh-Hans">软件项目管理（Software Project Management），在中国西南大学海外授课</span>
+            <p class="what"><span class="en">Software Project Management, taught offshore at Southwest University, China</span><span class="zh" lang="zh-Hans">软件项目管理（Software Project Management），在中国西南大学授课</span>
               <small><span class="en">May 2022, 2023, 2024 and 2026</span><span class="zh" lang="zh-Hans">2022、2023、2024、2026 年 5 月</span></small></p>
           </li>
         </ul>
@@ -1574,7 +1625,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 
       <div class="block rv">
         <h3 class="sub-h"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><span class="en">Doctoral students</span><span class="zh" lang="zh-Hans">博士生</span><span class="count"><span class="en">2 current · 8 graduated</span><span class="zh" lang="zh-Hans">在读 2 人 · 已毕业 8 人</span></span></h3>
-        <ul class="people">
+        <ul class="people" lang="en">
           <li class="person card"><span class="yr on"><span class="en">In progress</span><span class="zh" lang="zh-Hans">在读</span></span><span class="th">Domain-Invariant Sequence Modeling for Unsupervised Domain-Adaptive Point Cloud Completion</span><span class="nm">Yinghui Li</span></li>
           <li class="person card"><span class="yr on"><span class="en">In progress</span><span class="zh" lang="zh-Hans">在读</span></span><span class="th">Isolation-based Models for Unsupervised Learning</span><span class="nm">Xiaoyu Qin</span></li>
           <li class="person card"><span class="yr"><span class="en">Graduated 2026</span><span class="zh" lang="zh-Hans">2026 年毕业</span></span><span class="th">A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</span><span class="nm">Mousa Tayseer Mousa Ja’far</span></li>
@@ -1665,19 +1716,19 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
         <h3 class="sub-h"><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg><span class="en">Editorial roles</span><span class="zh" lang="zh-Hans">编辑工作</span></h3>
         <div class="editor card">
           <span class="aic" aria-hidden="true"><svg class="i"><use href="#i-book"/></svg></span>
-          <div><b><span class="en">Academic Editor, <i>PLOS ONE</i></span><span class="zh" lang="zh-Hans"><i>PLOS ONE</i> 学术编辑</span></b><span><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span></div>
+          <div><b><span class="en">Academic Editor, <i>PLOS ONE</i></span><span class="zh" lang="zh-Hans"><i lang="en">PLOS ONE</i> 学术编辑</span></b><span><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span></div>
         </div>
         <p class="intro-line"><span class="en">Guest Editor of nine special issues:</span><span class="zh" lang="zh-Hans">担任 9 个专刊的客座编辑：</span></p>
-        <ul class="si">
-          <li><span class="when">Apr 2025</span><span class="t">Cyber-Physical System: Security and Defense</span><span class="j">Applied Sciences</span></li>
-          <li><span class="when">Nov 2023</span><span class="t">Mathematical Modeling and Strategic Decision-Making of Cyber Conflicts</span><span class="j">Mathematical Biosciences and Engineering</span></li>
-          <li><span class="when">Nov 2022</span><span class="t">Propagation Dynamics and Control of Disinformation in Online Social Platforms</span><span class="j">Mathematical Biosciences and Engineering</span></li>
-          <li><span class="when">Dec 2021</span><span class="t">Network Structural Perturbation and Its Applications for Controlling Misinformation Diffusion</span><span class="j">Security and Communication Networks</span></li>
-          <li><span class="when">Nov 2021</span><span class="t">Epidemic Spreading Dynamics on Temporal Networks</span><span class="j">Complexity</span></li>
-          <li><span class="when">Sep 2020</span><span class="t">Coevolving Spreading Dynamics of Complex Networks</span><span class="j">Complexity</span></li>
-          <li><span class="when">Apr 2020</span><span class="t">Mathematical Models for New Types of Cyberattack and Associated Defense Strategies</span><span class="j">Security and Communication Networks</span></li>
-          <li><span class="when">Sep 2017</span><span class="t">Mathematical Models for Malware Propagation</span><span class="j">Security and Communication Networks</span></li>
-          <li><span class="when">Dec 2016</span><span class="t">Epidemic Processes on Complex Networks</span><span class="j">Discrete Dynamics in Nature and Society</span></li>
+        <ul class="si" lang="en">
+          <li><span class="when"><span class="en">Apr 2025</span><span class="zh" lang="zh-Hans">2025.04</span></span><span class="t">Cyber-Physical System: Security and Defense</span><span class="j">Applied Sciences</span></li>
+          <li><span class="when"><span class="en">Nov 2023</span><span class="zh" lang="zh-Hans">2023.11</span></span><span class="t">Mathematical Modeling and Strategic Decision-Making of Cyber Conflicts</span><span class="j">Mathematical Biosciences and Engineering</span></li>
+          <li><span class="when"><span class="en">Nov 2022</span><span class="zh" lang="zh-Hans">2022.11</span></span><span class="t">Propagation Dynamics and Control of Disinformation in Online Social Platforms</span><span class="j">Mathematical Biosciences and Engineering</span></li>
+          <li><span class="when"><span class="en">Dec 2021</span><span class="zh" lang="zh-Hans">2021.12</span></span><span class="t">Network Structural Perturbation and Its Applications for Controlling Misinformation Diffusion</span><span class="j">Security and Communication Networks</span></li>
+          <li><span class="when"><span class="en">Nov 2021</span><span class="zh" lang="zh-Hans">2021.11</span></span><span class="t">Epidemic Spreading Dynamics on Temporal Networks</span><span class="j">Complexity</span></li>
+          <li><span class="when"><span class="en">Sep 2020</span><span class="zh" lang="zh-Hans">2020.09</span></span><span class="t">Coevolving Spreading Dynamics of Complex Networks</span><span class="j">Complexity</span></li>
+          <li><span class="when"><span class="en">Apr 2020</span><span class="zh" lang="zh-Hans">2020.04</span></span><span class="t">Mathematical Models for New Types of Cyberattack and Associated Defense Strategies</span><span class="j">Security and Communication Networks</span></li>
+          <li><span class="when"><span class="en">Sep 2017</span><span class="zh" lang="zh-Hans">2017.09</span></span><span class="t">Mathematical Models for Malware Propagation</span><span class="j">Security and Communication Networks</span></li>
+          <li><span class="when"><span class="en">Dec 2016</span><span class="zh" lang="zh-Hans">2016.12</span></span><span class="t">Epidemic Processes on Complex Networks</span><span class="j">Discrete Dynamics in Nature and Society</span></li>
         </ul>
       </div>
 
@@ -1726,8 +1777,8 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
         <li class="ccard card">
           <span class="cic" aria-hidden="true"><svg class="i"><use href="#i-mail"/></svg></span>
           <h3><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></h3>
-          <p class="mail"><a href="mailto:y.luxing@deakin.edu.au">y.luxing@deakin.edu.au</a><button type="button" class="copy" data-copy="y.luxing@deakin.edu.au"><svg class="i i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i i-check" aria-hidden="true"><use href="#i-check"/></svg><span class="sr"><span class="en">Copy address</span><span class="zh" lang="zh-Hans">复制邮箱地址</span></span></button></p>
-          <p class="mail"><a href="mailto:ylx910920@gmail.com">ylx910920@gmail.com</a><button type="button" class="copy" data-copy="ylx910920@gmail.com"><svg class="i i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i i-check" aria-hidden="true"><use href="#i-check"/></svg><span class="sr"><span class="en">Copy address</span><span class="zh" lang="zh-Hans">复制邮箱地址</span></span></button></p>
+          <p class="mail"><a href="mailto:y.luxing@deakin.edu.au">y.luxing@deakin.edu.au</a><button type="button" class="copy" data-copy="y.luxing@deakin.edu.au"><svg class="i i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i i-check" aria-hidden="true"><use href="#i-check"/></svg><span class="sr"><span class="en">Copy y.luxing@deakin.edu.au</span><span class="zh" lang="zh-Hans">复制 y.luxing@deakin.edu.au</span></span></button></p>
+          <p class="mail"><a href="mailto:ylx910920@gmail.com">ylx910920@gmail.com</a><button type="button" class="copy" data-copy="ylx910920@gmail.com"><svg class="i i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i i-check" aria-hidden="true"><use href="#i-check"/></svg><span class="sr"><span class="en">Copy ylx910920@gmail.com</span><span class="zh" lang="zh-Hans">复制 ylx910920@gmail.com</span></span></button></p>
         </li>
         <li class="ccard card">
           <span class="cic" aria-hidden="true"><svg class="i"><use href="#i-pin"/></svg></span>
@@ -1784,7 +1835,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
     var l = lang();
     document.title = TITLES[l];
     syncLabels();
-    langBtn.setAttribute("aria-label", l === "zh" ? "Switch to English" : "切换到中文");
+    syncMotion();
     syncTheme();
     if (figure) figure.relabel();
   }
@@ -1801,6 +1852,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
   function isDark() { var t = root.getAttribute("data-theme"); return t ? t === "dark" : darkMQ.matches; }
   function syncTheme() {
     var d = isDark();
+    [].forEach.call(document.querySelectorAll('meta[name="theme-color"]'), function (m) { m.setAttribute("content", d ? "#10171D" : "#F3F5F4"); });
     themeBtn.setAttribute("aria-pressed", String(d));
     themeLbl.textContent = lang() === "zh" ? "深色模式" : "Dark mode";
     themeBtn.title = lang() === "zh" ? (d ? "切换到浅色模式" : "切换到深色模式") : (d ? "Switch to light mode" : "Switch to dark mode");
@@ -1813,6 +1865,28 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
     if (figure) figure.recolor();
   });
   function onSystemTheme() { syncTheme(); if (figure) figure.recolor(); }
+
+  /* ---------------- Pause all decorative animation ---------------- */
+  var motionBtn = document.getElementById("motion"), motionBtn2 = document.getElementById("motion2");
+  function syncMotion() {
+    var still = root.classList.contains("still");
+    motionBtn.setAttribute("aria-pressed", String(still));
+    motionBtn2.setAttribute("aria-pressed", String(still));
+    motionBtn.title = lang() === "zh" ? (still ? "播放动画" : "暂停动画") : (still ? "Play animations" : "Pause animations");
+  }
+  function toggleMotion() {
+    var still = root.classList.toggle("still");
+    store("still", still ? "1" : "0");
+    syncMotion();
+    if (figure) figure.setPlaying(!still);
+  }
+  motionBtn.addEventListener("click", toggleMotion);
+  motionBtn2.addEventListener("click", toggleMotion);
+
+  /* ---------------- Print in light colours, whatever the screen theme ---------------- */
+  var printTheme = null;
+  window.addEventListener("beforeprint", function () { printTheme = root.getAttribute("data-theme"); root.setAttribute("data-theme", "light"); if (figure) figure.recolor(); });
+  window.addEventListener("afterprint", function () { if (printTheme) root.setAttribute("data-theme", printTheme); else root.removeAttribute("data-theme"); if (figure) figure.recolor(); });
   if (darkMQ.addEventListener) darkMQ.addEventListener("change", onSystemTheme); else if (darkMQ.addListener) darkMQ.addListener(onSystemTheme);
 
   /* ---------------- Header: rule, reading progress ---------------- */
@@ -1835,19 +1909,22 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
   }
   menuBtn.addEventListener("click", function () { setMenu(mnav.hidden); });
   mnav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  mnav.addEventListener("focusout", function (e) { if (e.relatedTarget && !hdr.contains(e.relatedTarget)) setMenu(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !mnav.hidden) { setMenu(false); menuBtn.focus(); } });
   document.addEventListener("click", function (e) { if (!mnav.hidden && !hdr.contains(e.target)) setMenu(false); });
   
   /* ---------------- Section highlighting in the navigation ---------------- */
   var navLinks = [].slice.call(document.querySelectorAll('.nav > a, .mnav a'));
   if ("IntersectionObserver" in window) {
-    var secs = [].slice.call(document.querySelectorAll("main .sec[id]"));
+    var secs = [].slice.call(document.querySelectorAll("main > section")), NAV_ALIAS = { recognition: "publications", service: "experience" };
     var spy = new IntersectionObserver(function (es) {
       es.forEach(function (en) {
         if (!en.isIntersecting) return;
         var id = en.target.id;
         navLinks.forEach(function (a) {
-          if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+          // Funding and Service have no top-bar link, so the top bar marks their neighbours instead.
+          var key = a.parentNode.classList && a.parentNode.classList.contains("nav") ? (NAV_ALIAS[id] || id) : id;
+          if (key && a.getAttribute("href") === "#" + key) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
         });
       });
     }, { rootMargin: "-40% 0px -55% 0px" });
@@ -2289,7 +2366,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
 
     readColors();
     reset(performance.now());
-    if (reduceMQ.matches) {
+    if (reduceMQ.matches || root.classList.contains("still")) {
       // No autoplay: show a still from part-way through an outbreak; the Play button starts it.
       for (k = 0; k < 34; k++) step(0);
       running = false;
@@ -2302,7 +2379,7 @@ a.pub-t:hover .i{color:var(--teal);transform:translate(1px,-1px)}
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { drawPlot(); });
     if (document.readyState === "complete") idle(compareSlice); else window.addEventListener("load", function () { idle(compareSlice); });
 
-    return { relabel: relabel, recolor: recolor };
+    return { relabel: relabel, recolor: recolor, setPlaying: function (on) { if (on) play(); else pause(); } };
   })();
 
   syncLang();
