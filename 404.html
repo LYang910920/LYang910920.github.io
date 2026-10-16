@@ -6,11 +6,13 @@
 <title>Page not found | Lu-Xing Yang 杨橹星</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <style>
 @font-face{font-family:"LXY Serif";src:url("/assets/fonts/serif-roman.woff2") format("woff2");font-weight:200 900;font-display:swap}
 @font-face{font-family:"LXY Sans";src:url("/assets/fonts/sans.woff2") format("woff2");font-weight:200 900;font-display:swap}
 :root{--bg:#F3F5F4;--ink:#16212B;--ink-2:#47535F;--teal:#18665F;--rule:#D3D9DC;color-scheme:light}
-@media (prefers-color-scheme: dark){:root{--bg:#10171D;--ink:#E3E9EC;--ink-2:#AAB5BD;--teal:#64B9AF;--rule:#28343D;color-scheme:dark}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10171D;--ink:#E3E9EC;--ink-2:#AAB5BD;--teal:#64B9AF;--rule:#28343D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10171D;--ink:#E3E9EC;--ink-2:#AAB5BD;--teal:#64B9AF;--rule:#28343D;color-scheme:dark}
 html,body{height:100%}
 body{margin:0;display:grid;place-items:center;padding:24px 16px;background:var(--bg);color:var(--ink);font-family:"LXY Serif",Georgia,"Songti SC",serif;text-align:center}
 svg{width:88px;height:88px}

@@ -4,16 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lu-Xing Yang 杨橹星 | Deakin University</title>
-<meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in the School of Information Technology at Deakin University, Melbourne. He works on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and reinforcement learning.">
+<meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in Cybersecurity in the School of Information Technology at Deakin University, Melbourne. He works on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and reinforcement learning.">
 <meta name="author" content="Lu-Xing Yang">
 <link rel="alternate" hreflang="en" href="https://lyang910920.github.io/">
 <link rel="alternate" hreflang="zh-Hans" href="https://lyang910920.github.io/?lang=zh">
 <link rel="alternate" hreflang="x-default" href="https://lyang910920.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Lu-Xing Yang 杨橹星">
-<meta property="og:description" content="Senior Lecturer, School of Information Technology, Deakin University. He studies how cyber threats spread across networks and how to defend against them, using game theory, optimal control and reinforcement learning.">
+<meta property="og:site_name" content="Lu-Xing Yang">
+<meta property="og:description" content="Senior Lecturer in Cybersecurity, School of Information Technology, Deakin University. He studies how cyber threats spread across networks and how to defend against them, using game theory, optimal control and reinforcement learning.">
 <meta property="og:url" content="https://lyang910920.github.io/">
 <meta property="og:image" content="https://lyang910920.github.io/assets/og.png">
+<meta property="og:image:alt" content="Lu-Xing Yang 杨橹星, Senior Lecturer in Cybersecurity at Deakin University, beside a drawing of a network with infected and patched hosts">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_AU">
@@ -29,7 +31,7 @@
 <link rel="preload" href="assets/fonts/sans.woff2" as="font" type="font/woff2" crossorigin>
 <script>
 /* Before first paint: pick the language (?lang=, then last choice, then browser language) and the colour theme (last choice, else the system setting). */
-(function(){var r=document.documentElement,l="en";try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("lang"),t=localStorage.getItem("theme");if(q==="zh"||q==="en")l=q;else if(s==="zh"||s==="en")l=s;else if(/^zh\b/i.test(navigator.language||""))l="zh";if(t==="light"||t==="dark")r.setAttribute("data-theme",t);if(localStorage.getItem("still")==="1")r.className+=" still";}catch(e){}r.setAttribute("data-lang",l);r.lang=l==="zh"?"zh-Hans":"en";var c=document.createElement("link");c.rel="canonical";c.href="https://lyang910920.github.io/"+(q==="zh"?"?lang=zh":"");document.head.appendChild(c);r.className+=" js";})();
+(function(){var r=document.documentElement,l="en";try{var q=new URLSearchParams(location.search).get("lang"),s=null,t=null,m=null;try{s=localStorage.getItem("lang");t=localStorage.getItem("theme");m=localStorage.getItem("still");}catch(e){}if(q==="zh"||q==="en")l=q;else if(s==="zh"||s==="en")l=s;else if(/^zh\b/i.test(navigator.language||""))l="zh";if(t==="light"||t==="dark")r.setAttribute("data-theme",t);if(m==="1")r.className+=" still";}catch(e){}r.setAttribute("data-lang",l);r.lang=l==="zh"?"zh-Hans":"en";var c=document.createElement("link");c.rel="canonical";c.href="https://lyang910920.github.io/"+(q==="zh"?"?lang=zh":"");document.head.appendChild(c);r.className+=" js";})();
 </script>
 <style>
 /* ---------- Fonts (self-hosted, so the page also loads quickly in mainland China) ---------- */
@@ -206,15 +208,15 @@ button{font:inherit;color:inherit}
 .fig.edit #plot{height:228px;touch-action:none}
 #plot:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
 .seg .you:not([aria-pressed="true"]){color:var(--blue);font-weight:600}
-.seg .you:not([aria-pressed="true"])::before{content:"";display:inline-block;width:6px;height:6px;margin:0 6px 1px 0;border-radius:50%;background:var(--blue);animation:invite 1.8s var(--ease) infinite}
+.seg .you:not([aria-pressed="true"])::before{content:"";display:inline-block;width:6px;height:6px;margin:0 6px 1px 0;border-radius:50%;background:var(--blue);animation:invite 1.8s var(--ease) 6}
 @keyframes invite{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--blue) 55%,transparent)}70%,100%{box-shadow:0 0 0 7px transparent}}
 .try{margin-top:.9rem}
 .try a{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 8px;border-radius:999px;border:1px solid color-mix(in srgb,var(--blue) 40%,transparent);background:color-mix(in srgb,var(--blue) 8%,var(--surface));font-family:var(--sans);font-size:.875rem;line-height:1.45;color:var(--ink);text-decoration:none;transition:border-color .2s,background-color .2s}
 .try a:hover{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,var(--surface))}
-.try .pi{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:var(--surface);animation:invite 1.8s var(--ease) infinite}
+.try .pi{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:var(--surface);animation:invite 1.8s var(--ease) 6}
 .try .pi .i{font-size:.75rem}
-@media (prefers-reduced-motion: reduce){.try .pi,.seg .you::before{animation:none}}
-:root.still .try .pi,:root.still .seg .you::before{animation:none}
+@media (prefers-reduced-motion: reduce){.try .pi,.seg .you:not([aria-pressed="true"])::before{animation:none}.mbtn,.mnav .mrow{display:none!important}}
+:root.still .try .pi,:root.still .seg .you:not([aria-pressed="true"])::before{animation:none}
 @media print{.try{display:none}}
 #net{display:block;width:100%;aspect-ratio:16/10.5;touch-action:manipulation}
 #plot{display:block;width:100%;height:164px}
@@ -709,6 +711,20 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   .hero::before{display:none}
   .card,.plate{box-shadow:none}
 }
+
+/* Audit refinements */
+@media (min-width:861px) and (max-height:760px),(min-width:861px) and (max-width:1100px) and (max-height:920px){#publications .side{position:static}}
+.pub{line-height:1.42;text-wrap:balance}
+.pub-a,.pub-v{text-wrap:pretty}
+.pub-note{line-height:1.5}
+@media (max-width:420px){.controls .seg{order:-1;display:flex;flex:1 1 100%}.controls .seg button{flex:1 1 auto;padding:0 6px}}
+.cmp-h>span:first-child,.theme .q>span{text-wrap:balance}
+.qcard .how,.person .th,.urs li,.step p,.lectures .lq,.grant .gm,.review p,.ccard address{text-wrap:pretty}
+.side-note a,.fcard .rel a{white-space:nowrap}
+.tl>li:last-child::after{content:"";position:absolute;left:7px;top:calc(.42em + 14px);bottom:0;width:2px;background:var(--bg)}
+@media (max-width:360px){.brand{min-width:0;overflow:hidden}.brand>span{overflow:hidden;text-overflow:ellipsis}}
+.qcard:hover .study .i{transform:translateY(2px)}
+.series-top{flex-wrap:nowrap;align-items:flex-start}.series-top>div{min-width:0}.series-ic{flex:none}
 </style>
 <script type="application/ld+json">
 {
@@ -716,7 +732,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   "@type": "Person",
   "name": "Lu-Xing Yang",
   "alternateName": ["杨橹星", "Luxing Yang"],
-  "jobTitle": "Senior Lecturer",
+  "jobTitle": "Senior Lecturer in Cybersecurity",
   "worksFor": {"@type": "CollegeOrUniversity", "name": "Deakin University", "url": "https://www.deakin.edu.au/"},
   "affiliation": {"@type": "ResearchOrganization", "name": "Deakin Cyber Research and Innovation Centre"},
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "Chongqing University"},
@@ -762,7 +778,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5v14M15.5 5v14"/></symbol>
     <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 3.5v5h5"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></symbol>
-    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M5.5 12.5 12 19l6.5-6.5"/></symbol><symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5.5 15H5a1.5 1.5 0 0 1-1.5-1.5v-8A1.5 1.5 0 0 1 5 4h8a1.5 1.5 0 0 1 1.5 1.5V6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11.2a7 7 0 0 1 14 0C19 15 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.5"/></symbol>
@@ -858,20 +874,20 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <span class="en">My research gives defenders a mathematical basis for deciding when, where and how hard to act against threats that spread through networks.</span>
         <span class="zh" lang="zh-Hans">威胁在网络里扩散时，防御方该在什么时候、在哪里、用多大力度出手？我的研究为这些决定提供数学依据。</span>
       </p>
-      <p class="statement-2" style="--k:4">
-        <span class="en">My work covers malware, advanced persistent threats, social engineering and rumors. In each case the defender has incomplete information and limited resources, and the attacker adapts. To work out what the defender should do, I combine complex network dynamics, game theory and optimal control with single- and multi-agent reinforcement learning.</span>
-        <span class="zh" lang="zh-Hans">研究对象有恶意软件、高级持续性威胁、社会工程攻击和谣言。防御方往往信息不全、资源有限，攻击者还会不断调整做法，我关心的是这时该怎样决策。方法上以复杂网络动力学、博弈论和最优控制为基础，结合强化学习和多智能体强化学习。</span>
-      </p>
-      <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我致力于做数学上严谨、实际中用得上的网络安全研究，也重视培养能把这些工作继续推进的研究者。</span></span></p>
-      <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to containing rumors and disinformation. I am also combining large language models with cybersecurity and game theory. </span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span><a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">见下文</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
-      <p class="try" style="--k:6"><a href="#fig" id="try-game"><span class="pi" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span><span class="en">Can you contain an outbreak better than the optimized schedule? Try it in Fig.&nbsp;1</span><span class="zh" lang="zh-Hans">你能比优化方案更好地遏制一次爆发吗？在图&nbsp;1 里试试</span></a></p>
-      <ul class="links" style="--k:6">
+      <ul class="links" style="--k:4">
         <li><a class="primary" href="mailto:y.luxing@deakin.edu.au"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>Google Scholar</a></li>
         <li><a href="https://orcid.org/0000-0002-9229-5787"><svg class="i" aria-hidden="true"><use href="#i-orcid"/></svg>ORCID</a></li>
         <li><a href="https://dblp.org/pid/59/10736.html"><svg class="i" aria-hidden="true"><use href="#i-db"/></svg>dblp</a></li>
         <li><a href="https://experts.deakin.edu.au/43777-luxing-yang"><svg class="i" aria-hidden="true"><use href="#i-uni"/></svg><span class="en">Deakin profile</span><span class="zh" lang="zh-Hans">Deakin 主页</span></a></li>
       </ul>
+      <p class="try" style="--k:4"><a href="#fig" id="try-game"><span class="pi" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span><span class="en">Can you contain an outbreak better than the optimized schedule? Try it in Fig.&nbsp;1</span><span class="zh" lang="zh-Hans">你能比优化方案更好地遏制一次爆发吗？<span class="nw">在图&nbsp;1 里试试</span></span></a></p>
+      <p class="statement-2" style="--k:5">
+        <span class="en">My work covers malware, advanced persistent threats, social engineering and rumors. In each case the defender has incomplete information and limited resources, and the attacker adapts. To work out what the defender should do, I combine complex network dynamics, game theory and optimal control with single- and multi-agent reinforcement learning.</span>
+        <span class="zh" lang="zh-Hans">研究对象有恶意软件、高级持续性威胁、社会工程攻击和谣言。防御方往往信息不全、资源有限，攻击者还会不断调整做法，我关心的是这时该怎样决策。方法上以复杂网络动力学、博弈论和最优控制为基础，结合强化学习和多智能体强化学习。</span>
+      </p>
+      <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我致力于做数学上严谨、实际中用得上的网络安全研究，也重视培养能把这些工作继续推进的研究者。</span></span></p>
+      <p class="now-line" style="--k:6"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to containing rumors and disinformation. I am also combining large language models with cybersecurity and game theory. </span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span><a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">当前研究重心</span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a></span></p>
       <ul class="creds" style="--k:7">
         <li><svg class="i" aria-hidden="true"><use href="#i-star"/></svg><a href="https://research.com/u/lu-xing-yang"><span class="en">Research.com Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com 2026 全球最佳计算机科学家榜单</span></a></li>
         <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span class="en">IEEE Senior Member</span><span class="zh" lang="zh-Hans">IEEE 高级会员</span></li>
@@ -879,7 +895,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       </ul>
     </div>
 
-    <figure class="fig" id="fig" aria-labelledby="fig-cap">
+    <figure class="fig" id="fig" aria-label="Fig. 1" data-zh="图 1">
       <div class="plate">
         <div class="panel net">
           <span class="tag" aria-hidden="true">(a)</span>
@@ -899,7 +915,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <div class="panel cmp">
           <span class="tag" aria-hidden="true">(c)</span>
           <div class="cmp-h"><span><span class="en">Mean share of hosts infected, same total effort</span><span class="zh" lang="zh-Hans">总投入相同时，感染主机的平均占比</span></span><span id="cmp-n" class="nw"></span></div>
-          <div class="cmp-rows" role="group" aria-label="Patching schedule" data-zh="修补方案">
+          <div class="cmp-rows" role="group" aria-label="Mean share of hosts infected, by schedule" data-zh="各方案的平均感染占比">
             <button type="button" class="cmp-row" data-s="0" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 11H25"/></svg><span class="en">No defense</span><span class="zh" lang="zh-Hans">不防御</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
             <button type="button" class="cmp-row" data-s="1" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 8.3H25"/></svg><span class="en">Constant rate</span><span class="zh" lang="zh-Hans">恒定修补率</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
             <button type="button" class="cmp-row" data-s="2" aria-pressed="true"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 3.9H5V5.3H9V8.9H13V9.9H17V10.6H21V11H25"/></svg><span class="en">HOLD</span><span class="zh" lang="zh-Hans">分段常数</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
@@ -921,8 +937,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <button type="button" class="btn" id="f-reset"><svg class="i" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl">Reset</span></button>
       </div>
       <figcaption id="fig-cap">
-        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host. An infection can be detected only 10 steps after it starts, and only detected infections can be patched. (a) Red hosts are infected, and a dark ring marks a detected infection. Teal hosts have been patched or have recovered on their own. Click any host to infect&nbsp;it. (b) Shares of hosts infected and recovered (top), and the defender’s patch rate, the chance per step that each detected infection is patched (bottom). The 150-step response window opens at the first alert. (c) Mean share of hosts infected during the window, over 100 simulated runs. The three patching schedules spend the same total effort. The constant schedule keeps one rate throughout. The PMP schedule is the one Pontryagin’s maximum principle gives for the node-level model of this network, with an effort cost that grows with the square of the rate. Its rate changes at every step, which is hard to carry out in practice, so it serves as a benchmark. The HOLD schedule is one a defender can actually follow: it sets a rate at the alert and changes it only every 25 steps, holding it in between, with each held rate chosen for the same model and cost. Both act hardest soon after the alert and ease off as the outbreak shrinks. With six commands instead of 150, HOLD comes within a fraction of a percentage point of the benchmark. The switch below the figure runs the live model under each&nbsp;schedule.</p>
-        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播。感染发生 10 步以后才能被发现，防御方只能修补已发现的感染。(a) 红色是已感染主机，外面的深色圆环表示这处感染已被发现；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复的。点击任一主机，它就会被感染。(b) 上方是感染和已恢复主机所占比例；下方是防御方的修补率，即每个已发现的感染在每一步被修补的概率。响应窗口从第一次告警开始，共 150 步。(c) 100 次模拟中，窗口内被感染主机的平均比例。三种修补方案的总投入相同。恒定方案始终用同一个修补率。PMP 方案由庞特里亚金最大值原理在这张网络的节点级模型上求出，投入成本随修补率的平方增长；它的修补率每一步都在变，实际中很难执行，所以用作对照基准。分段常数（HOLD）方案是防御方实际能执行的：告警时定下修补率，之后每 25 步才调整一次，中间保持不变，各段取值针对同一模型和成本选到最好。两种方案都在告警后不久用力最大，随着感染范围缩小逐步放缓。HOLD 只需 6 条命令，PMP 要 150 条，两者的效果只差不到一个百分点。图下方的按钮可以让模型按任一方案<span class="nw">实时运行。</span></p>
+        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host. An infection can be detected only 10 steps after it starts, and only detected infections can be patched. (a) Red hosts are infected, and a ring marks a detected infection. Teal hosts have been patched or have recovered on their own. Click any host to infect&nbsp;it. (b) Shares of hosts infected and recovered (top), and the defender’s patch rate, the chance per step that each detected infection is patched (bottom). The 150-step response window opens at the first alert. (c) Mean share of hosts infected during the window, over 100 simulated runs. The three patching schedules spend the same total effort. The constant schedule keeps one rate throughout. The PMP schedule is the one Pontryagin’s maximum principle gives for the node-level model of this network, with an effort cost that grows with the square of the rate. Its rate changes at every step, which is hard to carry out in practice, so it serves as a benchmark. The HOLD schedule is one a defender can actually follow: it sets a rate at the alert and changes it only every 25 steps, holding it in between, with each held rate chosen for the same model and cost. Both act hardest soon after the alert and ease off as the outbreak shrinks. With six commands instead of 150, HOLD comes within a fraction of a percentage point of the benchmark. The buttons below the figure run the live model under each schedule. Choose You to set the six held rates yourself, using at most the same total effort; your schedule is then scored on the same 100&nbsp;runs.</p>
+        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播。感染发生 10 步以后才能被发现，防御方只能修补已发现的感染。(a) 红色是已感染主机，外面的圆环表示这处感染已被发现；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复的。点击任一主机，它就会被感染。(b) 上方是感染和已恢复主机所占比例；下方是防御方的修补率，即每个已发现的感染在每一步被修补的概率。响应窗口从第一次告警开始，共 150 步。(c) 100 次模拟中，窗口内被感染主机的平均比例。三种修补方案的总投入相同。恒定方案始终用同一个修补率。PMP 方案由庞特里亚金最大值原理在这张网络的节点级模型上求出，投入成本随修补率的平方增长；它的修补率每一步都在变，实际中很难执行，所以用作对照基准。分段常数（HOLD）方案是防御方实际能执行的：告警时定下修补率，之后每 25 步才调整一次，中间保持不变，各段的取值针对同一模型和成本做了优化。两种方案都在告警后不久力度最大，随着感染范围缩小逐步放缓。HOLD 只需 6 条命令，PMP 要 150 条，两者的效果只差不到一个百分点。图下方的按钮可以让模型按任一方案实时运行。选“你来”，可以拖动 (b) 里的六级台阶，自己设定六段修补率，总投入不超过另外三种方案；你的方案也用这 100 次模拟<span class="nw">打分。</span></p>
       </figcaption>
     </figure>
     </div>
@@ -932,7 +948,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       <li class="metric"><span class="v" aria-hidden="true" data-to="3988" data-sep="1">3,988</span><span class="sr">3,988</span><span class="k"><span class="en">Google Scholar citations</span><span class="zh" lang="zh-Hans">Google Scholar 引用</span></span></li>
       <li class="metric"><span class="v" aria-hidden="true" data-to="36">36</span><span class="sr">36</span><span class="k"><span class="en">h-index</span><span class="zh" lang="zh-Hans">h 指数</span></span></li>
       <li class="metric"><span class="v" aria-hidden="true" data-to="8">8</span><span class="sr">8</span><span class="k"><span class="en">papers in IEEE TIFS</span><span class="zh" lang="zh-Hans">IEEE TIFS 论文</span></span></li>
-      <li class="metric"><span class="v" aria-hidden="true"><small>AUD</small><span data-to="1.2" data-dec="1" data-suffix="M+">1.2M+</span></span><span class="sr">AUD 1.2M+</span><span class="k"><span class="en">research funding as CI</span><span class="zh" lang="zh-Hans">作为 CI 获得的经费</span></span></li>
+      <li class="metric"><span class="v" aria-hidden="true"><small>AUD</small><span data-to="1.2" data-dec="1" data-suffix="M+">1.2M+</span></span><span class="sr">AUD 1.2M+</span><span class="k"><span class="en">research funding as CI</span><span class="zh" lang="zh-Hans">主要研究者经费</span></span></li>
       <li class="metric"><span class="v" aria-hidden="true" data-to="8">8</span><span class="sr">8</span><span class="k"><span class="en">PhD students graduated</span><span class="zh" lang="zh-Hans">已毕业博士生</span></span></li>
     </ul>
     <p class="metric-note"><span class="en">Citation figures from Google Scholar, October 2026.</span><span class="zh" lang="zh-Hans">引用数据来自 Google Scholar，2026 年 10 月。</span></p>
@@ -956,7 +972,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <li>
             <time datetime="2026-05-07"><span class="en">7 May 2026</span><span class="zh" lang="zh-Hans">2026.05.07</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-cap"/></svg></span>
-            <p><span class="en">Congratulations to Dr Mousa Tayseer Mousa Ja’far, whose PhD thesis, <i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Mousa Tayseer Mousa Ja’far 获批授予博士学位，博士论文为 <i lang="en">A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>。</span></p>
+            <p><span class="en">Congratulations to Dr. Mousa Tayseer Mousa Ja’far, whose PhD thesis, <i>A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Mousa Tayseer Mousa Ja’far 获批授予博士学位，博士论文为 <i lang="en">A Hybrid Intelligent Framework to Mitigate Cybersecurity Attacks in Internet of Things Networks</i>。</span></p>
           </li>
           <li>
             <time datetime="2026-05"><span class="en">May 2026</span><span class="zh" lang="zh-Hans">2026.05</span></time>
@@ -981,7 +997,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <li>
             <time datetime="2025-12-03"><span class="en">3 Dec 2025</span><span class="zh" lang="zh-Hans">2025.12.03</span></time>
             <span class="nic" aria-hidden="true"><svg class="i"><use href="#i-cap"/></svg></span>
-            <p><span class="en">Congratulations to Dr Xiaojuan Cheng, whose PhD thesis, <i>Modeling and Analysis of Cyberwar</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Xiaojuan Cheng 获批授予博士学位，博士论文为 <i lang="en">Modeling and Analysis of Cyberwar</i>。</span></p>
+            <p><span class="en">Congratulations to Dr. Xiaojuan Cheng, whose PhD thesis, <i>Modeling and Analysis of Cyberwar</i>, has been approved for conferral.</span><span class="zh" lang="zh-Hans">祝贺 Xiaojuan Cheng 获批授予博士学位，博士论文为 <i lang="en">Modeling and Analysis of Cyberwar</i>。</span></p>
           </li>
           <li>
             <time datetime="2025-11-17"><span class="en">17 Nov 2025</span><span class="zh" lang="zh-Hans">2025.11.17</span></time>
@@ -1025,8 +1041,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       <p class="en">I have published more than 100 papers: eight in IEEE TIFS; others in IEEE TDSC, TSMC, TNSE and TCSS; and more than ten at CORE A*/A conferences such as IJCAI, AsiaCCS and PAKDD. As a chief investigator, I have secured over AUD 1.2 million in research funding. I am an IEEE Senior Member and an Academic Editor of <i>PLOS ONE</i>. Research.com named me among its Best Computer Science Scientists 2026, and in 2021 The Australian’s Research Magazine listed me among Australia’s top 40 early career researchers.</p>
 
       <p class="en">Public services, businesses and households now depend on networks, and how a defender spends limited resources decides how far an attack can reach. My aim is to give those decisions a rigorous basis, and to mentor the students who will carry the work forward.</p>
-      <p class="zh" lang="zh-Hans">杨橹星，澳大利亚迪肯大学（Deakin University）信息技术学院高级讲师，在 Deakin 网络安全研究与创新中心（Deakin Cyber Research and Innovation Centre）负责自适应智能网络建模与决策（Adaptive and Intelligent Cyber-Modelling and Decision-Making）方向。2015 年在重庆大学获得计算机科学博士学位，曾在英国帝国理工学院、荷兰代尔夫特理工大学和迪肯大学做研究，2019 年起在迪肯大学任教。</p>
-      <p class="zh" lang="zh-Hans">他的研究方向是网络空间威胁演化与智能防御，具体包括：威胁在复杂网络中的传播与风险演化，动态攻防博弈与资源有限时的协同防御，谣言控制建模，以及把机理模型和学习方法结合起来的自主防御。用到的方法有复杂网络动力学、博弈论、最优控制、强化学习和多智能体强化学习。他率先建立了 APT 攻防的节点级传播模型，并提出了基于最优控制和微分博弈的 APT 防御策略。他把脉冲控制理论引入了网络战建模。对复杂网络上多种病毒的竞争传播，他首次给出了严格分析；这里的“病毒”可以是相互竞争的恶意软件、观点或产品，因此这些结果可用于恶意软件抑制、谣言遏制和口碑营销。</p>
+      <p class="zh" lang="zh-Hans">杨橹星，澳大利亚迪肯大学（Deakin University）信息技术学院高级讲师，在该校网络安全研究与创新中心（Deakin Cyber Research and Innovation Centre）负责自适应智能网络建模与决策（Adaptive and Intelligent Cyber-Modelling and Decision-Making）方向。2015 年在重庆大学获得计算机科学博士学位，曾在英国帝国理工学院、荷兰代尔夫特理工大学和迪肯大学做研究，2019 年起在迪肯大学任教。</p>
+      <p class="zh" lang="zh-Hans">他的研究方向是网络空间威胁演化与智能防御，具体包括：威胁在复杂网络中的传播与风险演化，动态攻防博弈与资源有限时的协同防御，谣言控制建模，以及把机理模型和学习方法结合起来的自主防御。用到的方法有复杂网络动力学、博弈论、最优控制、强化学习和多智能体强化学习。他率先建立了高级持续性威胁（APT）攻防的节点级传播模型，并提出了基于最优控制和微分博弈的 APT 防御策略。他把脉冲控制理论引入了网络战建模。对复杂网络上多种病毒的竞争传播，他首次给出了严格分析；这里的“病毒”可以是相互竞争的恶意软件、观点或产品，因此这些结果可用于恶意软件抑制、谣言遏制和口碑营销。</p>
       <p class="zh" lang="zh-Hans">已发表论文 100 余篇：IEEE TIFS 8 篇，IEEE TDSC、TSMC、TNSE、TCSS 等期刊上也有论文，IJCAI、AsiaCCS、PAKDD 等 CORE A*/A 类会议论文 10 余篇。作为主要研究者（CI），他获得的科研经费超过 120 万澳元。现为 IEEE 高级会员、<i>PLOS ONE</i> 学术编辑。2026 年入选 Research.com 全球最佳计算机科学家榜单（Best Computer Science Scientists 2026）；2021 年入选《澳大利亚人报》（The Australian）Research Magazine 评选的澳大利亚 40 位顶尖青年学者。</p>
       <p class="zh" lang="zh-Hans">公共服务、企业和家庭都已离不开网络，防御方怎样使用有限的资源，决定了攻击能走多远。他致力于为这些决定提供严谨的依据，也重视培养能把这项工作继续推进的学生。</p>
     </div>
@@ -1066,9 +1082,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <path class="st" d="M200 18h12"/><text class="lab" x="216" y="21"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
             </svg>
             <h4><span class="en">Piecewise-constant (HOLD) games and their extensions</span><span class="zh" lang="zh-Hans">分段常数（HOLD）博弈及其扩展</span></h4>
-            <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates. <a href="#fig">Fig.&nbsp;1</a> at the top of this page runs a one-defender version: the PMP schedule changes its patch rate at every step, which is hard to carry out in practice, while HOLD issues just six held commands and comes within a fraction of a percentage point of it.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计费用。本页顶部的<a href="#fig">图&nbsp;1</a> 演示了只有一个防御方的情形：PMP 方案的修补率每一步都在变，实际中很难执行；分段常数方案只需六条保持命令，效果和它只差不到一个百分点。</span></p>
-            <ul class="chips"><li class="chip-s"><span class="en">Piecewise-constant games</span><span class="zh" lang="zh-Hans">分段常数博弈</span></li><li class="chip-s"><span class="en">Zero-order hold</span><span class="zh" lang="zh-Hans">零阶保持</span></li><li class="chip-s"><span class="en">Shared capacity</span><span class="zh" lang="zh-Hans">共享容量</span></li></ul>
-            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享容量防御）</span></p>
+            <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates. <a href="#fig">Fig.&nbsp;1</a> at the top of this page runs a one-defender version: the PMP schedule changes its patch rate at every step, which is hard to carry out in practice, while HOLD issues just six held commands and comes within a fraction of a percentage point of it. Pick “You” under the figure to try six commands of your own.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计成本。本页顶部的<a href="#fig">图&nbsp;1</a> 演示了只有一个防御方的情形：PMP 方案的修补率每一步都在变，实际中很难执行；分段常数方案只需六条保持命令，效果和它只差不到一个百分点。在图下方选“你来”，也可以自己设定六条命令试试。</span></p>
+            <ul class="chips"><li class="chip-s"><span class="en">Piecewise-constant games</span><span class="zh" lang="zh-Hans">分段常数博弈</span></li><li class="chip-s"><span class="en">Zero-order hold</span><span class="zh" lang="zh-Hans">零阶保持</span></li><li class="chip-s"><span class="en">Shared capacity</span><span class="zh" lang="zh-Hans">共享响应能力</span></li></ul>
+            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享响应能力下的防御）</span></p>
           </li>
           <li class="fcard">
             <svg class="ill fz-cage anim" viewBox="0 0 280 112" role="img" aria-label="CAGE Challenge 4 network: four zones, five blue defender agents, and a red attacker entering through the contractor network" data-zh="CAGE Challenge 4 网络：四个区域、五个蓝方防御智能体，红方从承包商网络进入">
@@ -1083,8 +1099,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <g class="travel-x" style="--dx:-150px;animation-duration:3.6s"><circle class="f-att" cx="270" cy="94" r="3.6"/></g>
               <text class="lab f-att-t" x="262" y="76" text-anchor="end"><tspan class="en">red enters</tspan><tspan class="zh" lang="zh-Hans">红方进入</tspan></text>
             </svg>
-            <h4><span class="en">Multi-agent learning, simulated in CAGE Challenge 4</span><span class="zh" lang="zh-Hans">多智能体强化学习，在 CAGE Challenge 4 中仿真</span></h4>
-            <p><span class="en">Defenders in different parts of a network each see only local alerts, yet they share resources and their actions affect one another. I combine multi-agent reinforcement learning with HOLD games so that the defenders can improve their coordination from execution feedback. The attack–defense simulations run on CAGE Challenge 4 (Kiely et al.) in CybORG. There, five blue agents guard parts of an enterprise network, and blocking an attack can also interrupt normal business.</span><span class="zh" lang="zh-Hans">网络里各个区域的防守方只看到本地告警，却共用资源，行动还会相互影响。我把多智能体强化学习和分段常数博弈结合起来，让它们通过执行反馈逐步改善配合。网络攻防仿真用 CAGE Challenge 4（Kiely 等），它运行在 CybORG 里：五个蓝方智能体分区守卫一个企业网络，阻断攻击通路，也可能耽误正常业务。</span></p>
+            <h4><span class="en">Multi-agent learning, simulated in CAGE Challenge 4</span><span class="zh" lang="zh-Hans">多智能体强化学习，在&nbsp;CAGE&nbsp;Challenge&nbsp;4&nbsp;中仿真</span></h4>
+            <p><span class="en">Defenders in different parts of a network each see only local alerts, yet they share resources and their actions affect one another. I combine multi-agent reinforcement learning with HOLD games so that the defenders can improve their coordination from execution feedback. The attack–defense simulations run on CAGE Challenge 4 (Kiely et al., AAAI 2025) in CybORG. There, five blue agents guard parts of an enterprise network, and blocking an attack can also interrupt normal business.</span><span class="zh" lang="zh-Hans">网络里各个区域的防御方只看到本地告警，却共用资源，行动还会相互影响。我把多智能体强化学习和分段常数博弈结合起来，让它们通过执行反馈逐步改善配合。网络攻防仿真用 CAGE Challenge 4（Kiely 等，AAAI 2025），它运行在 CybORG 里：五个蓝方智能体分区守卫一个企业网络，阻断攻击通路，也可能耽误正常业务。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Multi-agent RL</span><span class="zh" lang="zh-Hans">多智能体强化学习</span></li><li class="chip-s">CAGE Challenge 4</li><li class="chip-s">CybORG</li></ul>
           </li>
           <li class="fcard">
@@ -1101,7 +1117,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <text class="lab-b f-def" x="224" y="104" text-anchor="middle"><tspan class="en">Blue</tspan><tspan class="zh" lang="zh-Hans">蓝方</tspan></text>
             </svg>
             <h4><span class="en">Disinformation and bilateral cyber warfare</span><span class="zh" lang="zh-Hans">信息战与双边网络战</span></h4>
-            <p><span class="en">HOLD games and multi-agent learning also apply to containing rumors and disinformation in information warfare. In the bilateral setting each side attacks the other’s network and defends its own. The propaganda war game in our 2024 IEEE TIFS paper is one example: each side pushes its messages into the other’s network and counters the opponent’s messages at home. I am extending both methods to these two-sided contests.</span><span class="zh" lang="zh-Hans">分段常数博弈和多智能体学习也用在谣言和虚假信息的遏制上，也就是信息战。双边的情形里，每一方都在攻击对方网络，同时守住自己的网络。我们 2024 年 IEEE TIFS 论文里的宣传战就是一例：每一方把自己的信息推向对方人群，同时在本地反宣传。我正把这两类方法扩展到这种双边对抗。</span></p>
+            <p><span class="en">HOLD games and multi-agent learning also apply to containing rumors and disinformation in information warfare. In the bilateral setting each side attacks the other’s network and defends its own. The propaganda war game in our 2024 IEEE TIFS paper is one example: each side pushes its messages into the other’s network and counters the opponent’s messages at home. I am extending both methods to these two-sided contests.</span><span class="zh" lang="zh-Hans">分段常数博弈和多智能体学习也可以用来遏制信息战中的谣言和虚假信息。双边的情形里，每一方都在攻击对方网络，同时守住自己的网络。我们 2024 年 IEEE TIFS 论文里的宣传战就是一例：每一方把自己的信息推向对方人群，同时在本地反宣传。我正把这两类方法扩展到这种双边对抗。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Rumors and disinformation</span><span class="zh" lang="zh-Hans">谣言与虚假信息</span></li><li class="chip-s"><span class="en">Information warfare</span><span class="zh" lang="zh-Hans">信息战</span></li><li class="chip-s"><span class="en">Bilateral cyber warfare</span><span class="zh" lang="zh-Hans">双边网络战</span></li></ul>
             <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tcss-2025">IEEE TCSS 2025</a>, <a href="#tnse-2024">IEEE TNSE 2024</a></p>
           </li>
@@ -1119,14 +1135,14 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <text class="lab" x="259" y="70" text-anchor="middle"><tspan class="en">game</tspan><tspan class="zh" lang="zh-Hans">博弈</tspan></text>
             </svg>
             <h4><span class="en">Language models, cybersecurity and game theory</span><span class="zh" lang="zh-Hans">大语言模型<wbr>与网络安全、<wbr>博弈论的结合</span></h4>
-            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark (Debenedetti et al., 2024) records such cases. Game theory helps on two fronts: testing such agents against attackers who adapt, and training detectors against injected text that keeps being rewritten to evade them, as in DataSentinel (Liu et al., IEEE S&amp;P 2025). In the other direction, a language model can turn a written scenario into a formal game for a solver to analyze, as in GameInterpreter (Deng, Wang and Savani, AAMAS 2025). Bringing language models, cybersecurity and game theory together is one of my current priorities.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件。AgentDojo 基准测试（Debenedetti 等，2024）记录的就是这类情况。博弈论在两方面能派上用场：一是评测这类智能体在会调整策略的攻击者面前怎样选择；二是训练检测器，对付不断改写、专门绕过检测的注入文本，DataSentinel（Liu 等，IEEE S&amp;P 2025）就是这样做的。反过来，语言模型也能把文字描述的情境整理成博弈模型，交给求解工具计算，例如 GameInterpreter（Deng、Wang 和 Savani，AAMAS 2025）。把大语言模型、网络安全和博弈论结合起来，是我当前的重点之一。</span></p>
+            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark (Debenedetti et al., NeurIPS 2024) records such cases. Game theory helps on two fronts: testing such agents against attackers who adapt, and training detectors against injected text that keeps being rewritten to evade them, as in DataSentinel (Liu et al., IEEE S&amp;P 2025). In the other direction, a language model can turn a written scenario into a formal game for a solver to analyze, as in GameInterpreter (Deng, Wang and Savani, AAMAS 2025). Bringing language models, cybersecurity and game theory together is one of my current priorities.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件。AgentDojo 基准测试（Debenedetti 等，NeurIPS 2024）记录的就是这类情况。博弈论在两方面能派上用场：一是评测这类智能体在会调整策略的攻击者面前怎样选择；二是训练检测器，对付不断改写、专门绕过检测的注入文本，DataSentinel（Liu 等，IEEE S&amp;P 2025）就是这样做的。反过来，语言模型也能把文字描述的情境整理成博弈模型，交给求解工具计算，例如 GameInterpreter（Deng、Wang 和 Savani，AAMAS 2025）。把大语言模型、网络安全和博弈论结合起来，是我当前的重点之一。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Large language models</span><span class="zh" lang="zh-Hans">大语言模型</span></li><li class="chip-s"><span class="en">Prompt injection</span><span class="zh" lang="zh-Hans">提示注入</span></li><li class="chip-s"><span class="en">Game modeling</span><span class="zh" lang="zh-Hans">博弈建模</span></li></ul>
           </li>
         </ul>
         <div class="urs" id="under-review">
           <p class="ur-h"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Under review: the questions behind six manuscripts</span><span class="zh" lang="zh-Hans">在审稿件：六篇论文要回答的问题</span></p>
           <ul>
-            <li><span class="en">Patches travel over their own delivery network. Where should patch sources sit relative to malware exposure, and when does replanning at each update pay off?</span><span class="zh" lang="zh-Hans">补丁沿着自己的分发网络传播。补丁源相对恶意软件的暴露位置该放在哪里？每次更新都重新规划，什么时候才划算？</span> <span class="ur-v">IEEE TNSE</span></li>
+            <li><span class="en">Patches travel over their own delivery network. Where should patch sources sit relative to malware exposure, and when does replanning at each update pay off?</span><span class="zh" lang="zh-Hans">补丁沿着自己的分发网络传播。相对于恶意软件的暴露位置，补丁源该放在哪里？每次更新都重新规划，什么时候才划算？</span> <span class="ur-v">IEEE TNSE</span></li>
             <li><span class="en">Recovery commands take effect only after a delay, and the attacker spreads one budget over several channels. How much recovery capacity guarantees that compromise keeps shrinking?</span><span class="zh" lang="zh-Hans">恢复命令要过一段时间才生效，攻击方又把一份预算分给几条攻击渠道。恢复能力要准备多少，才能保证失陷持续减少？</span> <span class="ur-v">IEEE TCNS</span></li>
             <li><span class="en">Recovery takes time, and each responder may serve only some hosts. Which compromised hosts should be restored first?</span><span class="zh" lang="zh-Hans">恢复需要时间，每名处置人员又只能处理部分主机。该先恢复哪些失陷主机？</span> <span class="ur-v">IEEE TDSC</span></li>
             <li><span class="en">Risk runs on two clocks: time since a host was last renewed and time since it was compromised. How should one budget be split between proactive renewal and reactive removal?</span><span class="zh" lang="zh-Hans">风险取决于两个时间：主机上次更新后过了多久，被入侵后又过了多久。一份预算该怎样在主动更新和事后清除之间分配？</span> <span class="ur-v">IEEE TCNS</span></li>
@@ -1153,7 +1169,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       </ol>
 
       <figure class="fig2 card rv" aria-labelledby="fig2-cap">
-        <p class="fig2-key" aria-hidden="true"><span class="en"><b class="f-def-t">Blue</b>: defender’s daily scan · <b class="f-att-t2">red</b>: attacker’s activity</span><span class="zh" lang="zh-Hans"><b class="f-def-t">蓝色</b>：防御方每天的扫描 · <b class="f-att-t2">红色</b>：攻击方的活动</span></p>
+        <p class="fig2-key" aria-hidden="true"><span class="en"><span class="nw"><b class="f-def-t">Blue</b>: defender’s daily scan</span>&nbsp;· <span class="nw"><b class="f-att-t2">red</b>: attacker’s activity</span></span><span class="zh" lang="zh-Hans"><span class="nw"><b class="f-def-t">蓝色</b>：防御方每天的扫描</span>&nbsp;· <span class="nw"><b class="f-att-t2">红色</b>：攻击方的活动</span></span></p>
         <svg class="anim" viewBox="0 0 520 152" role="img" aria-label="A scan schedule the attacker can observe: scans run at the same time each day and the attacker acts in the gaps after each scan." data-zh="攻击者看得到的扫描时间表：每天同一时间扫描，攻击者在每次扫描结束后的空档行动。">
           <defs><clipPath id="clip2"><rect x="78" y="0" width="434" height="152"/></clipPath></defs>
           <text class="lab-b f-def" x="0" y="44"><tspan class="en">Defender</tspan><tspan class="zh" lang="zh-Hans">防御方</tspan></text>
@@ -1276,7 +1292,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             </ul>
             <div class="case">
               <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · plan ahead, act one step, learn, plan again</span><span class="zh" lang="zh-Hans">案例 · 规划一段，执行一步，<wbr>学习后再规划</span></p>
-              <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际 IoT 网络里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。MPC 从当前状态出发，在控制限制下向前规划，只执行最前面一项；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 RLMPC 高感染设备峰值更低，也更早完成恢复。</span></p>
+              <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际的物联网里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。模型预测控制（MPC）从当前状态出发，在控制限制下向前规划，只执行第一步；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 MPC 高感染设备峰值更低，也更早完成恢复。</span></p>
               <p class="src"><a href="#tifs-2024b">Jafar et al., IEEE TIFS 2024</a></p>
             </div>
             <p class="rep"><span class="en">Representative work: </span><span class="zh" lang="zh-Hans">代表性工作：</span><a href="#tifs-2024b">IEEE TIFS 2024</a>, <a href="#cose-2025">Computers &amp; Security 2025</a></p>
@@ -1292,32 +1308,32 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-coins"/></svg><span class="en">APT defense · fixed resources</span><span class="zh" lang="zh-Hans">APT 防御 · 资源固定</span></span>
             <span class="qq"><span class="en">Where should a fixed budget go?</span><span class="zh" lang="zh-Hans">固定的预算该投向哪里？</span></span>
             <span class="how"><span class="en">Allocate repair across connected hosts.</span><span class="zh" lang="zh-Hans">在相互连接的主机之间分配修复投入。</span></span>
-            <span class="study" lang="en">Yang et al., IEEE TDSC 2020<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Yang et al., IEEE TDSC 2020<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2019">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span class="en">APT defense · changing risk</span><span class="zh" lang="zh-Hans">APT 防御 · 风险在变</span></span>
             <span class="qq"><span class="en">How should repair change over time?</span><span class="zh" lang="zh-Hans">修复力度该怎样随时间调整？</span></span>
             <span class="how"><span class="en">Adjust effort while attacks continue.</span><span class="zh" lang="zh-Hans">攻击还在继续，修复投入边做边调。</span></span>
-            <span class="study" lang="en">Yang et al., IEEE TIFS 2019<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Yang et al., IEEE TIFS 2019<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2025">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><span class="en">Malware and users · devices and vigilance</span><span class="zh" lang="zh-Hans">恶意软件与用户 · 设备与警觉</span></span>
             <span class="qq"><span class="en">How should patching and training work together?</span><span class="zh" lang="zh-Hans">修补和培训怎样配合？</span></span>
             <span class="how"><span class="en">Coordinate protection and user training.</span><span class="zh" lang="zh-Hans">设备防护和人员培训一起安排。</span></span>
-            <span class="study" lang="en">Cheng et al., IEEE TIFS 2025<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Cheng et al., IEEE TIFS 2025<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2024a">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-msg"/></svg><span class="en">Propaganda · competing campaigns</span><span class="zh" lang="zh-Hans">宣传战 · 双方竞争</span></span>
             <span class="qq"><span class="en">How should different interventions combine?</span><span class="zh" lang="zh-Hans">不同的干预手段怎样组合？</span></span>
             <span class="how"><span class="en">Combine ongoing and focused responses.</span><span class="zh" lang="zh-Hans">把持续投入和集中反制结合起来。</span></span>
-            <span class="study" lang="en">Cheng et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Cheng et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2026">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg><span class="en">Insider-assisted APT · three decision makers</span><span class="zh" lang="zh-Hans">内部人协助的 APT · 三方决策</span></span>
             <span class="qq"><span class="en">What changes when an insider helps?</span><span class="zh" lang="zh-Hans">有内部人帮忙时，局面有什么不同？</span></span>
             <span class="how"><span class="en">Consider the insider’s own incentives.</span><span class="zh" lang="zh-Hans">把内部人自己的得失也算进去。</span></span>
-            <span class="study" lang="en">Qin et al., IEEE TIFS 2026<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Qin et al., IEEE TIFS 2026<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
           <li><a class="qcard card lift" href="#tifs-2024b">
             <span class="set"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg><span class="en">IoT response · recovery under attack</span><span class="zh" lang="zh-Hans">物联网响应 · 边受攻击边恢复</span></span>
             <span class="qq"><span class="en">How can feedback improve the plan?</span><span class="zh" lang="zh-Hans">反馈怎样帮助改进计划？</span></span>
             <span class="how"><span class="en">Learn from measurements and replan.</span><span class="zh" lang="zh-Hans">根据测量结果学习，再重新规划。</span></span>
-            <span class="study" lang="en">Jafar et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a></li>
+            <span class="study" lang="en">Jafar et al., IEEE TIFS 2024<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></a></li>
         </ul>
       </div>
     </div>
@@ -1332,7 +1348,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <div class="side">
       <p class="sec-no" aria-hidden="true">03</p>
       <h2 class="sec-h" id="h-pubs"><span class="en">Selected publications</span><span class="zh" lang="zh-Hans">代表性论文</span></h2>
-      <p class="side-note"><span class="en">The full list is on <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a> and <a href="https://dblp.org/pid/59/10736.html">dblp</a>.</span><span class="zh" lang="zh-Hans">完整论文列表见 <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a> 和 <a href="https://dblp.org/pid/59/10736.html">dblp</a>。</span></p>
+      <p class="side-note"><span class="en">The full list is on <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>; <a href="https://dblp.org/pid/59/10736.html">dblp</a> lists the computer science papers.</span><span class="zh" lang="zh-Hans">完整论文列表见 <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>；<a href="https://dblp.org/pid/59/10736.html">dblp</a> 只收录其中计算机类期刊和会议的论文。</span></p>
       <ul class="vstats" aria-label="Selected papers by venue" data-zh="代表性论文的期刊分布">
         <li><span>TIFS</span><span class="bar" style="--n:6"></span><span class="c">6</span></li>
         <li><span>TNSE</span><span class="bar" style="--n:4"></span><span class="c">4</span></li>
@@ -1566,21 +1582,21 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-chip"/></svg></span>
             <div><p class="gt"><span class="en">Quantum Automation for Cyber Defence</span><span class="zh" lang="zh-Hans">Quantum Automation for Cyber Defence（面向网络防御的量子自动化）</span></p>
-              <p class="gm"><span class="en">Australia’s Economic Accelerator (AEA) Ignite Program · chief investigator · 2025–2026</span><span class="zh" lang="zh-Hans">澳大利亚经济加速器（AEA）Ignite 计划 · 主要研究者（CI）· 2025–2026</span></p></div>
+              <p class="gm"><span class="en">Australia’s Economic Accelerator (AEA) Ignite Program · chief investigator · <span class="nw">2025–2026</span></span><span class="zh" lang="zh-Hans">澳大利亚经济加速器（AEA）Ignite 计划 · 主要研究者（CI）· <span class="nw">2025–2026</span></span></p></div>
             <p class="amt">479,960<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:100%"></i></span>
           </li>
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-shield"/></svg></span>
             <div><p class="gt"><span class="en">Augmenting Cyber Defence Capability (ACDC)</span><span class="zh" lang="zh-Hans">Augmenting Cyber Defence Capability（增强网络防御能力）</span></p>
-              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · 2022–2024</span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· 2022–2024</span></p></div>
+              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · <span class="nw">2022–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· <span class="nw">2022–2024</span></span></p></div>
             <p class="amt">390,000<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:81.3%"></i></span>
           </li>
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-eye"/></svg></span>
             <div><p class="gt"><span class="en">Privacy-Respecting and Compliant Digital Credential Wallet (PRCDCAT)</span><span class="zh" lang="zh-Hans">Privacy-Respecting and Compliant Digital Credential Wallet（隐私保护且合规的数字凭证钱包）</span></p>
-              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · 2023–2024</span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· 2023–2024</span></p></div>
+              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · <span class="nw">2023–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· <span class="nw">2023–2024</span></span></p></div>
             <p class="amt">325,000<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:67.7%"></i></span>
           </li>
@@ -1636,7 +1652,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <div class="body">
       <div class="block rv">
         <h3 class="sub-h"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg><span class="en">Teaching</span><span class="zh" lang="zh-Hans">教学</span></h3>
-        <p class="intro-line"><span class="en">Teaching areas: cybersecurity, applied mathematics, computer programming and data science fundamentals. Graduate Certificate of Higher Education (Learning and Teaching), Deakin University, 2022. In the list below, T1–T3 are Deakin’s three trimesters.</span><span class="zh" lang="zh-Hans">教学方向：网络安全、应用数学、程序设计和数据科学基础。2022 年获迪肯大学高等教育教学研究生证书（Graduate Certificate of Higher Education, Learning and Teaching）。下文的 T1–T3 指迪肯大学每年的三个学期。</span></p>
+        <p class="intro-line"><span class="en">Teaching areas: cybersecurity, applied mathematics, computer programming and data science fundamentals. Graduate Certificate of Higher Education (Learning and Teaching), Deakin University, 2022. In the list below, T1–T3 are Deakin’s three trimesters.</span><span class="zh" lang="zh-Hans">教学方向：网络安全、应用数学、程序设计和数据科学基础。2022 年获迪肯大学高等教育教学研究生证书（Graduate Certificate of Higher Education, Learning and Teaching）。下文的 <span class="nw">T1–T3</span> 指迪肯大学每年的三个学期。</span></p>
         <ul class="items">
           <li>
             <span class="when"><span class="code">SIT281</span></span>
@@ -1716,13 +1732,13 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <ol class="tl">
           <li class="now">
             <span class="when"><span class="en">Jan 2026 – present</span><span class="zh" lang="zh-Hans">2026.01 至今</span></span>
-            <p class="what"><span class="en">Senior Lecturer (equivalent to Associate Professor)</span><span class="zh" lang="zh-Hans">高级讲师（相当于北美副教授）</span><span class="now-b"><span class="en">Current</span><span class="zh" lang="zh-Hans">现任</span></span>
-              <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学 Deakin 网络安全研究与创新中心、信息技术学院</span></small></p>
+            <p class="what"><span class="en">Senior Lecturer (equivalent to Associate Professor in North America)</span><span class="zh" lang="zh-Hans">高级讲师（相当于北美副教授）</span><span class="now-b"><span class="en">Current</span><span class="zh" lang="zh-Hans">现任</span></span>
+              <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学网络安全研究与创新中心、信息技术学院</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Oct 2019 – Dec 2025</span><span class="zh" lang="zh-Hans">2019.10 – 2025.12</span></span>
             <p class="what"><span class="en">Lecturer</span><span class="zh" lang="zh-Hans">讲师</span>
-              <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学 Deakin 网络安全研究与创新中心、信息技术学院</span></small></p>
+              <small><span class="en">Deakin Cyber Research and Innovation Centre and School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学网络安全研究与创新中心、信息技术学院</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Feb 2018 – Oct 2019</span><span class="zh" lang="zh-Hans">2018.02 – 2019.10</span></span>
@@ -1795,7 +1811,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 
       <div class="block rv">
         <h3 class="sub-h"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Reviewing</span><span class="zh" lang="zh-Hans">审稿</span></h3>
-        <p class="intro-line"><span class="en">Regular reviewer for IEEE Transactions on Information Forensics and Security, IEEE Transactions on Dependable and Secure Computing, IEEE/ACM Transactions on Networking, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics: Systems, IEEE Transactions on Network Science and Engineering, and other journals.</span><span class="zh" lang="zh-Hans">经常为 IEEE TIFS、IEEE TDSC、IEEE/ACM Transactions on Networking、IEEE Transactions on Cybernetics、IEEE TSMC、IEEE TNSE 等期刊审稿。</span></p>
+        <p class="intro-line"><span class="en">Regular reviewer for IEEE Transactions on Information Forensics and Security, IEEE Transactions on Dependable and Secure Computing, IEEE/ACM Transactions on Networking, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics: Systems, IEEE Transactions on Network Science and Engineering, and other journals.</span><span class="zh" lang="zh-Hans">经常为 IEEE TIFS、IEEE TDSC、IEEE/ACM ToN、IEEE TCYB、IEEE TSMC、IEEE TNSE 等期刊审稿。</span></p>
         <ul class="chips">
           <li class="chip-s"><abbr title="IEEE Transactions on Information Forensics and Security">IEEE TIFS</abbr></li><li class="chip-s"><abbr title="IEEE Transactions on Dependable and Secure Computing">IEEE TDSC</abbr></li><li class="chip-s"><abbr title="IEEE/ACM Transactions on Networking">IEEE/ACM ToN</abbr></li><li class="chip-s"><abbr title="IEEE Transactions on Cybernetics">IEEE TCYB</abbr></li><li class="chip-s"><abbr title="IEEE Transactions on Systems, Man, and Cybernetics: Systems">IEEE TSMC</abbr></li><li class="chip-s"><abbr title="IEEE Transactions on Network Science and Engineering">IEEE TNSE</abbr></li>
         </ul>
@@ -1806,7 +1822,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <ul class="items">
           <li>
             <span class="when">2022–2024</span>
-            <p class="what"><span class="en">HDR Coordinator, Deakin Cyber Research and Innovation Centre</span><span class="zh" lang="zh-Hans">Deakin 网络安全研究与创新中心 研究生（HDR）协调人</span></p>
+            <p class="what"><span class="en">Higher Degree by Research (HDR) Coordinator, Deakin Cyber Research and Innovation Centre</span><span class="zh" lang="zh-Hans">迪肯大学网络安全研究与创新中心研究生（HDR）协调人</span></p>
           </li>
           <li>
             <span class="when"><span class="en">Ongoing</span><span class="zh" lang="zh-Hans">现任</span></span>
@@ -1891,10 +1907,13 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 
   /* ---------------- Language ---------------- */
   var TITLES = { en: "Lu-Xing Yang 杨橹星 | Deakin University", zh: "杨橹星 Lu-Xing Yang | 迪肯大学" };
+  var descMeta = document.querySelector('meta[name="description"]');
+  var DESC = { en: descMeta ? descMeta.getAttribute("content") : "", zh: "杨橹星，澳大利亚迪肯大学信息技术学院网络安全高级讲师。他研究恶意软件、高级持续性威胁和谣言怎样在网络中扩散、防御方该怎样应对，方法主要是博弈论、最优控制和强化学习。" };
   var langBtn = document.getElementById("lang");
   function syncLang() {
     var l = lang();
     document.title = TITLES[l];
+    if (descMeta) descMeta.setAttribute("content", DESC[l]);
     syncLabels();
     syncMotion();
     syncTheme();
@@ -1905,6 +1924,14 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     root.setAttribute("data-lang", l);
     root.setAttribute("lang", l === "zh" ? "zh-Hans" : "en");
     store("lang", l);
+    // Keep the address bar in step, so a reload, a bookmark or a copied link shows the language now on screen.
+    try {
+      var u = new URL(location.href);
+      if (l === "zh") u.searchParams.set("lang", "zh"); else u.searchParams.delete("lang");
+      history.replaceState(history.state, "", u.pathname + u.search + u.hash);
+      var canon = document.querySelector('link[rel="canonical"]');
+      if (canon) canon.href = "https://lyang910920.github.io/" + (l === "zh" ? "?lang=zh" : "");
+    } catch (e) {}
     syncLang();
   });
 
@@ -2051,10 +2078,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     });
   }
   chips.forEach(function (c) { c.addEventListener("click", function () { filter(c.getAttribute("data-filter")); }); });
+  function showPub(id) { var t = id && document.getElementById(id); if (t && t.classList.contains("pub") && t.hidden) { filter("all"); return t; } return null; }
   [].forEach.call(document.querySelectorAll('a[href^="#"]'), function (a) {
     var id = a.getAttribute("href").slice(1), t = id && document.getElementById(id);
-    if (t && t.classList.contains("pub")) a.addEventListener("click", function () { filter("all"); });
+    if (t && t.classList.contains("pub")) a.addEventListener("click", function () { showPub(id); });
   });
+  window.addEventListener("hashchange", function () { var t = showPub(location.hash.slice(1)); if (t) t.scrollIntoView(); });
 
   /* ---------------- Recent news: "New" tags and the Show all toggle ---------------- */
   (function () {
@@ -2092,6 +2121,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     var netC = document.getElementById("net"), plotC = document.getElementById("plot"), statEl = document.getElementById("fstat");
     if (!netC || !netC.getContext) return null;
     var nctx = netC.getContext("2d"), pctx = plotC.getContext("2d");
+    var rmFig = window.matchMedia("(prefers-reduced-motion: reduce)"), reduced = rmFig.matches;
 
     // Model parameters (per step): infection probability per infected-susceptible link, natural recovery, and the
     // detection delay. The response window opens at the first alert and lasts T steps. The patch rate is the chance
@@ -2234,14 +2264,14 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       else {
         p = (zh ? "修补率 " : "patch rate ") + pct(rate(strategy, t));
         if (strategy === NONE) { txt = zh ? "不防御" : "No defense"; key = "n"; }
-        else if (strategy === CONSTANT) { txt = (zh ? "恒定修补率 · " : "Constant rate · ") + p; key = "c"; }
+        else if (strategy === CONSTANT) { txt = (zh ? "恒定方案 · " : "Constant rate · ") + p; key = "c"; }
         else if (strategy === HOLD || strategy === USER) { var j = Math.floor(t / LEN) + 1, u = strategy === USER; txt = zh ? (u ? "你的方案" : "分段常数") + " · 第 " + j + "/" + K + " 段 · " + p : (u ? "You" : "HOLD") + " · interval " + j + " of " + K + " · " + p; key = "h" + j; }
         else { txt = (zh ? "PMP · 修补率每一步都在变 · " : "PMP · rate changes every step · ") + pct(rate(strategy, t)); key = "p"; }
       }
       if (txt !== statTxt) { statEl.textContent = txt; statTxt = txt; }
       // The status line lights up when the window opens and at each HOLD update.
       if (key !== lastKey) {
-        if (lastKey && key !== "end" && key !== "pre" && key !== "try" && !reduceMQ.matches && !root.classList.contains("still")) {
+        if (lastKey && key !== "end" && key !== "pre" && key !== "try" && !reduced && !root.classList.contains("still")) {
           statEl.classList.add("flash"); clearTimeout(flashT); flashT = setTimeout(function () { statEl.classList.remove("flash"); }, 420);
         }
         lastKey = key;
@@ -2281,7 +2311,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     }
     function draw(now) {
       if (!W) return;
-      var c = nctx, animate = !reduceMQ.matches, e, a, b, x, st = live.st, defended = strategy !== NONE;
+      var c = nctx, animate = running && !reduced, e, a, b, x, st = live.st, defended = strategy !== NONE;
       c.setTransform(dpr, 0, 0, dpr, 0, 0);
       c.clearRect(0, 0, W, H);
       c.lineCap = "round";
@@ -2447,7 +2477,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         if (live2 && strategy !== NONE && !g.edit) {
           var v = rate(strategy, nextT), yv = EY(v);
           c.fillStyle = col["--blue"]; c.beginPath(); c.arc(xEnd, yv, 3, 0, 6.2832); c.fill();
-          c.fillStyle = col["--ink"]; c.font = "11px " + SANS; c.textAlign = xEnd + 34 > PW ? "right" : "left";
+          c.fillStyle = col["--ink"]; c.font = "11px " + SANS; c.textAlign = xEnd + 34 > x1 ? "right" : "left";
           halo(c, pct(v), xEnd + (c.textAlign === "right" ? -7 : 7), Math.max(e1, Math.min(e0 - 6, yv - 8)));
         }
       }
@@ -2512,17 +2542,20 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       if (!noteEl) return;
       var zh = lang() === "zh", f = function (x) { return (x * 100).toFixed(1) + "%"; }, s;
       noteEl.hidden = strategy !== USER && !userTouched;
-      if (!userTouched) { s = zh ? "向上拖动 (b) 里的六级台阶，把 " + BUDGET + " 点修补投入分到整个窗口。爆发会按你的方案重放，并用上面同样的 100 次模拟打分。" : "Drag the six steps in (b) upward to spread " + BUDGET + " points of patching effort over the window. The outbreak replays under your schedule, and it is scored on the same 100 runs as the rows above."; }
+      if (!userTouched) { s = zh ? "向上拖动 (b) 里的六级台阶（也可以选中 (b) 后用方向键），把 " + BUDGET + " 点修补投入分到整个窗口，每 1 点让一段的修补率提高 1%。爆发会按你的方案重放，并用上面同样的 100 次模拟打分。" : "Drag the six steps in (b) upward, or select (b) and use the arrow keys, to spread " + BUDGET + " points of patching effort over the window (one point is a 1% patch rate held for one interval). The outbreak replays under your schedule, and it is scored on the same 100 runs as the rows above."; }
       else if (userScore === null || cmpN < CMP_K) { s = zh ? "正在用同样的 100 次模拟给你的方案打分……" : "Scoring your schedule on the same 100 runs…"; }
       else {
         var u = userScore, h = cmpSum[HOLD] / cmpN, c = cmpSum[CONSTANT] / cmpN, left = BUDGET;
         for (var q = 0; q < K; q++) left -= userLv[q];
         s = zh ? "你的方案：" + f(u) + "。" : "Your schedule: " + f(u) + ". ";
-        if (u < h - 0.0005) s += zh ? "在这 100 次模拟里，你赢过了优化后的分段常数方案（" + f(h) + "）！" : "On these 100 runs you beat the optimized HOLD schedule (" + f(h) + ")!";
-        else if (u - h < 0.01) s += zh ? "和优化后的分段常数方案（" + f(h) + "）只差不到一个百分点。" : "Within one point of the optimized HOLD schedule (" + f(h) + ").";
+        if (u < h - 0.0005) s += zh ? "在这 100 次模拟里，你赢过了优化后的分段常数方案（" + f(h) + "）！分段常数方案是在节点级模型上优化的，目标里除了感染，还有随修补率平方增长的投入成本；这里只按感染打分。" : "On these 100 runs you beat the optimized HOLD schedule (" + f(h) + ")! HOLD was tuned on the node-level model for infections plus an effort cost that grows with the square of the rate; this score counts infections only.";
+        else if (u - h < 0.01) s += zh ? "和优化后的分段常数方案（" + f(h) + "）只差不到一个百分点。" : "Within one percentage point of the optimized HOLD schedule (" + f(h) + ").";
         else if (u < c - 0.0005) s += zh ? "比平均分配（" + f(c) + "）好，还能更接近 " + f(h) + " 吗？" : "Better than spending evenly (" + f(c) + "). Can you get closer to " + f(h) + "?";
-        else s += zh ? "还不如平均分配（" + f(c) + "），试试早一点出手。" : "No better than spending evenly (" + f(c) + "). Try acting earlier.";
-        if (left > 0) s += zh ? "还有 " + left + " 点预算没用。" : " " + left + (left === 1 ? " point" : " points") + " of budget unused.";
+        else {
+          var tip = left > 0 ? (zh ? "先把预算用完试试。" : "Try spending the rest of your budget.") : userLv[0] >= 16 ? (zh ? "试试第一段之后别马上停手。" : "Try not to stop right after the first interval.") : (zh ? "试试早一点出手。" : "Try acting earlier.");
+          s += zh ? "还不如平均分配（" + f(c) + "），" + tip : "No better than spending evenly (" + f(c) + "). " + tip;
+        }
+        if (left > 0) s += zh ? "还有 " + left + " 点预算没用。" : " Unused budget: " + left + (left === 1 ? " point." : " points.");
       }
       noteEl.textContent = s;
     }
@@ -2547,29 +2580,41 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       renderCmp();
       verdict();
       status();
+      syncSlider();
       drawPlot();
     }
     // A new schedule replays the current outbreak from its start, so the schedules can be compared on it. "You"
     // turns the patch-rate strip into six handles the visitor can drag, or move with the arrow keys.
     var figEl = document.getElementById("fig"), PLOT_EN = plotC.getAttribute("aria-label"), PLOT_ZH = plotC.getAttribute("data-zh");
     function setStrategy(s) {
+      if (keyT) { clearTimeout(keyT); keyT = 0; scoreUser(); }
       var was = strategy === USER, edit = s === USER;
       strategy = s;
       if (figEl) figEl.classList.toggle("edit", edit);
       plotC.tabIndex = edit ? 0 : -1;
+      plotC.setAttribute("role", edit ? "slider" : "img");
+      if (edit) { plotC.setAttribute("aria-valuemin", "0"); plotC.setAttribute("aria-valuemax", String(MAXPT)); syncSlider(); }
+      else ["aria-valuemin", "aria-valuemax", "aria-valuenow", "aria-valuetext"].forEach(function (a) { plotC.removeAttribute(a); });
       plotC.setAttribute("data-en", edit ? "Your patch schedule: six held rates. Left and right arrow keys pick an interval; up and down change its rate." : PLOT_EN);
       plotC.setAttribute("data-zh", edit ? "你的修补方案：六段保持的修补率。左右方向键选择时段，上下方向键调整修补率。" : PLOT_ZH);
       plotC.setAttribute("aria-label", plotC.getAttribute(lang() === "zh" ? "data-zh" : "data-en"));
       if (edit && youRow) youRow.hidden = false;
       startEpisode(false, performance.now()); last = performance.now();
+      if (!edit || userTouched) settle();
       if (edit !== was) size();
       relabel(); draw(performance.now());
     }
+    // Without animation, show where the window ends up under the schedule in force.
+    function settle() { if (!running) for (var q = 0; q < DELAY - 1 + T; q++) step(0); }
     function commitUser() {
       startEpisode(false, performance.now()); last = performance.now();
-      // Without animation, show where the window ends up under the new schedule.
-      if (!running) for (var q = 0; q < DELAY - 1 + T; q++) step(0);
+      settle();
       syncYouGlyph(); scoreUser(); relabel(); draw(performance.now());
+    }
+    function syncSlider() {
+      if (strategy !== USER) return;
+      plotC.setAttribute("aria-valuenow", String(userLv[selK]));
+      plotC.setAttribute("aria-valuetext", lang() === "zh" ? "第 " + (selK + 1) + " 段：" + userLv[selK] + "%" : "Interval " + (selK + 1) + ": " + userLv[selK] + "%");
     }
     function setLevel(k, lv) {
       var others = 0;
@@ -2579,7 +2624,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       if (lv === userLv[k]) return false;
       userLv[k] = lv;
       if (!userTouched) { userTouched = true; status(); verdict(); }
-      drawPlot(); syncYouGlyph();
+      drawPlot(); syncYouGlyph(); syncSlider();
       return true;
     }
     function stripHit(ev) {
@@ -2592,18 +2637,20 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       var h = stripHit(ev);
       if (!h) return;
       ev.preventDefault();
-      dragK = selK = h.k;
+      dragK = selK = h.k; moved = false; syncSlider();
       if (plotC.setPointerCapture) plotC.setPointerCapture(ev.pointerId);
-      if (!setLevel(h.k, h.lv)) drawPlot();
+      moved = setLevel(h.k, h.lv); if (!moved) drawPlot();
     });
     plotC.addEventListener("pointermove", function (ev) {
       if (strategy !== USER) { plotC.style.cursor = ""; return; }
       if (dragK >= 0) {
         var r = plotC.getBoundingClientRect(), g = geom();
-        setLevel(dragK, (g.e0 - (ev.clientY - r.top)) / (g.e0 - g.e1) * g.vs * 100);
+        if (setLevel(dragK, (g.e0 - (ev.clientY - r.top)) / (g.e0 - g.e1) * g.vs * 100)) moved = true;
       } else plotC.style.cursor = stripHit(ev) ? "ns-resize" : "";
     });
-    function endDrag() { if (dragK < 0) return; dragK = -1; commitUser(); }
+    // A tap that changes nothing does not restart the replay.
+    var moved = false;
+    function endDrag() { if (dragK < 0) return; dragK = -1; if (moved) commitUser(); else drawPlot(); moved = false; }
     plotC.addEventListener("pointerup", endDrag);
     plotC.addEventListener("pointercancel", endDrag);
     var keyT = 0;
@@ -2611,9 +2658,10 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       if (strategy !== USER) return;
       var zh = lang() === "zh", d = { ArrowUp: 1, ArrowDown: -1, PageUp: 5, PageDown: -5 }[ev.key];
       if (ev.key === "ArrowLeft" || ev.key === "ArrowRight") selK = Math.max(0, Math.min(K - 1, selK + (ev.key === "ArrowRight" ? 1 : -1)));
-      else if (d !== undefined) { if (setLevel(selK, userLv[selK] + d)) { clearTimeout(keyT); keyT = setTimeout(commitUser, 600); } }
+      else if (d !== undefined) { if (setLevel(selK, userLv[selK] + d)) { clearTimeout(keyT); keyT = setTimeout(function () { keyT = 0; commitUser(); }, 600); } }
       else return;
       ev.preventDefault();
+      syncSlider();
       drawPlot();
       var used = 0; for (var q = 0; q < K; q++) used += userLv[q];
       announce(zh ? "第 " + (selK + 1) + " 段：" + userLv[selK] + "%，已用预算 " + used + "/" + BUDGET : "Interval " + (selK + 1) + ": " + userLv[selK] + "%. Budget used " + used + " of " + BUDGET + ".");
@@ -2622,7 +2670,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     plotC.addEventListener("blur", function () { drawPlot(); });
     // The invitation in the page header jumps to the figure and starts the game.
     var tryLink = document.getElementById("try-game");
-    if (tryLink) tryLink.addEventListener("click", function () { setStrategy(USER); });
+    if (tryLink) tryLink.addEventListener("click", function (ev) { setStrategy(USER); if (ev.detail === 0) setTimeout(function () { plotC.focus(); }, 0); });
 
     // Animation loop: runs only while playing, on screen and in a visible tab. Once no host is infected, the
     // rest of the window runs faster; a new outbreak starts shortly after the window closes.
@@ -2637,12 +2685,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       draw(now);
     }
     function kick() { if (running && onScreen && !document.hidden && !raf) raf = requestAnimationFrame(frame); }
-    function play() { running = true; relabel(); kick(); }
+    function play() { running = true; if (endAt) { startEpisode(false, performance.now()); last = performance.now(); } relabel(); kick(); }
     function pause() { running = false; relabel(); if (raf) { cancelAnimationFrame(raf); raf = 0; } draw(performance.now()); }
 
     bPlay.addEventListener("click", function () { running ? pause() : play(); });
-    segBtns.concat(cmpRows).forEach(function (b) { b.addEventListener("click", function () { setStrategy(+b.getAttribute("data-s")); }); });
-    bReset.addEventListener("click", function () { startEpisode(true, performance.now()); last = performance.now(); draw(performance.now()); });
+    segBtns.concat(cmpRows).forEach(function (b) { b.addEventListener("click", function (ev) { setStrategy(+b.getAttribute("data-s")); if (strategy === USER && ev.detail === 0) plotC.focus(); }); });
+    bReset.addEventListener("click", function () { startEpisode(true, performance.now()); last = performance.now(); settle(); draw(performance.now()); });
 
     function hit(ev) {
       if (!pts.length) return -1;
@@ -2661,16 +2709,22 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     netC.addEventListener("pointermove", function (ev) { netC.style.cursor = hit(ev) >= 0 ? "pointer" : "default"; });
 
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(netC);
+      // Keep running while either canvas is on screen: (b) carries the replay when (a) has scrolled away.
+      var vis = [true, true], io = new IntersectionObserver(function (es) {
+        es.forEach(function (en) { vis[en.target === netC ? 0 : 1] = en.isIntersecting; });
+        onScreen = vis[0] || vis[1]; kick();
+      });
+      io.observe(netC); io.observe(plotC);
     }
     document.addEventListener("visibilitychange", kick);
     if ("ResizeObserver" in window) { var ro = new ResizeObserver(function () { size(); }); ro.observe(netC); ro.observe(plotC); }
     else window.addEventListener("resize", size);
     function recolor() { readColors(); draw(performance.now()); }
-    if (reduceMQ.addEventListener) reduceMQ.addEventListener("change", function () { if (reduceMQ.matches) pause(); });
+    function onReduce(e) { reduced = e.matches; if (reduced) pause(); }
+    if (rmFig.addEventListener) rmFig.addEventListener("change", onReduce); else if (rmFig.addListener) rmFig.addListener(onReduce);
 
     readColors();
-    if (reduceMQ.matches || root.classList.contains("still")) {
+    if (reduced || root.classList.contains("still")) {
       // No autoplay: show a still from part-way through the response window; the Play button starts it.
       epSeed = STILL_SEED; startEpisode(false, 0);
       for (k = 0; k < DELAY - 1 + 32; k++) step(0);
