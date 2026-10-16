@@ -271,7 +271,7 @@ figcaption{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2
 .body{min-width:0}
 .prose{max-width:66ch}
 .prose p+p{margin-top:1em}
-.portrait{display:block;width:min(100%,184px);aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-top:22px;background:var(--rule-2)}
+.portrait{display:block;width:min(100%,184px);height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-top:22px;background:var(--rule-2)}
 @media (max-width:860px){.portrait{width:132px;margin-top:16px}}
 .sub-h{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:.9375rem;color:var(--ink-2);margin:0 0 12px}
 .sub-h .i{color:var(--teal);font-size:1.05rem}
@@ -719,20 +719,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 
 /* Audit refinements */
 .try+.statement-2{margin-top:1.5rem}
-@media (min-width:861px) and (max-height:820px),(min-width:861px) and (max-width:1100px) and (max-height:980px){#publications .side,#about .side,#contact .side{position:static}}
+@media (min-width:861px) and (max-height:820px),(min-width:861px) and (max-width:1100px) and (max-height:980px){#publications .side,#about .side{position:static}}
 
-/* Avatars: the drawings are transparent; the tile and disc behind them follow the theme */
-:root{--av-tile:color-mix(in srgb,var(--teal) 7%,var(--surface));--av-ring:color-mix(in srgb,var(--teal) 15%,var(--surface))}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--av-tile:color-mix(in srgb,var(--teal) 12%,var(--surface));--av-ring:color-mix(in srgb,var(--teal) 34%,var(--surface))}}
-:root[data-theme="dark"]{--av-tile:color-mix(in srgb,var(--teal) 12%,var(--surface));--av-ring:color-mix(in srgb,var(--teal) 34%,var(--surface))}
-.portrait.av{height:auto;object-fit:contain;background:radial-gradient(39.25% 31.4% at 50% 41.2%,var(--av-ring) 99%,transparent 100%),var(--av-tile)}
-.figure-av{display:block;width:min(100%,168px);height:auto;margin-top:28px;background:radial-gradient(38.4% 19.2% at 50% 25%,var(--av-ring) 99%,transparent 100%)}
-@media (max-width:860px){
-  #contact .side{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:16px}
-  #contact .side>*{grid-column:1}
-  .figure-av{grid-column:2!important;grid-row:1/3;width:76px;aspect-ratio:1;margin:0;border-radius:50%;object-fit:cover;object-position:50% 0;background:var(--av-ring)}
-}
-@media print{.figure-av{display:none}.portrait.av{background:none}}
 .pub{line-height:1.42;text-wrap:balance}
 .pub-a,.pub-v{text-wrap:pretty}
 .pub-note{line-height:1.5}
@@ -1046,7 +1034,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <div class="side">
       <p class="sec-no" aria-hidden="true">01</p>
       <h2 class="sec-h" id="h-about"><span class="en">About</span><span class="zh" lang="zh-Hans">简介</span></h2>
-      <img class="portrait av" src="assets/avatar.svg" alt="Illustrated portrait of Lu-Xing Yang" aria-label="Illustrated portrait of Lu-Xing Yang" data-zh="杨橹星的插画头像" width="400" height="500" loading="lazy" decoding="async">
+      <!-- To show a portrait, save a photo as assets/photo.jpg (portrait orientation, about 720 × 900 px) and uncomment the next line. -->
+      <!-- <img class="portrait" src="assets/photo.jpg" alt="Lu-Xing Yang" width="360" height="450" loading="lazy"> -->
       <ul class="glance">
         <li><svg class="i" aria-hidden="true"><use href="#i-uni"/></svg><span><b><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></b><span class="en">Senior Lecturer since 2026; on faculty since 2019</span><span class="zh" lang="zh-Hans">2026 年起任高级讲师，2019 年起任教</span></span></li>
         <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><b><span class="en">PhD, Chongqing University</span><span class="zh" lang="zh-Hans">重庆大学博士</span></b><span class="en">Computer Science, 2015</span><span class="zh" lang="zh-Hans">计算机科学，2015 年</span></span></li>
@@ -1866,7 +1855,6 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <div class="side">
       <p class="sec-no" aria-hidden="true">08</p>
       <h2 class="sec-h" id="h-contact"><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系方式</span></h2>
-      <img class="figure-av" src="assets/avatar-full.svg" alt="Illustration of Lu-Xing Yang giving a thumbs-up" aria-label="Illustration of Lu-Xing Yang giving a thumbs-up" data-zh="杨橹星竖起大拇指的插画" width="300" height="600" loading="lazy" decoding="async">
     </div>
     <div class="body">
       <ul class="ccards rv">
