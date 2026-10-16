@@ -1298,7 +1298,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             </ul>
             <div class="case">
               <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · plan ahead, act one step, learn, plan again</span><span class="zh" lang="zh-Hans">案例 · 规划一段，执行一步，<wbr>学习后再规划</span></p>
-              <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际的物联网里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。模型预测控制（MPC）从当前状态出发，在控制限制下向前规划，只执行第一步；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 MPC 高感染设备峰值更低，也更早完成恢复。</span></p>
+              <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际的物联网里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。模型预测控制（MPC）从当前状态出发，在控制限制下向前规划，只执行第一步；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 MPC 让高感染设备的峰值更低，也更早完成恢复。</span></p>
               <p class="src"><a href="#tifs-2024b">Jafar et al., IEEE TIFS 2024</a></p>
             </div>
             <p class="rep"><span class="en">Representative work: </span><span class="zh" lang="zh-Hans">代表性工作：</span><a href="#tifs-2024b">IEEE TIFS 2024</a>, <a href="#cose-2025">Computers &amp; Security 2025</a></p>
@@ -1354,7 +1354,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     <div class="side">
       <p class="sec-no" aria-hidden="true">03</p>
       <h2 class="sec-h" id="h-pubs"><span class="en">Selected publications</span><span class="zh" lang="zh-Hans">代表性论文</span></h2>
-      <p class="side-note"><span class="en">The full list is on <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>; <a href="https://dblp.org/pid/59/10736.html">dblp</a> lists the computer science papers.</span><span class="zh" lang="zh-Hans">完整论文列表见 <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>；<a href="https://dblp.org/pid/59/10736.html">dblp</a> 只收录其中计算机类期刊和会议的论文。</span></p>
+      <p class="side-note"><span class="en">The full list is on <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>; <a href="https://dblp.org/pid/59/10736.html">dblp</a> lists only the computer science papers.</span><span class="zh" lang="zh-Hans">完整论文列表见 <a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ">Google Scholar</a>；<a href="https://dblp.org/pid/59/10736.html">dblp</a> 只收录其中计算机类期刊和会议的论文。</span></p>
       <ul class="vstats" aria-label="Selected papers by venue" data-zh="代表性论文的期刊分布">
         <li><span>TIFS</span><span class="bar" style="--n:6"></span><span class="c">6</span></li>
         <li><span>TNSE</span><span class="bar" style="--n:4"></span><span class="c">4</span></li>
@@ -2269,7 +2269,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         // The window is judged by the same total as panel (c): share infected plus effort cost.
         var inf = runSum / T, eff = 0, q;
         for (q = 0; q < T; q++) { var r = rate(strategy, q); eff += W_EFF / 2 / T * r * r; }
-        txt = zh ? "本轮结束 · 成本 " + ((inf + eff) * 100).toFixed(2) + "（" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + "）" : "Window over · cost " + ((inf + eff) * 100).toFixed(2) + " (" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + ")"; key = "end";
+        txt = zh ? "本次运行 · 成本 " + ((inf + eff) * 100).toFixed(2) + "（" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + "）" : "This run · cost " + ((inf + eff) * 100).toFixed(2) + " (" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + " effort)"; key = "end";
       }
       else if (t < 0) { txt = zh ? "还没被发现，恶意软件在悄悄扩散" : "Spreading before anyone notices"; key = "pre"; }
       else {
@@ -2596,8 +2596,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         else s += zh ? "还不如平均分配（" + p(c.J) + "）；分段常数方案的成本是 " + p(h.J) + "。" : "No better than spending evenly (" + p(c.J) + "); the HOLD schedule costs " + p(h.J) + ".";
         if (gap >= 0.001) {
           if (left > 0 && u.inf > h.inf) { tip = zh ? "还有 " + left + " 点预算没用，先用完再试试。" : "You still have " + left + (left === 1 ? " point" : " points") + " left; try spending them."; said = true; }
-          else if (u.eff > h.eff + 0.002) tip = zh ? "投入太集中了：峰值的成本涨得比它省下的感染更快，试着分得平缓一些。" : "Your effort is too concentrated: the peaks cost more than the infections they prevent. Try spreading it a little.";
           else if (userLv[0] < 14) tip = zh ? "试试在告警后的第一段多投入一些。" : "Try putting more into the first interval, right after the alert.";
+          else if (u.eff > h.eff + 0.002) tip = zh ? "投入太集中了：峰值的成本涨得比它省下的感染更快，试着分得平缓一些。" : "Your effort is too concentrated: the peaks cost more than the infections they prevent. Try spreading it a little.";
+          else if (userLv[1] < 9) tip = zh ? "第二段也多留一些投入试试。" : "Try keeping more effort in the second interval.";
           else tip = zh ? "后面几段也留一点投入试试。" : "Try keeping some effort in the later intervals.";
           s += zh ? tip : " " + tip;
         }
@@ -2736,7 +2737,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 
     bPlay.addEventListener("click", function () { running ? pause() : play(); });
     segBtns.concat(cmpRows).forEach(function (b) { b.addEventListener("click", function (ev) { setStrategy(+b.getAttribute("data-s")); if (strategy === USER && ev.detail === 0) plotC.focus(); }); });
-    bReset.addEventListener("click", function () { startEpisode(true, performance.now()); last = performance.now(); settle(); draw(performance.now()); });
+    bReset.addEventListener("click", function () { startEpisode(true, performance.now()); last = performance.now(); if (strategy !== USER || userTouched) settle(); draw(performance.now()); });
 
     function hit(ev) {
       if (!pts.length) return -1;
