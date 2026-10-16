@@ -201,6 +201,21 @@ button{font:inherit;color:inherit}
 .cmp-g{width:26px;height:12px;flex:none;margin-right:7px;fill:none;stroke:var(--blue);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;vertical-align:-1px}
 .cmp-row[aria-pressed="true"] .cmp-g{stroke-width:2}
 .cmp-row[data-s="0"] .cmp-g{stroke:var(--ink-3);stroke-dasharray:2 2.5}
+.cmp-row.you .cmp-name{color:var(--blue)}
+.cmp-note{margin:8px 0 0;font-size:.8125rem;line-height:1.55;color:var(--ink)}
+.fig.edit #plot{height:228px;touch-action:none}
+#plot:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.seg .you:not([aria-pressed="true"]){color:var(--blue);font-weight:600}
+.seg .you:not([aria-pressed="true"])::before{content:"";display:inline-block;width:6px;height:6px;margin:0 6px 1px 0;border-radius:50%;background:var(--blue);animation:invite 1.8s var(--ease) infinite}
+@keyframes invite{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--blue) 55%,transparent)}70%,100%{box-shadow:0 0 0 7px transparent}}
+.try{margin-top:.9rem}
+.try a{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 8px;border-radius:999px;border:1px solid color-mix(in srgb,var(--blue) 40%,transparent);background:color-mix(in srgb,var(--blue) 8%,var(--surface));font-family:var(--sans);font-size:.875rem;line-height:1.45;color:var(--ink);text-decoration:none;transition:border-color .2s,background-color .2s}
+.try a:hover{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,var(--surface))}
+.try .pi{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:var(--surface);animation:invite 1.8s var(--ease) infinite}
+.try .pi .i{font-size:.75rem}
+@media (prefers-reduced-motion: reduce){.try .pi,.seg .you::before{animation:none}}
+:root.still .try .pi,:root.still .seg .you::before{animation:none}
+@media print{.try{display:none}}
 #net{display:block;width:100%;aspect-ratio:16/10.5;touch-action:manipulation}
 #plot{display:block;width:100%;height:164px}
 .panel.plot,.panel.cmp{border-top:1px solid var(--rule-2)}
@@ -849,6 +864,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       </p>
       <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我致力于做数学上严谨、实际中用得上的网络安全研究，也重视培养能把这些工作继续推进的研究者。</span></span></p>
       <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to containing rumors and disinformation. I am also combining large language models with cybersecurity and game theory. </span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span><a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">见下文</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
+      <p class="try" style="--k:6"><a href="#fig" id="try-game"><span class="pi" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span><span class="en">Can you contain an outbreak better than the optimized schedule? Try it in Fig.&nbsp;1</span><span class="zh" lang="zh-Hans">你能比优化方案更好地遏制一次爆发吗？在图&nbsp;1 里试试</span></a></p>
       <ul class="links" style="--k:6">
         <li><a class="primary" href="mailto:y.luxing@deakin.edu.au"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>Google Scholar</a></li>
@@ -888,7 +904,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             <button type="button" class="cmp-row" data-s="1" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 8.3H25"/></svg><span class="en">Constant rate</span><span class="zh" lang="zh-Hans">恒定修补率</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
             <button type="button" class="cmp-row" data-s="2" aria-pressed="true"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 3.9H5V5.3H9V8.9H13V9.9H17V10.6H21V11H25"/></svg><span class="en">HOLD</span><span class="zh" lang="zh-Hans">分段常数</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
             <button type="button" class="cmp-row" data-s="3" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1.1 9.5L1.7 7.9L2.4 6.1L3 3.2L3.5 1.7L4 1.5L4.6 2.2L5.6 3.9L6.8 5.9L8.4 7.5L10.7 8.6L13.2 9.4L16.3 9.9L19.5 10.3L22.7 10.6L24.9 10.9"/></svg>PMP</span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
+            <button type="button" class="cmp-row you" data-s="4" aria-pressed="false" hidden><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 9H25"/></svg><span class="en">Your schedule</span><span class="zh" lang="zh-Hans">你的方案</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
           </div>
+          <p class="cmp-note" id="cmp-note" hidden></p>
         </div>
       </div>
       <div class="controls" role="group" aria-label="Figure controls" data-zh="图 1 控制">
@@ -898,6 +916,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <button type="button" data-s="1" aria-pressed="false"><span class="en">Constant</span><span class="zh" lang="zh-Hans">恒定</span></button>
           <button type="button" data-s="2" aria-pressed="true"><span class="en">HOLD</span><span class="zh" lang="zh-Hans">分段常数</span></button>
           <button type="button" data-s="3" aria-pressed="false">PMP</button>
+          <button type="button" class="you" data-s="4" aria-pressed="false"><span class="en">You</span><span class="zh" lang="zh-Hans">你来</span></button>
         </span>
         <button type="button" class="btn" id="f-reset"><svg class="i" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl">Reset</span></button>
       </div>
@@ -2079,15 +2098,19 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     // per step that each detected infection is patched.
     var N = 72, M = 2, STEP_MS = 120, FAST_MS = 30, END_MS = 1800, BETA = 0.06, GAMMA = 0.004, DELAY = 10, T = 150, LEN = 25, K = 6;
     var S = 0, I = 1, R = 2;
-    var NONE = 0, CONSTANT = 1, HOLD = 2, PMP = 3, STILL_SEED = 7003;
+    var NONE = 0, CONSTANT = 1, HOLD = 2, PMP = 3, USER = 4, STILL_SEED = 7003;
     // Patch-rate schedules with the same total effort (mean rate 0.06). PMP_V solves Pontryagin's maximum principle
     // for the node-level model of this network, with an effort cost quadratic in the rate. HOLD_V holds each rate for
     // 25 steps; the six rates are optimal for the same model and cost.
     var MEAN = 0.06, VS = 0.22;
     var HOLD_V = [0.1556, 0.1259, 0.0463, 0.0232, 0.009, 0];
     var PMP_V = [0.0339, 0.0409, 0.0492, 0.0583, 0.0678, 0.0779, 0.0883, 0.0983, 0.1072, 0.1153, 0.1355, 0.1548, 0.1719, 0.186, 0.1966, 0.2036, 0.2075, 0.2089, 0.2082, 0.2061, 0.203, 0.1991, 0.1943, 0.1888, 0.1828, 0.1765, 0.1699, 0.1633, 0.1568, 0.1504, 0.1442, 0.1382, 0.1324, 0.127, 0.1218, 0.1169, 0.1122, 0.1078, 0.1037, 0.0998, 0.0961, 0.0926, 0.0893, 0.0862, 0.0832, 0.0805, 0.0778, 0.0753, 0.073, 0.0707, 0.0686, 0.0666, 0.0647, 0.0628, 0.0611, 0.0594, 0.0578, 0.0562, 0.0548, 0.0534, 0.052, 0.0507, 0.0494, 0.0482, 0.0471, 0.046, 0.0449, 0.0438, 0.0428, 0.0419, 0.0409, 0.04, 0.0391, 0.0382, 0.0374, 0.0366, 0.0358, 0.035, 0.0343, 0.0335, 0.0328, 0.0321, 0.0315, 0.0308, 0.0302, 0.0295, 0.0289, 0.0283, 0.0277, 0.0271, 0.0266, 0.026, 0.0255, 0.0249, 0.0244, 0.0239, 0.0234, 0.0229, 0.0224, 0.0219, 0.0214, 0.021, 0.0205, 0.0201, 0.0196, 0.0192, 0.0187, 0.0183, 0.0179, 0.0175, 0.017, 0.0166, 0.0162, 0.0158, 0.0154, 0.015, 0.0146, 0.0143, 0.0139, 0.0135, 0.0131, 0.0128, 0.0124, 0.012, 0.0116, 0.0113, 0.0109, 0.0106, 0.0102, 0.0099, 0.0095, 0.0092, 0.0088, 0.0085, 0.0081, 0.0078, 0.0074, 0.0071, 0.0067, 0.0064, 0.0061, 0.0057, 0.0054, 0.005, 0.0047, 0.0044, 0.004, 0.0037, 0.0034, 0.003];
+    // The visitor's own schedule: six held rates in percentage points that together use at most the same total
+    // effort as the other schedules (36 points), each at most 30. It starts empty.
+    var BUDGET = Math.round(MEAN * K * 100), MAXPT = 30, userLv = [0, 0, 0, 0, 0, 0], userTouched = false, selK = 0, dragK = -1, overT = -1e9;
     function rate(s, t) {
       if (s === NONE || t < 0 || t >= T) return 0;
+      if (s === USER) return userLv[Math.floor(t / LEN)] / 100;
       return s === CONSTANT ? MEAN : s === HOLD ? HOLD_V[Math.floor(t / LEN)] : PMP_V[t];
     }
 
@@ -2205,19 +2228,20 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     function status() {
       if (!statEl) return;
       var zh = lang() === "zh", t = clock - DELAY + 1, txt, key, p;
-      if (endAt) { txt = zh ? "本轮结束：平均 " + pct(runSum / T) + " 的主机被感染" : "Window over: " + pct(runSum / T) + " infected on average"; key = "end"; }
+      if (strategy === USER && !userTouched) { txt = zh ? "轮到你了：拖动 (b) 里的台阶" : "Your turn: drag the steps in (b)"; key = "try"; }
+      else if (endAt) { txt = zh ? "本轮结束：平均 " + pct(runSum / T) + " 的主机被感染" : "Window over: " + pct(runSum / T) + " infected on average"; key = "end"; }
       else if (t < 0) { txt = zh ? "还没被发现，恶意软件在悄悄扩散" : "Spreading before anyone notices"; key = "pre"; }
       else {
         p = (zh ? "修补率 " : "patch rate ") + pct(rate(strategy, t));
         if (strategy === NONE) { txt = zh ? "不防御" : "No defense"; key = "n"; }
         else if (strategy === CONSTANT) { txt = (zh ? "恒定修补率 · " : "Constant rate · ") + p; key = "c"; }
-        else if (strategy === HOLD) { var j = Math.floor(t / LEN) + 1; txt = zh ? "分段常数 · 第 " + j + "/" + K + " 段 · " + p : "HOLD · interval " + j + " of " + K + " · " + p; key = "h" + j; }
+        else if (strategy === HOLD || strategy === USER) { var j = Math.floor(t / LEN) + 1, u = strategy === USER; txt = zh ? (u ? "你的方案" : "分段常数") + " · 第 " + j + "/" + K + " 段 · " + p : (u ? "You" : "HOLD") + " · interval " + j + " of " + K + " · " + p; key = "h" + j; }
         else { txt = (zh ? "PMP · 修补率每一步都在变 · " : "PMP · rate changes every step · ") + pct(rate(strategy, t)); key = "p"; }
       }
       if (txt !== statTxt) { statEl.textContent = txt; statTxt = txt; }
       // The status line lights up when the window opens and at each HOLD update.
       if (key !== lastKey) {
-        if (lastKey && key !== "end" && key !== "pre" && !reduceMQ.matches && !root.classList.contains("still")) {
+        if (lastKey && key !== "end" && key !== "pre" && key !== "try" && !reduceMQ.matches && !root.classList.contains("still")) {
           statEl.classList.add("flash"); clearTimeout(flashT); flashT = setTimeout(function () { statEl.classList.remove("flash"); }, 420);
         }
         lastKey = key;
@@ -2310,19 +2334,25 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       drawPlot();
     }
     function halo(c, txt, x, y) { c.lineWidth = 3; c.strokeStyle = col["--surface"]; c.lineJoin = "round"; c.strokeText(txt, x, y); c.fillText(txt, x, y); }
+    // Plot geometry. While the visitor edits a schedule, the patch-rate strip is taller and its scale reaches 32%.
+    // Narrow plots use slimmer margins.
+    function geom() {
+      var zh = lang() === "zh", edit = strategy === USER, narrow = PW < 420, y0 = Math.round(PH * (edit ? 0.4 : 0.5));
+      return { zh: zh, edit: edit, narrow: narrow, x0: narrow ? 46 : 72, x1: PW - (narrow ? 72 : zh ? 96 : 104), y1: narrow ? 40 : 18, y0: y0, e1: y0 + (edit ? 32 : 24), e0: PH - (edit ? 27 : 20), vs: edit ? 0.32 : VS };
+    }
     function drawPlot() {
       if (!PW) return;
-      var c = pctx, zh = lang() === "zh", t, j;
+      var c = pctx, g = geom(), zh = g.zh, t, j;
       c.setTransform(dpr, 0, 0, dpr, 0, 0);
       c.clearRect(0, 0, PW, PH);
       // Top: shares of hosts infected and recovered. Bottom: the patch-rate schedule. Both share the time axis of
       // the response window, which opens at the alert.
-      var x0 = 72, x1 = PW - (zh ? 96 : 104), y1 = 18, y0 = Math.round(PH * 0.5), e1 = y0 + 24, e0 = PH - 20;
+      var x0 = g.x0, x1 = g.x1, y1 = g.y1, y0 = g.y0, e1 = g.e1, e0 = g.e0;
       function X(tau) { return x0 + (x1 - x0) * tau / T; }
-      function EY(v) { return e0 - (e0 - e1) * v / VS; }
+      function EY(v) { return e0 - (e0 - e1) * v / g.vs; }
       var nextT = clock - DELAY + 1, live2 = !endAt && nextT >= 0 && nextT < T;
-      if (strategy === HOLD) {
-        // HOLD intervals: shaded alternately, the one in force highlighted, dashed lines at the updates.
+      if (strategy === HOLD || g.edit) {
+        // Held intervals: shaded alternately, the one in force highlighted, dashed lines at the updates.
         for (j = 0; j < K; j++) {
           var xa = X(j * LEN), xb = X((j + 1) * LEN), on = live2 && nextT >= j * LEN && nextT < (j + 1) * LEN;
           if (on || j % 2) { c.fillStyle = on ? rgba(col["--blue"], 0.15) : rgba(col["--ink"], 0.045); c.fillRect(xa, e1 - 6, xb - xa, e0 - e1 + 6); }
@@ -2340,27 +2370,41 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       c.font = "11px " + SANS; c.fillStyle = col["--ink-3"]; c.textBaseline = "middle"; c.textAlign = "right";
       c.fillText("100%", x0 - 8, y1);
       c.fillText("0", x0 - 8, y0);
-      c.fillText(zh ? "修补率" : "patch rate", x0 - 8, (e0 + e1) / 2);
+      if (g.narrow && !zh) { c.fillText("patch", x0 - 8, (e0 + e1) / 2 - 7); c.fillText("rate", x0 - 8, (e0 + e1) / 2 + 7); }
+      else c.fillText(zh ? "修补率" : "patch rate", x0 - 8, (e0 + e1) / 2);
       c.textBaseline = "alphabetic";
       c.textAlign = "left"; c.fillText(zh ? "告警" : "alert", x0, PH - 5);
       c.textAlign = "right"; c.fillText(zh ? "第 " + T + " 步" : T + " steps", x1, PH - 5);
-      // Schedules: the other two dashed, the one running drawn solid over the shaded effort it spends.
+      // Schedules: the other two dashed, the one running drawn solid over the shaded effort it spends. While the
+      // visitor edits, only their own schedule is shown.
       function path(s) {
         c.beginPath();
         if (s === PMP) { c.moveTo(X(0), EY(PMP_V[0])); for (t = 0; t < T; t++) c.lineTo(X(t + 0.5), EY(PMP_V[t])); c.lineTo(X(T), EY(PMP_V[T - 1])); }
-        else if (s === HOLD) { for (j = 0; j < K; j++) { var yy = EY(HOLD_V[j]); if (j) c.lineTo(X(j * LEN), yy); else c.moveTo(X(0), yy); c.lineTo(X((j + 1) * LEN), yy); } }
+        else if (s === HOLD || s === USER) { for (j = 0; j < K; j++) { var yy = EY(s === USER ? userLv[j] / 100 : HOLD_V[j]); if (j) c.lineTo(X(j * LEN), yy); else c.moveTo(X(0), yy); c.lineTo(X((j + 1) * LEN), yy); } }
         else { var yc = EY(s === CONSTANT ? MEAN : 0); c.moveTo(X(0), yc); c.lineTo(X(T), yc); }
       }
-      c.setLineDash([3, 3]); c.lineWidth = 1; c.strokeStyle = rgba(col["--ink-3"], 0.6);
-      [CONSTANT, HOLD, PMP].forEach(function (s) { if (s !== strategy) { path(s); c.stroke(); } });
-      c.setLineDash([]);
+      if (!g.edit) {
+        c.setLineDash([3, 3]); c.lineWidth = 1; c.strokeStyle = rgba(col["--ink-3"], 0.6);
+        [CONSTANT, HOLD, PMP].forEach(function (s) { if (s !== strategy) { path(s); c.stroke(); } });
+        c.setLineDash([]);
+      }
       if (strategy !== NONE) { path(strategy); c.lineTo(X(T), e0); c.lineTo(X(0), e0); c.closePath(); c.fillStyle = rgba(col["--blue"], 0.1); c.fill(); }
       path(strategy); c.strokeStyle = col["--blue"]; c.lineWidth = 2; c.lineJoin = "round"; c.stroke();
-      // How many rate commands the running schedule needs over the window.
-      if (strategy !== NONE) {
+      c.font = "11px " + SANS; c.textAlign = "left"; c.textBaseline = "middle"; c.fillStyle = col["--ink-3"];
+      if (g.edit) {
+        // How much of the shared budget the visitor's schedule uses.
+        var used = 0; for (j = 0; j < K; j++) used += userLv[j];
+        c.fillText(zh ? "已用预算" : "budget used", x1 + 8, e1 + 2);
+        c.font = "600 13px " + SANS; c.fillStyle = performance.now() - overT < 700 ? col["--crimson"] : used < BUDGET ? col["--teal"] : col["--ink"];
+        c.fillText(used + " / " + BUDGET, x1 + 8, e1 + 20);
+        var bw = Math.max(0, Math.min(72, PW - x1 - 18));
+        c.fillStyle = rgba(col["--ink"], 0.1); c.fillRect(x1 + 8, e1 + 31, bw, 4);
+        c.fillStyle = col["--blue"]; c.fillRect(x1 + 8, e1 + 31, bw * used / BUDGET, 4);
+      } else if (strategy !== NONE) {
+        // How many rate commands the running schedule needs over the window.
         var nc = strategy === CONSTANT ? 1 : strategy === HOLD ? K : T;
-        c.font = "11px " + SANS; c.fillStyle = col["--ink-3"]; c.textAlign = "left"; c.textBaseline = "middle";
-        c.fillText(zh ? nc + " 条命令" : nc + (nc === 1 ? " command" : " commands"), x1 + 8, e1 + 2);
+        c.font = "600 13px " + SANS; c.fillStyle = col["--ink"]; c.fillText(String(nc), x1 + 8, e1 + 2);
+        c.font = "11px " + SANS; c.fillStyle = col["--ink-3"]; c.fillText(zh ? "条命令" : nc === 1 ? "command" : "commands", x1 + 8, e1 + 18);
       }
       // Shares of hosts infected and recovered so far.
       function series(idx, color) {
@@ -2375,34 +2419,49 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       }
       series(1, col["--teal"]);
       series(0, col["--crimson"]);
-      if (!hist.length) return;
-      var xEnd = X(hist.length - 1), last = hist[hist.length - 1];
-      c.strokeStyle = rgba(col["--ink"], 0.3); c.lineWidth = 1; c.beginPath();
-      c.moveTo(Math.round(xEnd) + 0.5, y1); c.lineTo(Math.round(xEnd) + 0.5, e0); c.stroke();
-      // Direct labels at the line ends, kept inside the panel and at least GAP px apart.
-      var lo = y1 + 6, hi = y0 - 6, GAP = 14;
-      var ys = [last[0], last[1]].map(function (v) { return Math.max(lo, Math.min(hi, y0 - (y0 - y1) * v)); });
-      var upper = ys[0] < ys[1] ? 0 : (ys[1] < ys[0] ? 1 : (last[0] >= last[1] ? 0 : 1)), lower = 1 - upper;
-      if (ys[lower] - ys[upper] < GAP) {
-        var m = (ys[0] + ys[1]) / 2;
-        ys[upper] = m - GAP / 2; ys[lower] = m + GAP / 2;
-        if (ys[lower] > hi) { ys[lower] = hi; ys[upper] = hi - GAP; }
-        if (ys[upper] < lo) { ys[upper] = lo; ys[lower] = lo + GAP; }
+      if (hist.length) {
+        var xEnd = X(hist.length - 1), last = hist[hist.length - 1];
+        c.strokeStyle = rgba(col["--ink"], 0.3); c.lineWidth = 1; c.beginPath();
+        c.moveTo(Math.round(xEnd) + 0.5, y1); c.lineTo(Math.round(xEnd) + 0.5, e0); c.stroke();
+        // Direct labels at the line ends, kept inside the panel and at least GAP px apart.
+        var lo = y1 + 6, hi = y0 - 6, GAP = 14;
+        var ys = [last[0], last[1]].map(function (v) { return Math.max(lo, Math.min(hi, y0 - (y0 - y1) * v)); });
+        var upper = ys[0] < ys[1] ? 0 : (ys[1] < ys[0] ? 1 : (last[0] >= last[1] ? 0 : 1)), lower = 1 - upper;
+        if (ys[lower] - ys[upper] < GAP) {
+          var m = (ys[0] + ys[1]) / 2;
+          ys[upper] = m - GAP / 2; ys[lower] = m + GAP / 2;
+          if (ys[lower] > hi) { ys[lower] = hi; ys[upper] = hi - GAP; }
+          if (ys[upper] < lo) { ys[upper] = lo; ys[lower] = lo + GAP; }
+        }
+        c.textBaseline = "middle"; c.font = "12px " + SANS;
+        var names = zh ? ["感染 ", "已恢复 "] : ["infected ", "recovered "];
+        var wide = Math.max(c.measureText(names[0] + "100%").width, c.measureText(names[1] + "100%").width), flip = xEnd + 8 + wide > PW - 2;
+        c.textAlign = flip ? "right" : "left";
+        [[0, col["--crimson"]], [1, col["--teal"]]].forEach(function (s) {
+          c.fillStyle = s[1];
+          c.beginPath(); c.arc(xEnd, y0 - (y0 - y1) * last[s[0]], 3, 0, 6.2832); c.fill();
+          c.fillStyle = col["--ink"];
+          halo(c, names[s[0]] + pct(last[s[0]]), xEnd + (flip ? -8 : 8), ys[s[0]]);
+        });
+        // The patch rate in force, marked on its schedule.
+        if (live2 && strategy !== NONE && !g.edit) {
+          var v = rate(strategy, nextT), yv = EY(v);
+          c.fillStyle = col["--blue"]; c.beginPath(); c.arc(xEnd, yv, 3, 0, 6.2832); c.fill();
+          c.fillStyle = col["--ink"]; c.font = "11px " + SANS; c.textAlign = xEnd + 34 > PW ? "right" : "left";
+          halo(c, pct(v), xEnd + (c.textAlign === "right" ? -7 : 7), Math.max(e1, Math.min(e0 - 6, yv - 8)));
+        }
       }
-      c.textAlign = "left"; c.textBaseline = "middle"; c.font = "12px " + SANS;
-      var names = zh ? ["感染 ", "已恢复 "] : ["infected ", "recovered "];
-      [[0, col["--crimson"]], [1, col["--teal"]]].forEach(function (s) {
-        c.fillStyle = s[1];
-        c.beginPath(); c.arc(xEnd, y0 - (y0 - y1) * last[s[0]], 3, 0, 6.2832); c.fill();
-        c.fillStyle = col["--ink"];
-        c.fillText(names[s[0]] + pct(last[s[0]]), xEnd + 8, ys[s[0]]);
-      });
-      // The patch rate in force, marked on its schedule.
-      if (live2 && strategy !== NONE) {
-        var v = rate(strategy, nextT), yv = EY(v);
-        c.fillStyle = col["--blue"]; c.beginPath(); c.arc(xEnd, yv, 3, 0, 6.2832); c.fill();
-        c.fillStyle = col["--ink"]; c.font = "11px " + SANS;
-        halo(c, pct(v), xEnd + 7, Math.max(e1, Math.min(e0 - 6, yv - 8)));
+      if (g.edit) {
+        // A handle on each held rate; the keyboard-selected interval is outlined while the plot has focus.
+        var focused = document.activeElement === plotC;
+        for (j = 0; j < K; j++) {
+          var hx = X((j + 0.5) * LEN), hy = EY(userLv[j] / 100), sel = focused && j === selK;
+          if (sel) { c.strokeStyle = rgba(col["--blue"], 0.75); c.lineWidth = 1; c.setLineDash([2, 2]); c.strokeRect(X(j * LEN) + 1.5, e1 - 5.5, X((j + 1) * LEN) - X(j * LEN) - 3, e0 - e1 + 4); c.setLineDash([]); }
+          c.beginPath(); c.arc(hx, hy, sel || j === dragK ? 7.5 : 6.5, 0, 6.2832); c.fillStyle = col["--surface"]; c.fill(); c.lineWidth = 2; c.strokeStyle = col["--blue"]; c.stroke();
+          c.beginPath(); c.moveTo(hx - 2.5, hy - 1.5); c.lineTo(hx + 2.5, hy - 1.5); c.moveTo(hx - 2.5, hy + 1.5); c.lineTo(hx + 2.5, hy + 1.5); c.lineWidth = 1; c.stroke();
+          c.font = "600 11px " + SANS; c.fillStyle = col["--ink"]; c.textAlign = "center"; c.textBaseline = "alphabetic";
+          halo(c, userLv[j] + "%", hx, hy - 12);
+        }
       }
     }
 
@@ -2419,9 +2478,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     }
     function renderCmp() {
       cmpRows.forEach(function (row) {
-        var s = +row.getAttribute("data-s"), mean = cmpN ? cmpSum[s] / cmpN : 0;
-        row.querySelector(".cmp-bar").style.width = (mean * 100).toFixed(1) + "%";
-        row.querySelector(".cmp-val").textContent = cmpN ? Math.round(mean * 100) + "%" : "…";
+        var s = +row.getAttribute("data-s"), mean = s === USER ? userScore : (cmpN ? cmpSum[s] / cmpN : null), dash = s === USER && !userTouched;
+        row.querySelector(".cmp-bar").style.width = mean === null ? "0%" : (mean * 100).toFixed(1) + "%";
+        row.querySelector(".cmp-val").textContent = dash ? "–" : mean === null ? "…" : Math.round(mean * 100) + "%";
       });
       cmpCount.textContent = lang() === "zh" ? cmpN + " 次模拟" : cmpN + (cmpN === 1 ? " run" : " runs");
     }
@@ -2433,7 +2492,46 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         cmpN++;
       }
       renderCmp();
-      if (cmpN < CMP_K) idle(compareSlice);
+      if (cmpN < CMP_K) idle(compareSlice); else verdict();
+    }
+
+    // The visitor's schedule is scored on the same seeded runs as the rows above.
+    var youRow = document.querySelector(".cmp-row.you"), noteEl = document.getElementById("cmp-note"), userScore = null, uSum = 0, uN = 0, uGen = 0;
+    function scoreUser() {
+      var gen = ++uGen; uSum = 0; uN = 0; userScore = null; renderCmp(); verdict();
+      (function slice() {
+        if (gen !== uGen) return;
+        var t0 = performance.now();
+        while (uN < CMP_K && performance.now() - t0 < 12) { uSum += simulate(USER, 7000 + uN); uN++; }
+        if (uN < CMP_K) { idle(slice); return; }
+        userScore = uSum / CMP_K; renderCmp(); verdict();
+        if (noteEl && !noteEl.hidden) announce(noteEl.textContent);
+      })();
+    }
+    function verdict() {
+      if (!noteEl) return;
+      var zh = lang() === "zh", f = function (x) { return (x * 100).toFixed(1) + "%"; }, s;
+      noteEl.hidden = strategy !== USER && !userTouched;
+      if (!userTouched) { s = zh ? "向上拖动 (b) 里的六级台阶，把 " + BUDGET + " 点修补投入分到整个窗口。爆发会按你的方案重放，并用上面同样的 100 次模拟打分。" : "Drag the six steps in (b) upward to spread " + BUDGET + " points of patching effort over the window. The outbreak replays under your schedule, and it is scored on the same 100 runs as the rows above."; }
+      else if (userScore === null || cmpN < CMP_K) { s = zh ? "正在用同样的 100 次模拟给你的方案打分……" : "Scoring your schedule on the same 100 runs…"; }
+      else {
+        var u = userScore, h = cmpSum[HOLD] / cmpN, c = cmpSum[CONSTANT] / cmpN, left = BUDGET;
+        for (var q = 0; q < K; q++) left -= userLv[q];
+        s = zh ? "你的方案：" + f(u) + "。" : "Your schedule: " + f(u) + ". ";
+        if (u < h - 0.0005) s += zh ? "在这 100 次模拟里，你赢过了优化后的分段常数方案（" + f(h) + "）！" : "On these 100 runs you beat the optimized HOLD schedule (" + f(h) + ")!";
+        else if (u - h < 0.01) s += zh ? "和优化后的分段常数方案（" + f(h) + "）只差不到一个百分点。" : "Within one point of the optimized HOLD schedule (" + f(h) + ").";
+        else if (u < c - 0.0005) s += zh ? "比平均分配（" + f(c) + "）好，还能更接近 " + f(h) + " 吗？" : "Better than spending evenly (" + f(c) + "). Can you get closer to " + f(h) + "?";
+        else s += zh ? "还不如平均分配（" + f(c) + "），试试早一点出手。" : "No better than spending evenly (" + f(c) + "). Try acting earlier.";
+        if (left > 0) s += zh ? "还有 " + left + " 点预算没用。" : " " + left + (left === 1 ? " point" : " points") + " of budget unused.";
+      }
+      noteEl.textContent = s;
+    }
+    function syncYouGlyph() {
+      var g = youRow && youRow.querySelector(".cmp-g path");
+      if (!g) return;
+      var d = "M1 " + (11 - 10 * userLv[0] / MAXPT).toFixed(1);
+      for (var q = 0; q < K; q++) { if (q) d += "V" + (11 - 10 * userLv[q] / MAXPT).toFixed(1); d += "H" + (1 + 4 * (q + 1)); }
+      g.setAttribute("d", d);
     }
 
     // Controls
@@ -2447,11 +2545,84 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       bReset.querySelector(".lbl").textContent = t.reset;
       segBtns.concat(cmpRows).forEach(function (b) { b.setAttribute("aria-pressed", String(+b.getAttribute("data-s") === strategy)); });
       renderCmp();
+      verdict();
       status();
       drawPlot();
     }
-    // A new schedule replays the current outbreak from its start, so the schedules can be compared on it.
-    function setStrategy(s) { strategy = s; startEpisode(false, performance.now()); last = performance.now(); relabel(); draw(performance.now()); }
+    // A new schedule replays the current outbreak from its start, so the schedules can be compared on it. "You"
+    // turns the patch-rate strip into six handles the visitor can drag, or move with the arrow keys.
+    var figEl = document.getElementById("fig"), PLOT_EN = plotC.getAttribute("aria-label"), PLOT_ZH = plotC.getAttribute("data-zh");
+    function setStrategy(s) {
+      var was = strategy === USER, edit = s === USER;
+      strategy = s;
+      if (figEl) figEl.classList.toggle("edit", edit);
+      plotC.tabIndex = edit ? 0 : -1;
+      plotC.setAttribute("data-en", edit ? "Your patch schedule: six held rates. Left and right arrow keys pick an interval; up and down change its rate." : PLOT_EN);
+      plotC.setAttribute("data-zh", edit ? "你的修补方案：六段保持的修补率。左右方向键选择时段，上下方向键调整修补率。" : PLOT_ZH);
+      plotC.setAttribute("aria-label", plotC.getAttribute(lang() === "zh" ? "data-zh" : "data-en"));
+      if (edit && youRow) youRow.hidden = false;
+      startEpisode(false, performance.now()); last = performance.now();
+      if (edit !== was) size();
+      relabel(); draw(performance.now());
+    }
+    function commitUser() {
+      startEpisode(false, performance.now()); last = performance.now();
+      // Without animation, show where the window ends up under the new schedule.
+      if (!running) for (var q = 0; q < DELAY - 1 + T; q++) step(0);
+      syncYouGlyph(); scoreUser(); relabel(); draw(performance.now());
+    }
+    function setLevel(k, lv) {
+      var others = 0;
+      for (var q = 0; q < K; q++) if (q !== k) others += userLv[q];
+      if (Math.round(lv) > BUDGET - others && BUDGET - others < MAXPT) { overT = performance.now(); setTimeout(drawPlot, 750); }
+      lv = Math.max(0, Math.min(MAXPT, BUDGET - others, Math.round(lv)));
+      if (lv === userLv[k]) return false;
+      userLv[k] = lv;
+      if (!userTouched) { userTouched = true; status(); verdict(); }
+      drawPlot(); syncYouGlyph();
+      return true;
+    }
+    function stripHit(ev) {
+      var r = plotC.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top, g = geom();
+      if (x < g.x0 - 6 || x > g.x1 + 6 || y < g.e1 - 22 || y > g.e0 + 12) return null;
+      return { k: Math.max(0, Math.min(K - 1, Math.floor((x - g.x0) / (g.x1 - g.x0) * K))), lv: (g.e0 - y) / (g.e0 - g.e1) * g.vs * 100 };
+    }
+    plotC.addEventListener("pointerdown", function (ev) {
+      if (strategy !== USER) return;
+      var h = stripHit(ev);
+      if (!h) return;
+      ev.preventDefault();
+      dragK = selK = h.k;
+      if (plotC.setPointerCapture) plotC.setPointerCapture(ev.pointerId);
+      if (!setLevel(h.k, h.lv)) drawPlot();
+    });
+    plotC.addEventListener("pointermove", function (ev) {
+      if (strategy !== USER) { plotC.style.cursor = ""; return; }
+      if (dragK >= 0) {
+        var r = plotC.getBoundingClientRect(), g = geom();
+        setLevel(dragK, (g.e0 - (ev.clientY - r.top)) / (g.e0 - g.e1) * g.vs * 100);
+      } else plotC.style.cursor = stripHit(ev) ? "ns-resize" : "";
+    });
+    function endDrag() { if (dragK < 0) return; dragK = -1; commitUser(); }
+    plotC.addEventListener("pointerup", endDrag);
+    plotC.addEventListener("pointercancel", endDrag);
+    var keyT = 0;
+    plotC.addEventListener("keydown", function (ev) {
+      if (strategy !== USER) return;
+      var zh = lang() === "zh", d = { ArrowUp: 1, ArrowDown: -1, PageUp: 5, PageDown: -5 }[ev.key];
+      if (ev.key === "ArrowLeft" || ev.key === "ArrowRight") selK = Math.max(0, Math.min(K - 1, selK + (ev.key === "ArrowRight" ? 1 : -1)));
+      else if (d !== undefined) { if (setLevel(selK, userLv[selK] + d)) { clearTimeout(keyT); keyT = setTimeout(commitUser, 600); } }
+      else return;
+      ev.preventDefault();
+      drawPlot();
+      var used = 0; for (var q = 0; q < K; q++) used += userLv[q];
+      announce(zh ? "第 " + (selK + 1) + " 段：" + userLv[selK] + "%，已用预算 " + used + "/" + BUDGET : "Interval " + (selK + 1) + ": " + userLv[selK] + "%. Budget used " + used + " of " + BUDGET + ".");
+    });
+    plotC.addEventListener("focus", function () { drawPlot(); });
+    plotC.addEventListener("blur", function () { drawPlot(); });
+    // The invitation in the page header jumps to the figure and starts the game.
+    var tryLink = document.getElementById("try-game");
+    if (tryLink) tryLink.addEventListener("click", function () { setStrategy(USER); });
 
     // Animation loop: runs only while playing, on screen and in a visible tab. Once no host is infected, the
     // rest of the window runs faster; a new outbreak starts shortly after the window closes.
@@ -2493,7 +2664,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(netC);
     }
     document.addEventListener("visibilitychange", kick);
-    if ("ResizeObserver" in window) new ResizeObserver(function () { size(); }).observe(netC);
+    if ("ResizeObserver" in window) { var ro = new ResizeObserver(function () { size(); }); ro.observe(netC); ro.observe(plotC); }
     else window.addEventListener("resize", size);
     function recolor() { readColors(); draw(performance.now()); }
     if (reduceMQ.addEventListener) reduceMQ.addEventListener("change", function () { if (reduceMQ.matches) pause(); });
