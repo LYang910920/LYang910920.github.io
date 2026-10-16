@@ -2265,7 +2265,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       if (!statEl) return;
       var zh = lang() === "zh", t = clock - DELAY + 1, txt, key, p;
       if (strategy === USER && !userTouched) { txt = zh ? "轮到你了：拖动 (b) 里的台阶" : "Your turn: drag the steps in (b)"; key = "try"; }
-      else if (endAt) { txt = zh ? "本轮结束：平均 " + pct(runSum / T) + " 的主机被感染" : "Window over: " + pct(runSum / T) + " infected on average"; key = "end"; }
+      else if (endAt) {
+        // The window is judged by the same total as panel (c): share infected plus effort cost.
+        var inf = runSum / T, eff = 0, q;
+        for (q = 0; q < T; q++) { var r = rate(strategy, q); eff += W_EFF / 2 / T * r * r; }
+        txt = zh ? "本轮结束 · 成本 " + ((inf + eff) * 100).toFixed(2) + "（" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + "）" : "Window over · cost " + ((inf + eff) * 100).toFixed(2) + " (" + (inf * 100).toFixed(1) + "% + " + (eff * 100).toFixed(2) + ")"; key = "end";
+      }
       else if (t < 0) { txt = zh ? "还没被发现，恶意软件在悄悄扩散" : "Spreading before anyone notices"; key = "pre"; }
       else {
         p = (zh ? "修补率 " : "patch rate ") + pct(rate(strategy, t));
@@ -2508,16 +2513,23 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     var W_EFF = 8, NA = DELAY - 1, init = null, costs = null, userCost = null;
     var cmpRows = [].slice.call(document.querySelectorAll(".cmp-row"));
     var idle = window.requestIdleCallback ? function (f) { window.requestIdleCallback(f, { timeout: 400 }); } : function (f) { setTimeout(f, 40); };
-    function buildInit() {
-      var runs = 20000, rand = mulberry32(424242), s0 = new Float64Array(N), a0 = new Float64Array(N * NA), d0 = new Float64Array(N), q, i, k, e, m;
-      for (q = 0; q < runs; q++) {
-        m = newModel(); seedOutbreak(m, rand);
-        for (k = 1; k < DELAY; k++) advance(m, 0, rand);
-        for (i = 0; i < N; i++) if (m.st[i] === S) s0[i]++; else if (m.st[i] === I) { e = m.tick - m.tInf[i]; if (e >= DELAY - 1) d0[i]++; else a0[i * NA + e]++; }
+    // Rebuilt in slices of about 10 ms during idle time, so the page keeps responding; the random stream is the
+    // same as in one pass.
+    var BRUNS = 20000, bq = 0, bAcc = null, brand = null;
+    function buildSlice() {
+      if (!bAcc) { bAcc = { s: new Float64Array(N), a: new Float64Array(N * NA), d: new Float64Array(N) }; brand = mulberry32(424242); }
+      var t0 = performance.now(), m, k, i, e;
+      while (bq < BRUNS && performance.now() - t0 < 10) {
+        m = newModel(); seedOutbreak(m, brand);
+        for (k = 1; k < DELAY; k++) advance(m, 0, brand);
+        for (i = 0; i < N; i++) if (m.st[i] === S) bAcc.s[i]++; else if (m.st[i] === I) { e = m.tick - m.tInf[i]; if (e >= DELAY - 1) bAcc.d[i]++; else bAcc.a[i * NA + e]++; }
+        bq++;
       }
-      for (i = 0; i < N; i++) { s0[i] /= runs; d0[i] /= runs; }
-      for (i = 0; i < N * NA; i++) a0[i] /= runs;
-      init = { s: s0, a: a0, d: d0 };
+      if (bq < BRUNS) return false;
+      for (i = 0; i < N; i++) { bAcc.s[i] /= BRUNS; bAcc.d[i] /= BRUNS; }
+      for (i = 0; i < N * NA; i++) bAcc.a[i] /= BRUNS;
+      init = bAcc;
+      return true;
     }
     // Expected cost of schedule s: { inf, eff, J } as fractions (shown ×100).
     function modelCost(s) {
@@ -2550,10 +2562,14 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         bars[0].style.width = k ? (k.inf / top * 100).toFixed(2) + "%" : "0%";
         if (bars[1]) bars[1].style.width = k ? (k.eff / top * 100).toFixed(2) + "%" : "0%";
         row.querySelector(".cmp-val").textContent = s === USER && !userTouched ? "–" : k ? (k.J * 100).toFixed(2) : "…";
+        // The split shown by the two bar colours, for screen readers.
+        var sr = row.querySelector(".sr");
+        if (!sr) { sr = document.createElement("span"); sr.className = "sr"; row.appendChild(sr); }
+        sr.textContent = k ? (lang() === "zh" ? "：感染 " + (k.inf * 100).toFixed(1) + "% + 投入 " + (k.eff * 100).toFixed(2) : ": " + (k.inf * 100).toFixed(1) + "% infected + " + (k.eff * 100).toFixed(2) + " effort") : "";
       });
     }
     function computeCosts() {
-      if (!init) buildInit();
+      if (!init && !buildSlice()) { idle(computeCosts); return; }
       costs = [NONE, CONSTANT, HOLD, PMP].map(modelCost);
       if (userTouched) userCost = modelCost(USER);
       renderCmp(); verdict();
