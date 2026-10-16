@@ -324,14 +324,14 @@ abbr[title]{text-decoration:none;cursor:help}
 :root[data-lang="zh"] .fcard p{line-height:1.8}
 .fcard .chips{margin-top:auto;padding-top:12px}
 .fcard .rel{margin-top:10px;font-family:var(--sans);font-size:.8125rem;color:var(--ink-3)}
-.fcard .ur{margin-top:12px;padding:10px 12px 11px;border:1px dashed var(--edge);border-radius:8px;background:var(--panel)}
-.fcard .ur-h{display:flex;align-items:center;gap:7px;margin:0;font-family:var(--sans);font-size:.75rem;font-weight:600;line-height:1.4;color:var(--ink)}
-.fcard .ur-h .i{color:var(--blue);font-size:.95rem}
-.fcard .ur ul{margin:6px 0 0;padding:0;list-style:none}
-.fcard .ur li{font-size:.875rem;line-height:1.55;color:var(--ink-2)}
-:root[data-lang="zh"] .fcard .ur li{line-height:1.75}
-.fcard .ur li+li{margin-top:7px;padding-top:7px;border-top:1px solid var(--rule-2)}
-.fcard .ur-v{display:inline-block;margin-left:4px;font-family:var(--sans);font-size:.75rem;font-weight:600;color:var(--teal);white-space:nowrap}
+.urs{margin-top:14px;padding:12px 16px 14px;border:1px dashed var(--edge);border-radius:10px;background:var(--surface)}
+.urs .ur-h{display:flex;align-items:center;gap:7px;margin:0;font-family:var(--sans);font-size:.8125rem;font-weight:600;line-height:1.4;color:var(--ink)}
+.urs .ur-h .i{color:var(--blue);font-size:1rem}
+.urs ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px 28px;margin:10px 0 0;padding:0;list-style:none}
+.urs li{position:relative;padding-left:14px;font-size:.875rem;line-height:1.55;color:var(--ink-2)}
+:root[data-lang="zh"] .urs li{line-height:1.75}
+.urs li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.urs .ur-v{display:inline-block;margin-left:4px;font-family:var(--sans);font-size:.75rem;font-weight:600;color:var(--teal);white-space:nowrap}
 
 /* Themes */
 .themes{list-style:none;padding:0;margin:44px 0 0;counter-reset:th}
@@ -1050,13 +1050,6 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates. <a href="#fig">Fig.&nbsp;1</a> at the top of this page runs a one-defender version: the PMP schedule changes its patch rate at every step, which is hard to carry out in practice, while HOLD issues just six held commands and comes within a fraction of a percentage point of it.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计费用。本页顶部的<a href="#fig">图&nbsp;1</a> 演示了只有一个防御方的情形：PMP 方案的修补率每一步都在变，实际中很难执行；分段常数方案只需六条保持命令，效果和它只差不到一个百分点。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Piecewise-constant games</span><span class="zh" lang="zh-Hans">分段常数博弈</span></li><li class="chip-s"><span class="en">Zero-order hold</span><span class="zh" lang="zh-Hans">零阶保持</span></li><li class="chip-s"><span class="en">Shared capacity</span><span class="zh" lang="zh-Hans">共享容量</span></li></ul>
             <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享容量防御）</span></p>
-            <div class="ur">
-              <p class="ur-h"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Under review</span><span class="zh" lang="zh-Hans">在审稿件</span></p>
-              <ul>
-                <li><span class="en">Patches travel over their own delivery network. Where should patch sources sit relative to malware exposure, and when does replanning at each update pay off?</span><span class="zh" lang="zh-Hans">补丁沿着自己的分发网络传播。补丁源相对恶意软件的暴露位置该放在哪里？每次更新都重新规划，什么时候才划算？</span> <span class="ur-v">IEEE TNSE</span></li>
-                <li><span class="en">Recovery takes time, and each responder may serve only some hosts. Which compromised hosts should be restored first?</span><span class="zh" lang="zh-Hans">恢复需要时间，每名处置人员又只能处理部分主机。该先恢复哪些失陷主机？</span> <span class="ur-v">IEEE TDSC</span></li>
-              </ul>
-            </div>
           </li>
           <li class="fcard">
             <svg class="ill fz-cage anim" viewBox="0 0 280 112" role="img" aria-label="CAGE Challenge 4 network: four zones, five blue defender agents, and a red attacker entering through the contractor network" data-zh="CAGE Challenge 4 网络：四个区域、五个蓝方防御智能体，红方从承包商网络进入">
@@ -1092,13 +1085,6 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             <p><span class="en">HOLD games and multi-agent learning also apply to containing rumors and disinformation in information warfare. In the bilateral setting each side attacks the other’s network and defends its own. The propaganda war game in our 2024 IEEE TIFS paper is one example: each side pushes its messages into the other’s network and counters the opponent’s messages at home. I am extending both methods to these two-sided contests.</span><span class="zh" lang="zh-Hans">分段常数博弈和多智能体学习也用在谣言和虚假信息的遏制上，也就是信息战。双边的情形里，每一方都在攻击对方网络，同时守住自己的网络。我们 2024 年 IEEE TIFS 论文里的宣传战就是一例：每一方把自己的信息推向对方人群，同时在本地反宣传。我正把这两类方法扩展到这种双边对抗。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Rumors and disinformation</span><span class="zh" lang="zh-Hans">谣言与虚假信息</span></li><li class="chip-s"><span class="en">Information warfare</span><span class="zh" lang="zh-Hans">信息战</span></li><li class="chip-s"><span class="en">Bilateral cyber warfare</span><span class="zh" lang="zh-Hans">双边网络战</span></li></ul>
             <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#tifs-2024a">IEEE TIFS 2024</a>, <a href="#tcss-2025">IEEE TCSS 2025</a>, <a href="#tnse-2024">IEEE TNSE 2024</a></p>
-            <div class="ur">
-              <p class="ur-h"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Under review</span><span class="zh" lang="zh-Hans">在审稿件</span></p>
-              <ul>
-                <li><span class="en">Emotion can outlast sharing. Why can a rumor rebound after sharing falls, and how should mitigation be held between scheduled reviews?</span><span class="zh" lang="zh-Hans">情绪可能比转发持续得更久。转发减少以后，谣言为什么还会反弹？两次复核之间，干预该怎样保持？</span> <span class="ur-v">IEEE TKDE</span></li>
-                <li><span class="en">Each side splits limited capacity between attacking its rival and keeping its own services running. How should that split change over a campaign?</span><span class="zh" lang="zh-Hans">每一方都要把有限的能力分给攻击对方和维持自己的服务。整场对抗中，这种分配该怎样随时间调整？</span> <span class="ur-v">Ann. Oper. Res.</span></li>
-              </ul>
-            </div>
           </li>
           <li class="fcard">
             <svg class="ill fz-llm anim" viewBox="0 0 280 112" role="img" aria-label="External text with a hidden instruction passes a detector before reaching a language-model agent; a game model frames attacker and defender" data-zh="带隐藏指令的外部文本先经过检测，再到达大模型智能体；用博弈模型刻画攻防双方">
@@ -1118,6 +1104,17 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
             <ul class="chips"><li class="chip-s"><span class="en">Large language models</span><span class="zh" lang="zh-Hans">大语言模型</span></li><li class="chip-s"><span class="en">Prompt injection</span><span class="zh" lang="zh-Hans">提示注入</span></li><li class="chip-s"><span class="en">Game modeling</span><span class="zh" lang="zh-Hans">博弈建模</span></li></ul>
           </li>
         </ul>
+        <div class="urs" id="under-review">
+          <p class="ur-h"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Under review: the questions behind six manuscripts</span><span class="zh" lang="zh-Hans">在审稿件：六篇论文要回答的问题</span></p>
+          <ul>
+            <li><span class="en">Patches travel over their own delivery network. Where should patch sources sit relative to malware exposure, and when does replanning at each update pay off?</span><span class="zh" lang="zh-Hans">补丁沿着自己的分发网络传播。补丁源相对恶意软件的暴露位置该放在哪里？每次更新都重新规划，什么时候才划算？</span> <span class="ur-v">IEEE TNSE</span></li>
+            <li><span class="en">Recovery commands take effect only after a delay, and the attacker spreads one budget over several channels. How much recovery capacity guarantees that compromise keeps shrinking?</span><span class="zh" lang="zh-Hans">恢复命令要过一段时间才生效，攻击方又把一份预算分给几条攻击渠道。恢复能力要准备多少，才能保证失陷持续减少？</span> <span class="ur-v">IEEE TCNS</span></li>
+            <li><span class="en">Recovery takes time, and each responder may serve only some hosts. Which compromised hosts should be restored first?</span><span class="zh" lang="zh-Hans">恢复需要时间，每名处置人员又只能处理部分主机。该先恢复哪些失陷主机？</span> <span class="ur-v">IEEE TDSC</span></li>
+            <li><span class="en">Risk runs on two clocks: time since a host was last renewed and time since it was compromised. How should one budget be split between proactive renewal and reactive removal?</span><span class="zh" lang="zh-Hans">风险取决于两个时间：主机上次更新后过了多久，被入侵后又过了多久。一份预算该怎样在主动更新和事后清除之间分配？</span> <span class="ur-v">IEEE TCNS</span></li>
+            <li><span class="en">Emotion can outlast sharing. Why can a rumor rebound after sharing falls, and how should mitigation be held between scheduled reviews?</span><span class="zh" lang="zh-Hans">情绪可能比转发持续得更久。转发减少以后，谣言为什么还会反弹？两次复核之间，干预该怎样保持？</span> <span class="ur-v">IEEE TKDE</span></li>
+            <li><span class="en">Each side splits limited capacity between attacking its rival and keeping its own services running. How should that split change over a campaign?</span><span class="zh" lang="zh-Hans">每一方都要把有限的能力分给攻击对方和维持自己的服务。整场对抗中，这种分配该怎样随时间调整？</span> <span class="ur-v">Ann. Oper. Res.</span></li>
+          </ul>
+        </div>
       </div>
 
       <h3 class="sr"><span class="en">Approach and long-standing themes</span><span class="zh" lang="zh-Hans">研究思路与长期方向</span></h3>
@@ -1328,9 +1325,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 <p class="vstats-cap"><span class="en">The 22 papers below, by venue (IEEE Transactions unless noted).</span><span class="zh" lang="zh-Hans">下列 22 篇论文的期刊分布（除“其他”外均为 IEEE Transactions）。</span></p>
       <div class="review">
         <p class="review-k"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="en">Under review</span><span class="zh" lang="zh-Hans">在审稿件</span></p>
-        <p><span class="en">Manuscripts at IEEE TKDE, IEEE TDSC, IEEE TCNS, IEEE TNSE, Annals of Operations Research and other journals, and two submissions to WWW 2027. <a href="#focus">Current focus</a> lists the questions behind four of them.</span><span class="zh" lang="zh-Hans">投往 IEEE TKDE、TDSC、TCNS、TNSE、Annals of Operations Research 等期刊的稿件，以及两篇 WWW 2027 投稿。其中四篇研究的问题，列在<a href="#focus">当前研究重心</a>里。</span></p>
+        <p><span class="en">Manuscripts at IEEE TKDE, IEEE TDSC, IEEE TCNS (two), IEEE TNSE, Annals of Operations Research and other journals, and two submissions to WWW 2027. <a href="#under-review">Current focus</a> lists the questions behind six of them.</span><span class="zh" lang="zh-Hans">投往 IEEE TKDE、TDSC、TCNS（两篇）、TNSE、Annals of Operations Research 等期刊的稿件，以及两篇 WWW 2027 投稿。其中六篇研究的问题，列在<a href="#under-review">当前研究重心</a>里。</span></p>
         <ul class="chips" aria-hidden="true">
-          <li class="chip-s">IEEE TKDE</li><li class="chip-s">IEEE TDSC</li><li class="chip-s">IEEE TCNS</li><li class="chip-s">IEEE TNSE</li><li class="chip-s">Ann. Oper. Res.</li><li class="chip-s">WWW 2027 ×2</li>
+          <li class="chip-s">IEEE TKDE</li><li class="chip-s">IEEE TDSC</li><li class="chip-s">IEEE TCNS ×2</li><li class="chip-s">IEEE TNSE</li><li class="chip-s">Ann. Oper. Res.</li><li class="chip-s">WWW 2027 ×2</li>
         </ul>
       </div>
     </div>
