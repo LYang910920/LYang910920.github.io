@@ -717,6 +717,13 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   .card,.plate{box-shadow:none}
 }
 
+/* Institution logos: white tiles so the marks read in both themes */
+.tl .what{position:relative;padding-left:54px;min-height:42px}
+.tl .org{position:absolute;left:0;top:0;width:42px;height:42px;padding:5px;box-sizing:border-box;border-radius:10px;background:#fff;border:1px solid var(--rule);object-fit:contain}
+.glance li{grid-template-columns:24px minmax(0,1fr)}
+.glance .gl{width:24px;height:24px;padding:1.5px;box-sizing:border-box;border-radius:6px;background:#fff;border:1px solid var(--rule);object-fit:contain;margin-top:-.1em}
+@media print{.tl .org,.glance .gl{border-color:#D3D9DC}}
+
 /* Audit refinements */
 .try+.statement-2{margin-top:1.5rem}
 @media (min-width:861px) and (max-height:820px),(min-width:861px) and (max-width:1100px) and (max-height:980px){#publications .side,#about .side{position:static}}
@@ -1036,8 +1043,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       <h2 class="sec-h" id="h-about"><span class="en">About</span><span class="zh" lang="zh-Hans">简介</span></h2>
       <img class="portrait" src="assets/portrait.jpg?v=24df1b68" alt="Portrait of Lu-Xing Yang" aria-label="Portrait of Lu-Xing Yang" data-zh="杨橹星的照片" width="524" height="655" loading="lazy" decoding="async">
       <ul class="glance">
-        <li><svg class="i" aria-hidden="true"><use href="#i-uni"/></svg><span><b><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></b><span class="en">Senior Lecturer since 2026; on faculty since 2019</span><span class="zh" lang="zh-Hans">2026 年起任高级讲师，2019 年起任教</span></span></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><b><span class="en">PhD, Chongqing University</span><span class="zh" lang="zh-Hans">重庆大学博士</span></b><span class="en">Computer Science, 2015</span><span class="zh" lang="zh-Hans">计算机科学，2015 年</span></span></li>
+        <li><img class="gl" src="assets/logos/deakin.webp" alt="" width="96" height="96" decoding="async"><span><b><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></b><span class="en">Senior Lecturer since 2026; on faculty since 2019</span><span class="zh" lang="zh-Hans">2026 年起任高级讲师，2019 年起任教</span></span></li>
+        <li><img class="gl" src="assets/logos/cqu.webp" alt="" width="96" height="96" decoding="async"><span><b><span class="en">PhD, Chongqing University</span><span class="zh" lang="zh-Hans">重庆大学博士</span></b><span class="en">Computer Science, 2015</span><span class="zh" lang="zh-Hans">计算机科学，2015 年</span></span></li>
         <li><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg><span><b><span class="en">Research positions</span><span class="zh" lang="zh-Hans">此前研究经历</span></b><span class="en">Imperial College London · TU Delft · Deakin</span><span class="zh" lang="zh-Hans">帝国理工学院 · 代尔夫特理工大学 · 迪肯大学</span></span></li>
       </ul>
     </div>
@@ -1738,27 +1745,27 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <ol class="tl">
           <li class="now">
             <span class="when"><span class="en">Jan 2026 – present</span><span class="zh" lang="zh-Hans">2026.01 至今</span></span>
-            <p class="what"><span class="en">Senior Lecturer (equivalent to Associate Professor in North America)</span><span class="zh" lang="zh-Hans">高级讲师（相当于北美副教授）</span><span class="now-b"><span class="en">Current</span><span class="zh" lang="zh-Hans">现任</span></span>
+            <p class="what"><img class="org" src="assets/logos/deakin.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Senior Lecturer (equivalent to Associate Professor in North America)</span><span class="zh" lang="zh-Hans">高级讲师（相当于北美副教授）</span><span class="now-b"><span class="en">Current</span><span class="zh" lang="zh-Hans">现任</span></span>
               <small><span class="en">School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学信息技术学院</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Oct 2019 – Dec 2025</span><span class="zh" lang="zh-Hans">2019.10 – 2025.12</span></span>
-            <p class="what"><span class="en">Lecturer</span><span class="zh" lang="zh-Hans">讲师</span>
+            <p class="what"><img class="org" src="assets/logos/deakin.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Lecturer</span><span class="zh" lang="zh-Hans">讲师</span>
               <small><span class="en">School of Information Technology, Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学信息技术学院</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Feb 2018 – Oct 2019</span><span class="zh" lang="zh-Hans">2018.02 – 2019.10</span></span>
-            <p class="what"><span class="en">Alfred Deakin Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">Alfred Deakin 博士后研究员</span>
+            <p class="what"><img class="org" src="assets/logos/deakin.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Alfred Deakin Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">Alfred Deakin 博士后研究员</span>
               <small><span class="en">Deakin University, with Prof. Yong Xiang and Prof. Wanlei Zhou</span><span class="zh" lang="zh-Hans">迪肯大学，合作导师：Yong Xiang 教授、Wanlei Zhou 教授</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Mar 2016 – Sep 2017</span><span class="zh" lang="zh-Hans">2016.03 – 2017.09</span></span>
-            <p class="what"><span class="en">Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">博士后研究员</span>
+            <p class="what"><img class="org" src="assets/logos/tudelft.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Postdoctoral Research Fellow</span><span class="zh" lang="zh-Hans">博士后研究员</span>
               <small><span class="en">Delft University of Technology, the Netherlands, with Prof. Piet Van Mieghem</span><span class="zh" lang="zh-Hans">荷兰代尔夫特理工大学，合作导师：Piet Van Mieghem 教授</span></small></p>
           </li>
           <li>
             <span class="when"><span class="en">Oct 2014 – Oct 2015</span><span class="zh" lang="zh-Hans">2014.10 – 2015.10</span></span>
-            <p class="what"><span class="en">Research Associate, joint PhD training program</span><span class="zh" lang="zh-Hans">Research Associate（博士联合培养）</span>
+            <p class="what"><img class="org" src="assets/logos/imperial.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Research Associate, joint PhD training program</span><span class="zh" lang="zh-Hans">Research Associate（博士联合培养）</span>
               <small><span class="en">Imperial College London, United Kingdom, with Prof. Moez Draief</span><span class="zh" lang="zh-Hans">英国帝国理工学院，合作导师：Moez Draief 教授</span></small></p>
           </li>
         </ol>
@@ -1768,17 +1775,17 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <ol class="tl">
           <li>
             <span class="when">2022</span>
-            <p class="what"><span class="en">Graduate Certificate of Higher Education (Learning and Teaching)</span><span class="zh" lang="zh-Hans">高等教育教学研究生证书</span>
+            <p class="what"><img class="org" src="assets/logos/deakin.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">Graduate Certificate of Higher Education (Learning and Teaching)</span><span class="zh" lang="zh-Hans">高等教育教学研究生证书</span>
               <small><span class="en">Deakin University</span><span class="zh" lang="zh-Hans">迪肯大学</span></small></p>
           </li>
           <li>
             <span class="when">2015</span>
-            <p class="what"><span class="en">PhD in Computer Science</span><span class="zh" lang="zh-Hans">计算机科学博士</span>
+            <p class="what"><img class="org" src="assets/logos/cqu.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">PhD in Computer Science</span><span class="zh" lang="zh-Hans">计算机科学博士</span>
               <small><span class="en">Chongqing University, China; advisor Prof. Xiaofan Yang</span><span class="zh" lang="zh-Hans">重庆大学，导师：Xiaofan Yang 教授</span></small></p>
           </li>
           <li>
             <span class="when">2012</span>
-            <p class="what"><span class="en">BSc in Applied Mathematics</span><span class="zh" lang="zh-Hans">应用数学学士</span>
+            <p class="what"><img class="org" src="assets/logos/cqu.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><span class="en">BSc in Applied Mathematics</span><span class="zh" lang="zh-Hans">应用数学学士</span>
               <small><span class="en">Chongqing University, China</span><span class="zh" lang="zh-Hans">重庆大学</span></small></p>
           </li>
         </ol>
