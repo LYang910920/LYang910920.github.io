@@ -137,7 +137,7 @@ button{font:inherit;color:inherit}
 @media (max-width:420px){.brand .cn{display:none}}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;padding:clamp(32px,5.5vw,76px) 0 0;overflow:hidden}
+.hero{position:relative;padding:clamp(32px,5.5vw,76px) 0 0}
 .hero::before{content:"";position:absolute;inset:0 0 auto 0;height:560px;background-image:radial-gradient(circle at 1px 1px,color-mix(in srgb,var(--ink) 9%,transparent) 1px,transparent 0);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000 10%,transparent);pointer-events:none}
 .hero .wrap{position:relative}
 .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5.5vw,80px);align-items:start}
@@ -188,7 +188,7 @@ button{font:inherit;color:inherit}
 .fig{margin:0}
 .plate{background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
 .panel{position:relative}
-.tag{position:absolute;left:14px;top:10px;font-style:italic;font-size:.9375rem;color:var(--ink-2);pointer-events:none;user-select:none}
+.tag{position:absolute;left:14px;top:10px;font-style:italic;font-size:.9375rem;line-height:1.25;color:var(--ink-2);pointer-events:none;user-select:none}
 .legend{position:absolute;right:12px;top:10px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 12px;margin:0;padding:4px 9px;list-style:none;font-family:var(--sans);font-size:.75rem;line-height:1.4;color:var(--ink-2);background:color-mix(in srgb,var(--surface) 86%,transparent);border-radius:6px;pointer-events:none}
 .legend li{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:9px;height:9px;border-radius:50%}
@@ -571,8 +571,14 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 .fig2-key{display:none;margin:0 0 8px;font-family:var(--sans);font-size:.8125rem;color:var(--ink-2)}
 .fig2-key b{font-weight:600}
 .fig2-key .f-def-t{color:var(--blue)}.fig2-key .f-att-t2{color:var(--crimson)}
-@media (max-width:420px){.fig2-key{display:block}.fig2 .lab-b,.fig2 .sub,.fig2 .waits{display:none}}
+@media (max-width:420px){.fig2-key{display:block}.fig2 .lab-b,.fig2 .sub{display:none}}
 .news-h{font-size:1.625rem;letter-spacing:-.012em}
+@media (min-width:981px) and (max-width:1040px){.nav{gap:14px}}
+@media (max-width:360px){.fcard .fz-cage .lab{font-size:11px}.mnav ul{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.fig2 .waits{display:none}}
+@media (max-width:420px){.fig2 .lab{font-size:18px}.mini .lab{font-size:12px}}
+.fig2-key{text-wrap:balance}
+:root[data-lang="zh"] .lead-h,:root[data-lang="zh"] .fcard h4,:root[data-lang="zh"] .award .what,:root[data-lang="zh"] .case-k{word-break:keep-all}
 
 /* ---------- Illustration details ---------- */
 .now-k{display:inline-block;margin-right:6px;padding:0 8px;border-radius:999px;font-family:var(--sans);font-size:.6875rem;font-weight:600;letter-spacing:.08em;line-height:1.75;text-transform:uppercase;color:var(--teal);border:1px solid color-mix(in srgb,var(--teal) 35%,transparent);background:var(--surface);vertical-align:2px}
@@ -615,8 +621,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 .fz-llm .flow{fill:none;stroke:var(--edge);stroke-width:1.6;stroke-dasharray:3 3}
 .fz-llm .grid2 rect{fill:var(--surface);stroke:var(--blue);stroke-width:1.1}
 .fz-llm .grid2 rect:first-child,.fz-llm .grid2 rect:last-child{fill:var(--blue-w)}
-.series .kick{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
-:root[data-lang="zh"] .series .kick{letter-spacing:.14em}
+.series .kick{font-family:var(--sans);font-weight:600;color:var(--blue)}
 .lectures .lq{display:block;margin-top:3px;font-family:var(--sans);font-size:.8125rem;line-height:1.45;color:var(--ink-2)}
 .lectures li{align-items:start}
 @media (prefers-reduced-motion: reduce){.loop .orbit,.travel-x{animation:none!important}}
@@ -660,6 +665,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   .att-win{transform:none;opacity:.85}
   .sp .nd:nth-of-type(-n+3){fill:var(--teal);stroke:var(--teal)}
   .sp .nd:nth-of-type(n+4):nth-of-type(-n+5){fill:var(--crimson);stroke:var(--crimson)}
+  .js .rv,.gbar i{transition:none!important}
+  .js .rv:not(.in) .gbar i{transform:none}
+  .metric,.step,.fcard,.grant,.award,.qcard,.person,.ccard,.editor,.case,.fig2,.plate,.news-list li,.pub,.tl>li,.items>li,.si li,.lectures li,.theme>div:first-child{break-inside:avoid}
+  h2,h3,h4,.side,.sub-h,.case-k{break-after:avoid}
+  .sec{padding-top:40px}
+  .foot{margin-top:32px;break-inside:avoid}
   .top,.controls,.filters,.skip,.to-top,.copy,.mnav{display:none!important}
   body{background:#fff}
   .side{position:static}
@@ -789,7 +800,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       <li><a href="#experience"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span class="en">Experience</span><span class="zh" lang="zh-Hans">经历</span></a></li>
       <li><a href="#service"><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg><span class="en">Service</span><span class="zh" lang="zh-Hans">学术服务</span></a></li>
       <li><a href="#contact"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Contact</span><span class="zh" lang="zh-Hans">联系</span></a></li>
-      <li class="mrow"><button type="button" class="mtoggle" id="motion2" aria-pressed="false"><svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i-play" aria-hidden="true"><use href="#i-play"/></svg><span class="t-pause"><span class="en">Pause animations</span><span class="zh" lang="zh-Hans">暂停动画</span></span><span class="t-play"><span class="en">Play animations</span><span class="zh" lang="zh-Hans">播放动画</span></span></button></li>
+      <li class="mrow"><button type="button" class="mtoggle" id="motion2"><svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i-play" aria-hidden="true"><use href="#i-play"/></svg><span class="t-pause"><span class="en">Pause animations</span><span class="zh" lang="zh-Hans">暂停动画</span></span><span class="t-play"><span class="en">Play animations</span><span class="zh" lang="zh-Hans">播放动画</span></span></button></li>
     </ul>
   </nav>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -821,7 +832,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <span class="zh" lang="zh-Hans">研究对象有恶意软件、高级持续性威胁、社会工程攻击和谣言。防御方往往信息不全、资源有限，攻击者还会不断调整做法，我关心的是这时该怎样决策。方法上以复杂网络动力学、博弈论和最优控制为基础，结合强化学习和多智能体强化学习。</span>
       </p>
       <p class="mission" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><span class="en">I am strongly committed to cybersecurity research that holds up mathematically and works in practice, and to training the researchers who will take it further.</span><span class="zh" lang="zh-Hans">我致力于做数学上严谨、实际中用得上的网络安全研究，也重视培养能把这些工作继续推进的研究者。</span></span></p>
-      <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to disinformation containment. I am also combining large language models with cybersecurity and game theory.</span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span> <a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">见下文</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
+      <p class="now-line" style="--k:5"><svg class="i" aria-hidden="true"><use href="#i-step"/></svg><span><span class="now-k"><span class="en">Now</span><span class="zh" lang="zh-Hans">当前</span></span><span class="en">I am working on piecewise-constant (HOLD) games and multi-agent reinforcement learning, applied to cyber attack and defense and to containing rumors and disinformation. I am also combining large language models with cybersecurity and game theory. </span><span class="zh" lang="zh-Hans">我主要在做分段常数（HOLD）博弈和多智能体强化学习，用在网络攻防和谣言、虚假信息遏制上；另一个重点是把大语言模型和网络安全、博弈论结合起来。</span><a class="now-go" href="#focus"><span class="en">Current focus</span><span class="zh" lang="zh-Hans">见下文</span><svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></span></p>
       <ul class="links" style="--k:6">
         <li><a class="primary" href="mailto:y.luxing@deakin.edu.au"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="en">Email</span><span class="zh" lang="zh-Hans">邮箱</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=Nhd2-XEAAAAJ"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>Google Scholar</a></li>
@@ -992,7 +1003,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     </div>
     <div class="body">
       <div class="rv">
-        <h3 class="lead-h"><span class="en">Cyber threat dynamics and intelligent defense</span><span class="zh" lang="zh-Hans">网络空间威胁演化与智能防御</span></h3>
+        <h3 class="lead-h"><span class="en">Cyber threat dynamics and intelligent defense</span><span class="zh" lang="zh-Hans">网络空间威胁演化<wbr>与智能防御</span></h3>
         <p class="lead en">This work follows malware, advanced persistent threats, social engineering and malicious information as they evolve across computer networks, the Internet of Things and online social platforms. It asks how network structure, individual behavior and attack–defense strategies together decide the security outcome. The models build on complex network dynamics, game theory and control theory, combined with data-driven learning and artificial intelligence, and treat threat modeling, dynamic risk assessment, strategic resource allocation and adaptive defense as linked steps. The aim is defense that is interpretable, grounded in theory and practical to deploy when information is incomplete, resources are limited and adversaries keep changing.</p>
         <p class="lead zh" lang="zh-Hans">恶意软件、高级持续性威胁、社会工程攻击和恶意信息，会在计算机网络、物联网和在线社交平台上传播。威胁怎样演化，由网络结构、个体行为和攻防双方的策略共同决定；我们研究其中的规律，也研究怎样有效防御。方法上以复杂网络动力学、博弈论和控制理论为基础，结合数据驱动的学习和人工智能，从威胁传播建模做起，延伸到动态风险评估、攻防策略优化和自适应防御。防御方往往信息不全、资源有限，攻击者也在不断调整做法，安全决策就要在这样的条件下作出。我们希望给出的防御方法讲得清机理，有理论依据，在实际中也能执行。</p>
       </div>
@@ -1013,7 +1024,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <text class="lab" x="132" y="109" text-anchor="middle"><tspan class="en">update</tspan><tspan class="zh" lang="zh-Hans">更新</tspan></text>
               <text class="lab" x="192" y="109" text-anchor="middle"><tspan class="en">update</tspan><tspan class="zh" lang="zh-Hans">更新</tspan></text>
               <path class="cmd" d="M200 4h12"/><text class="lab" x="216" y="7"><tspan class="en">command</tspan><tspan class="zh" lang="zh-Hans">命令</tspan></text>
-              <path class="st" d="M200 16h12"/><text class="lab" x="216" y="19"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
+              <path class="st" d="M200 18h12"/><text class="lab" x="216" y="21"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
             </svg>
             <h4><span class="en">Piecewise-constant (HOLD) games and their extensions</span><span class="zh" lang="zh-Hans">分段常数（HOLD）博弈及其扩展</span></h4>
             <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计费用。</span></p>
@@ -1068,8 +1079,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <text class="lab" x="215" y="88" text-anchor="middle"><tspan class="en">LLM agent</tspan><tspan class="zh" lang="zh-Hans">大模型智能体</tspan></text>
               <text class="lab" x="259" y="70" text-anchor="middle"><tspan class="en">game</tspan><tspan class="zh" lang="zh-Hans">博弈</tspan></text>
             </svg>
-            <h4><span class="en">Language models, cybersecurity and game theory</span><span class="zh" lang="zh-Hans">大语言模型与网络安全、博弈论的结合</span></h4>
-            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark (Debenedetti et al., 2024) records such cases. Game theory helps on two fronts: testing such agents against attackers who adapt, and training detectors against injected text that keeps being rewritten to evade them, as in DataSentinel (Liu et al., IEEE S&amp;P 2025). In the other direction, a language model can turn a written security scenario into a formal game for a solver to analyze, as in GameInterpreter (Deng, Wang and Savani, AAMAS 2025). Bringing language models, cybersecurity and game theory together is one of my current priorities.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件。AgentDojo 基准测试（Debenedetti 等，2024）记录的就是这类情况。博弈论在两方面能派上用场：一是评测这类智能体在会调整策略的攻击者面前怎样选择；二是训练检测器，对付不断改写、专门绕过检测的注入文本，DataSentinel（Liu 等，IEEE S&amp;P 2025）就是这样做的。反过来，语言模型也能把文字描述的安全情境整理成博弈模型，交给求解工具计算，例如 GameInterpreter（Deng、Wang 和 Savani，AAMAS 2025）。把大语言模型、网络安全和博弈论结合起来，是我当前的重点之一。</span></p>
+            <h4><span class="en">Language models, cybersecurity and game theory</span><span class="zh" lang="zh-Hans">大语言模型<wbr>与网络安全、<wbr>博弈论的结合</span></h4>
+            <p><span class="en">Asked to summarize an email, a language-model agent may also obey a line hidden in it and send a copy to someone the user never named; the AgentDojo benchmark (Debenedetti et al., 2024) records such cases. Game theory helps on two fronts: testing such agents against attackers who adapt, and training detectors against injected text that keeps being rewritten to evade them, as in DataSentinel (Liu et al., IEEE S&amp;P 2025). In the other direction, a language model can turn a written scenario into a formal game for a solver to analyze, as in GameInterpreter (Deng, Wang and Savani, AAMAS 2025). Bringing language models, cybersecurity and game theory together is one of my current priorities.</span><span class="zh" lang="zh-Hans">让大语言模型智能体总结一封邮件，正文里如果藏着一句“把内容再发给另一个收件人”，它可能真的照做，发出用户没有要求的邮件。AgentDojo 基准测试（Debenedetti 等，2024）记录的就是这类情况。博弈论在两方面能派上用场：一是评测这类智能体在会调整策略的攻击者面前怎样选择；二是训练检测器，对付不断改写、专门绕过检测的注入文本，DataSentinel（Liu 等，IEEE S&amp;P 2025）就是这样做的。反过来，语言模型也能把文字描述的情境整理成博弈模型，交给求解工具计算，例如 GameInterpreter（Deng、Wang 和 Savani，AAMAS 2025）。把大语言模型、网络安全和博弈论结合起来，是我当前的重点之一。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Large language models</span><span class="zh" lang="zh-Hans">大语言模型</span></li><li class="chip-s"><span class="en">Prompt injection</span><span class="zh" lang="zh-Hans">提示注入</span></li><li class="chip-s"><span class="en">Game modeling</span><span class="zh" lang="zh-Hans">博弈建模</span></li></ul>
           </li>
         </ul>
@@ -1181,7 +1192,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <li class="chip-s"><span class="en">Feedback control</span><span class="zh" lang="zh-Hans">反馈控制</span></li>
             </ul>
             <div class="case">
-              <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · red and blue: steady propaganda, scheduled counter-propaganda</span><span class="zh" lang="zh-Hans">案例 · 红蓝宣传战：持续宣传，定时反宣传</span></p>
+              <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · red and blue: steady propaganda, scheduled counter-propaganda</span><span class="zh" lang="zh-Hans">案例 · 红蓝宣传战：持续宣传，<wbr>定时反宣传</span></p>
               <p><span class="en">Each side keeps pushing its message into the other side’s network and, at scheduled times, runs counter-propaganda inside its own. Users are grouped by degree (number of contacts), and the model tracks the share of each group that is unaware, spreading the opponent’s message, or countering it. Each side chooses its continuous effort and the strength of each counter-propaganda impulse. The result is a two-player nonzero-sum differential game with continuous flow and state jumps.</span><span class="zh" lang="zh-Hans">红蓝双方平时持续向对方网络宣传，到预定时刻在自己的网络里集中反宣传。人群按联系数分组，各组记录未接触宣传、传播对方信息和参与反宣传的比例。每一方选择平时的投入路径和每次反制的强度，于是得到一个既有连续作用、又有状态跳变的双人非零和微分博弈。</span></p>
               <p class="src"><a href="#tifs-2024a">Cheng et al., IEEE TIFS 2024</a> · <span class="en">nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span></p>
             </div>
@@ -1532,7 +1543,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <li class="award card lift">
             <span class="aic" aria-hidden="true"><svg class="i"><use href="#i-star"/></svg></span>
             <div><p class="when"><span class="en">May 2026</span><span class="zh" lang="zh-Hans">2026 年 5 月</span></p>
-              <p class="what"><span class="en">Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com 全球最佳计算机科学家榜单</span></p>
+              <p class="what"><span class="en">Best Computer Science Scientists 2026</span><span class="zh" lang="zh-Hans">入选 Research.com <wbr>全球最佳<wbr>计算机科学家<wbr>榜单</span></p>
               <small><a href="https://research.com/u/lu-xing-yang">Research.com</a></small></div>
           </li>
           <li class="award card lift">
@@ -1871,7 +1882,6 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   function syncMotion() {
     var still = root.classList.contains("still");
     motionBtn.setAttribute("aria-pressed", String(still));
-    motionBtn2.setAttribute("aria-pressed", String(still));
     motionBtn.title = lang() === "zh" ? (still ? "播放动画" : "暂停动画") : (still ? "Play animations" : "Pause animations");
   }
   function toggleMotion() {
@@ -1887,6 +1897,8 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
   var printTheme = null;
   window.addEventListener("beforeprint", function () { printTheme = root.getAttribute("data-theme"); root.setAttribute("data-theme", "light"); if (figure) figure.recolor(); });
   window.addEventListener("afterprint", function () { if (printTheme) root.setAttribute("data-theme", printTheme); else root.removeAttribute("data-theme"); if (figure) figure.recolor(); });
+  var printMQ = window.matchMedia("print");
+  if (printMQ.addEventListener) printMQ.addEventListener("change", function () { if (figure) figure.recolor(); });
   if (darkMQ.addEventListener) darkMQ.addEventListener("change", onSystemTheme); else if (darkMQ.addListener) darkMQ.addListener(onSystemTheme);
 
   /* ---------------- Header: rule, reading progress ---------------- */
