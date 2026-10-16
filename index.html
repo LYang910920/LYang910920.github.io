@@ -188,7 +188,7 @@ button{font:inherit;color:inherit}
 .fig{margin:0}
 .plate{background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
 .panel{position:relative}
-.tag{position:absolute;left:14px;top:10px;font-style:italic;font-size:.9375rem;line-height:1.25;color:var(--ink-2);pointer-events:none;user-select:none}
+.tag{position:absolute;left:14px;top:10px;font-style:italic;font-size:.9375rem;color:var(--ink-2);pointer-events:none;user-select:none}
 .legend{position:absolute;right:12px;top:10px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 12px;margin:0;padding:4px 9px;list-style:none;font-family:var(--sans);font-size:.75rem;line-height:1.4;color:var(--ink-2);background:color-mix(in srgb,var(--surface) 86%,transparent);border-radius:6px;pointer-events:none}
 .legend li{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:9px;height:9px;border-radius:50%}
@@ -223,7 +223,7 @@ button{font:inherit;color:inherit}
 figcaption{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2);max-width:70ch}
 :root[data-lang="zh"] figcaption{line-height:1.8}
 .fig-no{color:var(--ink);font-weight:600;font-variant-numeric:lining-nums}
-@media (max-width:640px){#net{aspect-ratio:4/3.6}.legend{top:auto;bottom:8px;right:8px}.cmp{padding-left:16px;padding-top:30px}.cmp-row{grid-template-columns:6.6rem minmax(0,1fr) 2.6rem}}
+@media (max-width:640px){.cmp .tag{line-height:1.25}#net{aspect-ratio:4/3.6}.legend{top:auto;bottom:8px;right:8px}.cmp{padding-left:16px;padding-top:30px}.cmp-row{grid-template-columns:6.6rem minmax(0,1fr) 2.6rem}}
 
 /* ---------- Sections ---------- */
 .sec{padding-top:clamp(64px,9vw,120px)}
@@ -574,9 +574,10 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 @media (max-width:420px){.fig2-key{display:block}.fig2 .lab-b,.fig2 .sub{display:none}}
 .news-h{font-size:1.625rem;letter-spacing:-.012em}
 @media (min-width:981px) and (max-width:1040px){.nav{gap:14px}}
-@media (max-width:360px){.fcard .fz-cage .lab{font-size:11px}.mnav ul{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:360px){.fcard .fz-cage .lab{font-size:11px}}
+.mnav ul>li{display:grid}
 @media (max-width:560px){.fig2 .waits{display:none}}
-@media (max-width:420px){.fig2 .lab{font-size:18px}.mini .lab{font-size:12px}}
+@media (max-width:420px){.fig2 .lab{font-size:18px}.case .mini .lab{font-size:12px}}
 .fig2-key{text-wrap:balance}
 :root[data-lang="zh"] .lead-h,:root[data-lang="zh"] .fcard h4,:root[data-lang="zh"] .award .what,:root[data-lang="zh"] .case-k{word-break:keep-all}
 
@@ -1225,7 +1226,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <li class="chip-s"><span class="en">Large language models</span><span class="zh" lang="zh-Hans">大语言模型</span></li>
             </ul>
             <div class="case">
-              <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · plan ahead, act one step, learn, plan again</span><span class="zh" lang="zh-Hans">案例 · 规划一段，执行一步，学习后再规划</span></p>
+              <p class="case-k"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg><span class="en">Case · plan ahead, act one step, learn, plan again</span><span class="zh" lang="zh-Hans">案例 · 规划一段，执行一步，<wbr>学习后再规划</span></p>
               <p><span class="en">In a real IoT network, how fast infection spreads and how long devices take to recover are often unclear at the start, yet defense has to continue. Model predictive control (MPC) plans ahead from the current state within control limits and executes only the first step. A learning module then compares measured and predicted states and updates the parameters used in the next round. In the paper’s simulation, this learning-assisted MPC kept the peak number of highly infected devices lower than open-loop response and plain MPC did, and reached full recovery first.</span><span class="zh" lang="zh-Hans">在实际 IoT 网络里，感染会传多快、设备多久能恢复，开始时往往拿不准，可防御还得继续做。MPC 从当前状态出发，在控制限制下向前规划，只执行最前面一项；学习模块把实测状态和预测状态放在一起比较，更新下一轮规划用的参数。在论文的模拟里，与开环响应和普通 MPC 相比，加入学习的 RLMPC 高感染设备峰值更低，也更早完成恢复。</span></p>
               <p class="src"><a href="#tifs-2024b">Jafar et al., IEEE TIFS 2024</a></p>
             </div>
