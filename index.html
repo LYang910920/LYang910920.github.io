@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lu-Xing Yang 杨橹星 | Deakin University</title>
-<meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in Cybersecurity in the School of Information Technology at Deakin University, Melbourne. He works on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and reinforcement learning.">
+<meta name="description" content="Lu-Xing Yang (杨橹星) is a Senior Lecturer in Cybersecurity at the School of Information Technology, Deakin University, Melbourne. He works on cyber threat dynamics and intelligent defense: threat propagation in complex networks, dynamic attack–defense games and learning-based autonomous defense, using game theory, optimal control and reinforcement learning.">
 <meta name="author" content="Lu-Xing Yang">
 <link rel="alternate" hreflang="en" href="https://lyang910920.github.io/">
 <link rel="alternate" hreflang="zh-Hans" href="https://lyang910920.github.io/?lang=zh">
@@ -230,7 +230,12 @@ button{font:inherit;color:inherit}
 .cmp-row[aria-pressed="true"] .cmp-name::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ink);margin:0 7px 1px 0}
 .cmp-track{position:relative;height:12px}
 .cmp-track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--rule-2)}
-.cmp-bar{position:relative;display:block;height:12px;width:0;border-radius:0 4px 4px 0;background:var(--crimson);transition:width .45s var(--ease)}
+.cmp-bar{position:relative;display:block;flex:none;height:12px;width:0;background:var(--crimson);transition:width .45s var(--ease)}
+.cmp-bar.eff{background:var(--blue);border-radius:0 4px 4px 0}
+.cmp-track{display:flex;align-items:center}
+.cmp-key{display:inline-flex;align-items:center;gap:5px}
+.cmp-key i{display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--crimson)}
+.cmp-key i.k-eff{background:var(--blue);margin-left:6px}
 .cmp-val{font-variant-numeric:lining-nums tabular-nums;text-align:right;color:var(--ink)}
 .controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
 .btn{font-family:var(--sans);font-size:.8125rem;line-height:1;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:6px;height:34px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:border-color .2s}
@@ -713,11 +718,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
 }
 
 /* Audit refinements */
-@media (min-width:861px) and (max-height:760px),(min-width:861px) and (max-width:1100px) and (max-height:920px){#publications .side{position:static}}
+.try+.statement-2{margin-top:1.5rem}
+@media (min-width:861px) and (max-height:820px),(min-width:861px) and (max-width:1100px) and (max-height:980px){#publications .side{position:static}}
 .pub{line-height:1.42;text-wrap:balance}
 .pub-a,.pub-v{text-wrap:pretty}
 .pub-note{line-height:1.5}
-@media (max-width:420px){.controls .seg{order:-1;display:flex;flex:1 1 100%}.controls .seg button{flex:1 1 auto;padding:0 6px}}
+@media (max-width:420px){.controls .seg{display:flex;flex:1 1 100%}.controls .seg button{flex:1 1 auto;padding:0 6px}}
 .cmp-h>span:first-child,.theme .q>span{text-wrap:balance}
 .qcard .how,.person .th,.urs li,.step p,.lectures .lq,.grant .gm,.review p,.ccard address{text-wrap:pretty}
 .side-note a,.fcard .rel a{white-space:nowrap}
@@ -881,7 +887,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         <li><a href="https://dblp.org/pid/59/10736.html"><svg class="i" aria-hidden="true"><use href="#i-db"/></svg>dblp</a></li>
         <li><a href="https://experts.deakin.edu.au/43777-luxing-yang"><svg class="i" aria-hidden="true"><use href="#i-uni"/></svg><span class="en">Deakin profile</span><span class="zh" lang="zh-Hans">Deakin 主页</span></a></li>
       </ul>
-      <p class="try" style="--k:4"><a href="#fig" id="try-game"><span class="pi" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span><span class="en">Can you contain an outbreak better than the optimized schedule? Try it in Fig.&nbsp;1</span><span class="zh" lang="zh-Hans">你能比优化方案更好地遏制一次爆发吗？<span class="nw">在图&nbsp;1 里试试</span></span></a></p>
+      <p class="try" style="--k:4"><a href="#fig" id="try-game"><span class="pi" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span><span class="en">How close can you get to the optimized schedule? Try it in Fig.&nbsp;1</span><span class="zh" lang="zh-Hans">你能多接近优化方案？<span class="nw">在图&nbsp;1 里试试</span></span></a></p>
       <p class="statement-2" style="--k:5">
         <span class="en">My work covers malware, advanced persistent threats, social engineering and rumors. In each case the defender has incomplete information and limited resources, and the attacker adapts. To work out what the defender should do, I combine complex network dynamics, game theory and optimal control with single- and multi-agent reinforcement learning.</span>
         <span class="zh" lang="zh-Hans">研究对象有恶意软件、高级持续性威胁、社会工程攻击和谣言。防御方往往信息不全、资源有限，攻击者还会不断调整做法，我关心的是这时该怎样决策。方法上以复杂网络动力学、博弈论和最优控制为基础，结合强化学习和多智能体强化学习。</span>
@@ -914,19 +920,18 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
         </div>
         <div class="panel cmp">
           <span class="tag" aria-hidden="true">(c)</span>
-          <div class="cmp-h"><span><span class="en">Mean share of hosts infected, same total effort</span><span class="zh" lang="zh-Hans">总投入相同时，感染主机的平均占比</span></span><span id="cmp-n" class="nw"></span></div>
-          <div class="cmp-rows" role="group" aria-label="Mean share of hosts infected, by schedule" data-zh="各方案的平均感染占比">
-            <button type="button" class="cmp-row" data-s="0" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 11H25"/></svg><span class="en">No defense</span><span class="zh" lang="zh-Hans">不防御</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
-            <button type="button" class="cmp-row" data-s="1" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 8.3H25"/></svg><span class="en">Constant rate</span><span class="zh" lang="zh-Hans">恒定修补率</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
-            <button type="button" class="cmp-row" data-s="2" aria-pressed="true"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 3.9H5V5.3H9V8.9H13V9.9H17V10.6H21V11H25"/></svg><span class="en">HOLD</span><span class="zh" lang="zh-Hans">分段常数</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
-            <button type="button" class="cmp-row" data-s="3" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1.1 9.5L1.7 7.9L2.4 6.1L3 3.2L3.5 1.7L4 1.5L4.6 2.2L5.6 3.9L6.8 5.9L8.4 7.5L10.7 8.6L13.2 9.4L16.3 9.9L19.5 10.3L22.7 10.6L24.9 10.9"/></svg>PMP</span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
-            <button type="button" class="cmp-row you" data-s="4" aria-pressed="false" hidden><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 9H25"/></svg><span class="en">Your schedule</span><span class="zh" lang="zh-Hans">你的方案</span></span><span class="cmp-track"><span class="cmp-bar"></span></span><span class="cmp-val">…</span></button>
+          <div class="cmp-h"><span><span class="en">Expected cost in the node-level model, same total effort</span><span class="zh" lang="zh-Hans">总投入相同时，节点级模型下的期望成本</span></span><span class="cmp-key nw" aria-hidden="true"><i class="k-inf"></i><span class="en">infected</span><span class="zh" lang="zh-Hans">感染</span><i class="k-eff"></i><span class="en">effort</span><span class="zh" lang="zh-Hans">投入</span></span></div>
+          <div class="cmp-rows" role="group" aria-label="Expected cost by schedule: share infected plus effort cost" data-zh="各方案的期望成本：感染比例加投入成本">
+            <button type="button" class="cmp-row" data-s="0" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 11H25"/></svg><span class="en">No defense</span><span class="zh" lang="zh-Hans">不防御</span></span><span class="cmp-track"><span class="cmp-bar"></span><span class="cmp-bar eff"></span></span><span class="cmp-val">…</span></button>
+            <button type="button" class="cmp-row" data-s="1" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 8.3H25"/></svg><span class="en">Constant rate</span><span class="zh" lang="zh-Hans">恒定修补率</span></span><span class="cmp-track"><span class="cmp-bar"></span><span class="cmp-bar eff"></span></span><span class="cmp-val">…</span></button>
+            <button type="button" class="cmp-row" data-s="2" aria-pressed="true"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 3.9H5V5.3H9V8.9H13V9.9H17V10.6H21V11H25"/></svg><span class="en">HOLD</span><span class="zh" lang="zh-Hans">分段常数</span></span><span class="cmp-track"><span class="cmp-bar"></span><span class="cmp-bar eff"></span></span><span class="cmp-val">…</span></button>
+            <button type="button" class="cmp-row" data-s="3" aria-pressed="false"><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1.1 9.5L1.7 7.9L2.4 6.1L3 3.2L3.5 1.7L4 1.5L4.6 2.2L5.6 3.9L6.8 5.9L8.4 7.5L10.7 8.6L13.2 9.4L16.3 9.9L19.5 10.3L22.7 10.6L24.9 10.9"/></svg>PMP</span><span class="cmp-track"><span class="cmp-bar"></span><span class="cmp-bar eff"></span></span><span class="cmp-val">…</span></button>
+            <button type="button" class="cmp-row you" data-s="4" aria-pressed="false" hidden><span class="cmp-name"><svg class="cmp-g" viewBox="0 0 26 12" aria-hidden="true"><path d="M1 9H25"/></svg><span class="en">Your schedule</span><span class="zh" lang="zh-Hans">你的方案</span></span><span class="cmp-track"><span class="cmp-bar"></span><span class="cmp-bar eff"></span></span><span class="cmp-val">…</span></button>
           </div>
           <p class="cmp-note" id="cmp-note" hidden></p>
         </div>
       </div>
       <div class="controls" role="group" aria-label="Figure controls" data-zh="图 1 控制">
-        <button type="button" class="btn" id="f-play"><svg class="i" aria-hidden="true"><use href="#i-pause"/></svg><span class="lbl">Pause</span></button>
         <span class="seg" role="group" aria-label="Patching schedule" data-zh="修补方案">
           <button type="button" data-s="0" aria-pressed="false"><span class="en">None</span><span class="zh" lang="zh-Hans">不防御</span></button>
           <button type="button" data-s="1" aria-pressed="false"><span class="en">Constant</span><span class="zh" lang="zh-Hans">恒定</span></button>
@@ -934,11 +939,12 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <button type="button" data-s="3" aria-pressed="false">PMP</button>
           <button type="button" class="you" data-s="4" aria-pressed="false"><span class="en">You</span><span class="zh" lang="zh-Hans">你来</span></button>
         </span>
+        <button type="button" class="btn" id="f-play"><svg class="i" aria-hidden="true"><use href="#i-pause"/></svg><span class="lbl">Pause</span></button>
         <button type="button" class="btn" id="f-reset"><svg class="i" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl">Reset</span></button>
       </div>
       <figcaption id="fig-cap">
-        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host. An infection can be detected only 10 steps after it starts, and only detected infections can be patched. (a) Red hosts are infected, and a ring marks a detected infection. Teal hosts have been patched or have recovered on their own. Click any host to infect&nbsp;it. (b) Shares of hosts infected and recovered (top), and the defender’s patch rate, the chance per step that each detected infection is patched (bottom). The 150-step response window opens at the first alert. (c) Mean share of hosts infected during the window, over 100 simulated runs. The three patching schedules spend the same total effort. The constant schedule keeps one rate throughout. The PMP schedule is the one Pontryagin’s maximum principle gives for the node-level model of this network, with an effort cost that grows with the square of the rate. Its rate changes at every step, which is hard to carry out in practice, so it serves as a benchmark. The HOLD schedule is one a defender can actually follow: it sets a rate at the alert and changes it only every 25 steps, holding it in between, with each held rate chosen for the same model and cost. Both act hardest soon after the alert and ease off as the outbreak shrinks. With six commands instead of 150, HOLD comes within a fraction of a percentage point of the benchmark. The buttons below the figure run the live model under each schedule. Choose You to set the six held rates yourself, using at most the same total effort; your schedule is then scored on the same 100&nbsp;runs.</p>
-        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播。感染发生 10 步以后才能被发现，防御方只能修补已发现的感染。(a) 红色是已感染主机，外面的圆环表示这处感染已被发现；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复的。点击任一主机，它就会被感染。(b) 上方是感染和已恢复主机所占比例；下方是防御方的修补率，即每个已发现的感染在每一步被修补的概率。响应窗口从第一次告警开始，共 150 步。(c) 100 次模拟中，窗口内被感染主机的平均比例。三种修补方案的总投入相同。恒定方案始终用同一个修补率。PMP 方案由庞特里亚金最大值原理在这张网络的节点级模型上求出，投入成本随修补率的平方增长；它的修补率每一步都在变，实际中很难执行，所以用作对照基准。分段常数（HOLD）方案是防御方实际能执行的：告警时定下修补率，之后每 25 步才调整一次，中间保持不变，各段的取值针对同一模型和成本做了优化。两种方案都在告警后不久力度最大，随着感染范围缩小逐步放缓。HOLD 只需 6 条命令，PMP 要 150 条，两者的效果只差不到一个百分点。图下方的按钮可以让模型按任一方案实时运行。选“你来”，可以拖动 (b) 里的六级台阶，自己设定六段修补率，总投入不超过另外三种方案；你的方案也用这 100 次模拟<span class="nw">打分。</span></p>
+        <p class="en"><b class="fig-no">Fig. 1.</b> An attack–defense model on a scale-free network of 72 hosts. Malware spreads from host to host. An infection can be detected only 10 steps after it starts, and only detected infections can be patched. (a) Red hosts are infected, and a ring marks a detected infection. Teal hosts have been patched or have recovered on their own. Click any host to infect&nbsp;it. (b) Shares of hosts infected and recovered (top), and the defender’s patch rate, the chance per step that each detected infection is patched (bottom). The 150-step response window opens at the first alert. (c) Expected cost over the window in the node-level model of this network: the share of hosts infected (red) plus an effort cost that grows with the square of the patch rate (blue). The three patching schedules spend the same total effort. The constant schedule keeps one rate throughout. The PMP schedule is the one Pontryagin’s maximum principle gives for this model and cost. Its rate changes at every step, which is hard to carry out in practice, so it serves as a benchmark. The HOLD schedule is one a defender can actually follow: it sets a rate at the alert and changes it only every 25 steps, holding it in between. Its six rates give the lowest cost that six held rates can reach; a check of all 5,243,014 schedules that can be set under You found none lower. Both act hardest soon after the alert and ease off as the outbreak shrinks. With six commands instead of 150, HOLD costs only 0.5 more than the benchmark. The animation in (a) and (b) is one random run on the same network. The buttons below the figure switch between the schedules. Choose “You” and drag the six steps in (b) to set the held rates yourself, and see how close you can get to&nbsp;HOLD.</p>
+        <p class="zh" lang="zh-Hans"><b class="fig-no">图 1</b>　72 台主机组成一张无标度网络，恶意软件在主机之间传播。感染发生 10 步以后才能被发现，防御方只能修补已发现的感染。(a) 红色是已感染主机，外面的圆环表示这处感染已被发现；青色是已恢复的主机，可能是防御方修补的，也可能是自行恢复的。点击任一主机，它就会被感染。(b) 上方是感染和已恢复主机所占比例；下方是防御方的修补率，即每个已发现的感染在每一步被修补的概率。响应窗口从第一次告警开始，共 150 步。(c) 这张网络的节点级模型下，窗口内的期望成本：被感染主机的比例（红色）加上投入成本（蓝色），投入成本随修补率的平方增长。三种修补方案的总投入相同。恒定方案始终用同一个修补率。PMP 方案由庞特里亚金最大值原理针对这个模型和成本求出；它的修补率每一步都在变，实际中很难执行，所以用作对照基准。分段常数（HOLD）方案是防御方实际能执行的：告警时定下修补率，之后每 25 步才调整一次，中间保持不变。它的六个取值达到了六段保持能做到的最低成本：“你来”里能设定的 524 万余种方案全部检查过，没有一种成本更低。两种方案都在告警后不久力度最大，随着感染范围缩小逐步放缓。HOLD 只需 6 条命令，PMP 要 150 条，成本只高出 0.5。(a) 和 (b) 的动画是这张网络上的一次随机运行。图下方的按钮可以在各方案之间切换。选<span class="nw">“你来”</span>，可以拖动 (b) 里的六级台阶自己设定六段修补率，看看能多接近分段常数<span class="nw">方案。</span></p>
       </figcaption>
     </figure>
     </div>
@@ -1082,9 +1088,9 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <path class="st" d="M200 18h12"/><text class="lab" x="216" y="21"><tspan class="en">state</tspan><tspan class="zh" lang="zh-Hans">网络状态</tspan></text>
             </svg>
             <h4><span class="en">Piecewise-constant (HOLD) games and their extensions</span><span class="zh" lang="zh-Hans">分段常数（HOLD）博弈及其扩展</span></h4>
-            <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates. <a href="#fig">Fig.&nbsp;1</a> at the top of this page runs a one-defender version: the PMP schedule changes its patch rate at every step, which is hard to carry out in practice, while HOLD issues just six held commands and comes within a fraction of a percentage point of it. Pick “You” under the figure to try six commands of your own.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计成本。本页顶部的<a href="#fig">图&nbsp;1</a> 演示了只有一个防御方的情形：PMP 方案的修补率每一步都在变，实际中很难执行；分段常数方案只需六条保持命令，效果和它只差不到一个百分点。在图下方选“你来”，也可以自己设定六条命令试试。</span></p>
+            <p><span class="en">An administrator might recompute the isolation level once a minute; devices hold each value until the next one arrives, while infection and recovery carry on. I study games built on such held commands, in which several actions draw on one shared response capacity. How long each command is held, and what each side knows at each update, both shape the risk that follows and the cost that accumulates. <a href="#fig">Fig.&nbsp;1</a> at the top of this page runs a one-defender version: the PMP schedule changes its patch rate at every step, which is hard to carry out in practice, while HOLD issues just six held commands, costs only 0.5 more in expected cost and beats every other six-command schedule. Pick “You” under the figure to try six commands of your own.</span><span class="zh" lang="zh-Hans">管理员每分钟重新算一次隔离强度，设备收到后照着执行，等下一条命令到了再调整，这一分钟里感染和恢复照常发生。我研究的分段常数博弈就建立在这种保持命令上，而且几项处置要共用同一份响应能力。命令保持多久再更新，更新时双方各自掌握了哪些信息，都会改变后面的风险和累计成本。本页顶部的<a href="#fig">图&nbsp;1</a> 演示了只有一个防御方的情形：PMP 方案的修补率每一步都在变，实际中很难执行；分段常数方案只需六条保持命令，期望成本只比它高 0.5，而且胜过其他任何六段方案。在图下方选<span class="nw">“你来”</span>，也可以自己设定六条命令试试。</span></p>
             <ul class="chips"><li class="chip-s"><span class="en">Piecewise-constant games</span><span class="zh" lang="zh-Hans">分段常数博弈</span></li><li class="chip-s"><span class="en">Zero-order hold</span><span class="zh" lang="zh-Hans">零阶保持</span></li><li class="chip-s"><span class="en">Shared capacity</span><span class="zh" lang="zh-Hans">共享响应能力</span></li></ul>
-            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh" lang="zh-Hans">（共享响应能力下的防御）</span></p>
+            <p class="rel"><span class="en">Related papers: </span><span class="zh" lang="zh-Hans">相关论文：</span><a href="#amm-2026">Appl. Math. Model. 2026</a><span class="en"> (shared-capacity defense)</span><span class="zh nw" lang="zh-Hans">（共享响应能力下的防御）</span></p>
           </li>
           <li class="fcard">
             <svg class="ill fz-cage anim" viewBox="0 0 280 112" role="img" aria-label="CAGE Challenge 4 network: four zones, five blue defender agents, and a red attacker entering through the contractor network" data-zh="CAGE Challenge 4 网络：四个区域、五个蓝方防御智能体，红方从承包商网络进入">
@@ -1381,22 +1387,22 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2026</h3>
           <ol class="plist">
             <li class="pub" id="amm-2026" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1016/j.apm.2026.117375">Compromise-age malware dynamics and shared-capacity defense on directed <span class="nw">networks<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1016/j.apm.2026.117375"><span class="nw">Compromise-age</span> malware dynamics and <span class="nw">shared-capacity</span> defense on directed <span class="nw">networks<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Xiaofan Yang, <b>Lu-Xing Yang</b></p>
               <p class="pub-v"><span class="venue alt">AMM</span><i>Applied Mathematical Modelling</i>, 117375, 2026, <span class="en">in press</span><span class="zh" lang="zh-Hans">录用待刊</span></p>
             </li>
             <li class="pub" id="tdsc-2026" data-topics="apt">
-              <span class="pub-t">A Stackelberg Differential Game Framework for Cost-Effective Promotion of Employee Security Compliance</span>
+              <span class="pub-t">A Stackelberg Differential Game Framework for <span class="nw">Cost-Effective</span> Promotion of Employee Security Compliance</span>
               <p class="pub-a">Yang Qin, Xiaofan Yang, <b>Lu-Xing Yang</b>, Yushu Zhang, Tianqing Zhu, Gang Li</p>
               <p class="pub-v"><span class="venue">TDSC</span><i>IEEE Transactions on Dependable and Secure Computing</i>, <span class="en">to appear</span><span class="zh" lang="zh-Hans">录用待刊</span></p>
             </li>
             <li class="pub" id="tifs-2026" data-topics="apt">
-              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2026.3675443">Mitigating Insider-Facilitated Advanced Persistent Threat: A Three-Player Differential Game <span class="nw">Approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2026.3675443">Mitigating <span class="nw">Insider-Facilitated</span> Advanced Persistent Threat: A <span class="nw">Three-Player</span> Differential Game <span class="nw">Approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Yang Qin, <b>Lu-Xing Yang</b>, Xiaofan Yang, Gang Li, Robin Doss</p>
               <p class="pub-v"><span class="venue">TIFS</span><i>IEEE Transactions on Information Forensics and Security</i>, vol. 21, pp. 3153–3168, 2026</p>
             </li>
             <li class="pub" id="tcss-2026" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1109/TCSS.2025.3635013">Attack Graph-Epidemic Hybrid Modeling for Mitigating Cyber Threats <span class="nw">Propagation<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TCSS.2025.3635013">Attack <span class="nw">Graph-Epidemic</span> Hybrid Modeling for Mitigating Cyber Threats <span class="nw">Propagation<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Mousa Tayseer Jafar, Wei Ren, <b>Lu-Xing Yang</b>, Gang Li</p>
               <p class="pub-v"><span class="venue">TCSS</span><i>IEEE Transactions on Computational Social Systems</i>, vol. 13, no. 2, pp. 2288–2307, 2026</p>
             </li>
@@ -1407,7 +1413,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2025</h3>
           <ol class="plist">
             <li class="pub" id="tifs-2025" data-topics="info malware">
-              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2025.3630005">Modeling and Mitigating Social Engineering Malware: Integrating Malware-Opinion Dynamics With Optimal Impulse Control <span class="nw">Approaches<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2025.3630005">Modeling and Mitigating Social Engineering Malware: Integrating <span class="nw">Malware-Opinion</span> Dynamics With Optimal Impulse Control <span class="nw">Approaches<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Xiaojuan Cheng, <b>Lu-Xing Yang</b>, Gang Li, Zenan Ma, Tianqing Zhu, Lidan Wang, Shukai Duan</p>
               <p class="pub-v"><span class="venue">TIFS</span><i>IEEE Transactions on Information Forensics and Security</i>, vol. 20, pp. 12231–12244, 2025</p>
               <p class="pub-note"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg><span class="en">IEEE Signal Processing Society Paper Spotlight, January 2026</span><span class="zh" lang="zh-Hans">入选 IEEE 信号处理学会 Paper Spotlight（2026 年 1 月）</span></p>
@@ -1418,7 +1424,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <p class="pub-v"><span class="venue">TCSS</span><i>IEEE Transactions on Computational Social Systems</i>, vol. 12, no. 5, pp. 2685–2695, 2025</p>
             </li>
             <li class="pub" id="tnse-2025" data-topics="info">
-              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2025.3556927">Mitigating Social Engineering Attacks Through Cost-Effective Security Awareness Training <span class="nw">Policy<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2025.3556927">Mitigating Social Engineering Attacks Through <span class="nw">Cost-Effective</span> Security Awareness Training <span class="nw">Policy<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Yang Qin, Xiaofan Yang, <b>Lu-Xing Yang</b>, Kaifan Huang</p>
               <p class="pub-v"><span class="venue">TNSE</span><i>IEEE Transactions on Network Science and Engineering</i>, vol. 12, no. 4, pp. 3145–3158, 2025</p>
             </li>
@@ -1434,7 +1440,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2024</h3>
           <ol class="plist">
             <li class="pub" id="tifs-2024a" data-topics="info">
-              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2024.3468903">Cost-Effective Hybrid Control Strategies for Dynamical Propaganda War <span class="nw">Game<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TIFS.2024.3468903"><span class="nw">Cost-Effective</span> Hybrid Control Strategies for Dynamical Propaganda War <span class="nw">Game<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Xiaojuan Cheng, <b>Lu-Xing Yang</b>, Qingyi Zhu, Chenquan Gan, Xiaofan Yang, Gang Li</p>
               <p class="pub-v"><span class="venue">TIFS</span><i>IEEE Transactions on Information Forensics and Security</i>, vol. 19, pp. 9789–9802, 2024</p>
               <p class="pub-note"><svg class="i" aria-hidden="true"><use href="#i-trophy"/></svg><span class="en">Nominated for Cybersecurity Best Paper 2025</span><span class="zh" lang="zh-Hans">获 Cybersecurity Best Paper 2025 提名</span></p>
@@ -1445,7 +1451,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
               <p class="pub-v"><span class="venue">TIFS</span><i>IEEE Transactions on Information Forensics and Security</i>, vol. 19, pp. 9682–9697, 2024</p>
             </li>
             <li class="pub" id="tsmc-2024" data-topics="platform">
-              <a class="pub-t" href="https://doi.org/10.1109/TSMC.2024.3379408">Cost-Effective Company Response Policy for Product Co-Creation in Company-Sponsored Online <span class="nw">Community<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TSMC.2024.3379408"><span class="nw">Cost-Effective</span> Company Response Policy for Product <span class="nw">Co-Creation</span> in <span class="nw">Company-Sponsored</span> Online <span class="nw">Community<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a">Jiamin Hu, <b>Lu-Xing Yang</b>, Xiaofan Yang, Kaifan Huang, Gang Li, Yong Xiang</p>
               <p class="pub-v"><span class="venue">TSMC</span><i>IEEE Transactions on Systems, Man, and Cybernetics: Systems</i>, vol. 54, no. 7, pp. 4494–4506, 2024</p>
             </li>
@@ -1521,7 +1527,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2018</h3>
           <ol class="plist">
             <li class="pub" id="tnse-2018" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2017.2734075">A Bi-Virus Competing Spreading Model with Generic Infection <span class="nw">Rates<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1109/TNSE.2017.2734075">A <span class="nw">Bi-Virus</span> Competing Spreading Model with Generic Infection <span class="nw">Rates<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a"><b>Lu-Xing Yang</b>, Xiaofan Yang, Yuan Yan Tang</p>
               <p class="pub-v"><span class="venue">TNSE</span><i>IEEE Transactions on Network Science and Engineering</i>, vol. 5, no. 1, pp. 2–13, 2018</p>
             </li>
@@ -1532,7 +1538,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2016</h3>
           <ol class="plist">
             <li class="pub" id="physa-2016" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1016/j.physa.2016.01.026">The optimal dynamic immunization under a controlled heterogeneous node-based SIRS <span class="nw">model<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1016/j.physa.2016.01.026">The optimal dynamic immunization under a controlled heterogeneous <span class="nw">node-based</span> SIRS <span class="nw">model<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a"><b>Lu-Xing Yang</b>, Moez Draief, Xiaofan Yang</p>
               <p class="pub-v"><span class="venue alt">Phys. A</span><i>Physica A: Statistical Mechanics and its Applications</i>, vol. 450, pp. 403–415, 2016</p>
             </li>
@@ -1543,7 +1549,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2015</h3>
           <ol class="plist">
             <li class="pub" id="plos-2015" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1371/journal.pone.0134507">The Impact of the Network Topology on the Viral Prevalence: A Node-Based <span class="nw">Approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1371/journal.pone.0134507">The Impact of the Network Topology on the Viral Prevalence: A <span class="nw">Node-Based</span> <span class="nw">Approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a"><b>Lu-Xing Yang</b>, Moez Draief, Xiaofan Yang</p>
               <p class="pub-v"><span class="venue alt">PLOS</span><i>PLOS ONE</i>, vol. 10, no. 7, e0134507, 2015</p>
             </li>
@@ -1554,7 +1560,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <h3 class="year-n">2013</h3>
           <ol class="plist">
             <li class="pub" id="amc-2013" data-topics="malware">
-              <a class="pub-t" href="https://doi.org/10.1016/j.amc.2013.02.031">Epidemics of computer viruses: A complex-network <span class="nw">approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
+              <a class="pub-t" href="https://doi.org/10.1016/j.amc.2013.02.031">Epidemics of computer viruses: A <span class="nw">complex-network</span> <span class="nw">approach<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></span></a>
               <p class="pub-a"><b>Lu-Xing Yang</b>, Xiaofan Yang, Jiming Liu, Qingyi Zhu, Chenquan Gan</p>
               <p class="pub-v"><span class="venue alt">AMC</span><i>Applied Mathematics and Computation</i>, vol. 219, no. 16, pp. 8705–8717, 2013</p>
             </li>
@@ -1582,21 +1588,21 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-chip"/></svg></span>
             <div><p class="gt"><span class="en">Quantum Automation for Cyber Defence</span><span class="zh" lang="zh-Hans">Quantum Automation for Cyber Defence（面向网络防御的量子自动化）</span></p>
-              <p class="gm"><span class="en">Australia’s Economic Accelerator (AEA) Ignite Program · chief investigator · <span class="nw">2025–2026</span></span><span class="zh" lang="zh-Hans">澳大利亚经济加速器（AEA）Ignite 计划 · 主要研究者（CI）· <span class="nw">2025–2026</span></span></p></div>
+              <p class="gm"><span class="en">Australia’s Economic Accelerator (AEA) Ignite Program · chief investigator&nbsp;· <span class="nw">2025–2026</span></span><span class="zh" lang="zh-Hans">澳大利亚经济加速器（AEA）Ignite 计划 · 主要研究者<span class="nw">（CI）·</span> <span class="nw">2025–2026</span></span></p></div>
             <p class="amt">479,960<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:100%"></i></span>
           </li>
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-shield"/></svg></span>
             <div><p class="gt"><span class="en">Augmenting Cyber Defence Capability (ACDC)</span><span class="zh" lang="zh-Hans">Augmenting Cyber Defence Capability（增强网络防御能力）</span></p>
-              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · <span class="nw">2022–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· <span class="nw">2022–2024</span></span></p></div>
+              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator&nbsp;· <span class="nw">2022–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者<span class="nw">（CI）·</span> <span class="nw">2022–2024</span></span></p></div>
             <p class="amt">390,000<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:81.3%"></i></span>
           </li>
           <li class="grant card lift">
             <span class="gic" aria-hidden="true"><svg class="i"><use href="#i-eye"/></svg></span>
             <div><p class="gt"><span class="en">Privacy-Respecting and Compliant Digital Credential Wallet (PRCDCAT)</span><span class="zh" lang="zh-Hans">Privacy-Respecting and Compliant Digital Credential Wallet（隐私保护且合规的数字凭证钱包）</span></p>
-              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator · <span class="nw">2023–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者（CI）· <span class="nw">2023–2024</span></span></p></div>
+              <p class="gm"><span class="en">Cyber Security Cooperative Research Centre (CSCRC) · chief investigator&nbsp;· <span class="nw">2023–2024</span></span><span class="zh" lang="zh-Hans">澳大利亚网络安全合作研究中心（CSCRC）· 主要研究者<span class="nw">（CI）·</span> <span class="nw">2023–2024</span></span></p></div>
             <p class="amt">325,000<small><span class="en">AUD</span><span class="zh" lang="zh-Hans">澳元</span></small></p>
             <span class="gbar" aria-hidden="true"><i style="--w:67.7%"></i></span>
           </li>
@@ -2264,7 +2270,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       else {
         p = (zh ? "修补率 " : "patch rate ") + pct(rate(strategy, t));
         if (strategy === NONE) { txt = zh ? "不防御" : "No defense"; key = "n"; }
-        else if (strategy === CONSTANT) { txt = (zh ? "恒定方案 · " : "Constant rate · ") + p; key = "c"; }
+        else if (strategy === CONSTANT) { txt = (zh ? "恒定方案 · " : "Constant · ") + p; key = "c"; }
         else if (strategy === HOLD || strategy === USER) { var j = Math.floor(t / LEN) + 1, u = strategy === USER; txt = zh ? (u ? "你的方案" : "分段常数") + " · 第 " + j + "/" + K + " 段 · " + p : (u ? "You" : "HOLD") + " · interval " + j + " of " + K + " · " + p; key = "h" + j; }
         else { txt = (zh ? "PMP · 修补率每一步都在变 · " : "PMP · rate changes every step · ") + pct(rate(strategy, t)); key = "p"; }
       }
@@ -2495,67 +2501,91 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
       }
     }
 
-    // Panel (c): the four schedules on the same network, averaged over seeded outbreaks.
-    // Runs in small slices so the page stays responsive; the numbers are the same on every visit.
-    var CMP_K = 100, cmpSum = [0, 0, 0, 0], cmpN = 0;
-    var cmpRows = [].slice.call(document.querySelectorAll(".cmp-row")), cmpCount = document.getElementById("cmp-n");
-    function simulate(s, seed) {
-      var rand = mulberry32(seed), m = newModel(), sum = 0, t;
-      seedOutbreak(m, rand);
-      for (t = 1; t < DELAY; t++) advance(m, 0, rand);
-      for (t = 0; t < T; t++) sum += advance(m, rate(s, t), rand) / N;
-      return sum / T;
-    }
-    function renderCmp() {
-      cmpRows.forEach(function (row) {
-        var s = +row.getAttribute("data-s"), mean = s === USER ? userScore : (cmpN ? cmpSum[s] / cmpN : null), dash = s === USER && !userTouched;
-        row.querySelector(".cmp-bar").style.width = mean === null ? "0%" : (mean * 100).toFixed(1) + "%";
-        row.querySelector(".cmp-val").textContent = dash ? "–" : mean === null ? "…" : Math.round(mean * 100) + "%";
-      });
-      cmpCount.textContent = lang() === "zh" ? cmpN + " 次模拟" : cmpN + (cmpN === 1 ? " run" : " runs");
-    }
+    // Panel (c): expected cost of each schedule under the node-level model of this network, the model that PMP and
+    // HOLD were computed from: the mean share of hosts infected over the window plus an effort cost (W/2)·mean(v²).
+    // The expected state at the first alert is rebuilt from the same seeded Monte Carlo used offline, so these
+    // numbers match the optimization exactly. Under this cost no six-rate schedule within the budget beats HOLD.
+    var W_EFF = 8, NA = DELAY - 1, init = null, costs = null, userCost = null;
+    var cmpRows = [].slice.call(document.querySelectorAll(".cmp-row"));
     var idle = window.requestIdleCallback ? function (f) { window.requestIdleCallback(f, { timeout: 400 }); } : function (f) { setTimeout(f, 40); };
-    function compareSlice() {
-      var t0 = performance.now();
-      while (cmpN < CMP_K && performance.now() - t0 < 12) {
-        for (var s = 0; s < 4; s++) cmpSum[s] += simulate(s, 7000 + cmpN);
-        cmpN++;
+    function buildInit() {
+      var runs = 20000, rand = mulberry32(424242), s0 = new Float64Array(N), a0 = new Float64Array(N * NA), d0 = new Float64Array(N), q, i, k, e, m;
+      for (q = 0; q < runs; q++) {
+        m = newModel(); seedOutbreak(m, rand);
+        for (k = 1; k < DELAY; k++) advance(m, 0, rand);
+        for (i = 0; i < N; i++) if (m.st[i] === S) s0[i]++; else if (m.st[i] === I) { e = m.tick - m.tInf[i]; if (e >= DELAY - 1) d0[i]++; else a0[i * NA + e]++; }
       }
-      renderCmp();
-      if (cmpN < CMP_K) idle(compareSlice); else verdict();
+      for (i = 0; i < N; i++) { s0[i] /= runs; d0[i] /= runs; }
+      for (i = 0; i < N * NA; i++) a0[i] /= runs;
+      init = { s: s0, a: a0, d: d0 };
     }
-
-    // The visitor's schedule is scored on the same seeded runs as the rows above.
-    var youRow = document.querySelector(".cmp-row.you"), noteEl = document.getElementById("cmp-note"), userScore = null, uSum = 0, uN = 0, uGen = 0;
+    // Expected cost of schedule s: { inf, eff, J } as fractions (shown ×100).
+    function modelCost(s) {
+      var x0 = init.s.slice(), a = init.a.slice(), d = init.d.slice(), s2 = new Float64Array(N), a2 = new Float64Array(N * NA), d2 = new Float64Array(N);
+      var X = new Float64Array(N), c = 1 - GAMMA, inf = 0, eff = 0, t, i, e, o, q, l, nb, v, x, sx, tmp;
+      for (t = 0; t < T; t++) {
+        v = rate(s, t);
+        for (i = 0; i < N; i++) { x = d[i]; o = i * NA; for (e = 0; e < NA; e++) x += a[o + e]; X[i] = x; }
+        sx = 0;
+        for (i = 0; i < N; i++) {
+          l = 1; nb = nbr[i];
+          for (q = 0; q < nb.length; q++) l *= 1 - BETA * X[nb[q]];
+          s2[i] = x0[i] * l;
+          o = i * NA;
+          a2[o] = x0[i] * (1 - l);
+          for (e = 0; e + 1 < NA; e++) a2[o + e + 1] = c * a[o + e];
+          d2[i] = c * a[o + NA - 1] + c * (1 - v) * d[i];
+          x = d2[i]; for (e = 0; e < NA; e++) x += a2[o + e]; sx += x;
+        }
+        inf += sx / N / T; eff += W_EFF / 2 / T * v * v;
+        tmp = x0; x0 = s2; s2 = tmp; tmp = a; a = a2; a2 = tmp; tmp = d; d = d2; d2 = tmp;
+      }
+      return { inf: inf, eff: eff, J: inf + eff };
+    }
+    function costOf(s) { return s === USER ? (userTouched ? userCost : null) : costs && costs[s]; }
+    function renderCmp() {
+      var top = costs ? costs[NONE].J : 1;
+      cmpRows.forEach(function (row) {
+        var s = +row.getAttribute("data-s"), k = costOf(s), bars = row.querySelectorAll(".cmp-bar");
+        bars[0].style.width = k ? (k.inf / top * 100).toFixed(2) + "%" : "0%";
+        if (bars[1]) bars[1].style.width = k ? (k.eff / top * 100).toFixed(2) + "%" : "0%";
+        row.querySelector(".cmp-val").textContent = s === USER && !userTouched ? "–" : k ? (k.J * 100).toFixed(2) : "…";
+      });
+    }
+    function computeCosts() {
+      if (!init) buildInit();
+      costs = [NONE, CONSTANT, HOLD, PMP].map(modelCost);
+      if (userTouched) userCost = modelCost(USER);
+      renderCmp(); verdict();
+    }
+    // The visitor's schedule is scored at once with the same model and cost.
+    var youRow = document.querySelector(".cmp-row.you"), noteEl = document.getElementById("cmp-note");
     function scoreUser() {
-      var gen = ++uGen; uSum = 0; uN = 0; userScore = null; renderCmp(); verdict();
-      (function slice() {
-        if (gen !== uGen) return;
-        var t0 = performance.now();
-        while (uN < CMP_K && performance.now() - t0 < 12) { uSum += simulate(USER, 7000 + uN); uN++; }
-        if (uN < CMP_K) { idle(slice); return; }
-        userScore = uSum / CMP_K; renderCmp(); verdict();
-        if (noteEl && !noteEl.hidden) announce(noteEl.textContent);
-      })();
+      if (!costs) return;
+      userCost = modelCost(USER); renderCmp(); verdict();
+      if (noteEl && !noteEl.hidden) announce(noteEl.textContent);
     }
     function verdict() {
       if (!noteEl) return;
-      var zh = lang() === "zh", f = function (x) { return (x * 100).toFixed(1) + "%"; }, s;
+      var zh = lang() === "zh", p = function (x) { return (x * 100).toFixed(2); }, p1 = function (x) { return (x * 100).toFixed(1); }, s;
       noteEl.hidden = strategy !== USER && !userTouched;
-      if (!userTouched) { s = zh ? "向上拖动 (b) 里的六级台阶（也可以选中 (b) 后用方向键），把 " + BUDGET + " 点修补投入分到整个窗口，每 1 点让一段的修补率提高 1%。爆发会按你的方案重放，并用上面同样的 100 次模拟打分。" : "Drag the six steps in (b) upward, or select (b) and use the arrow keys, to spread " + BUDGET + " points of patching effort over the window (one point is a 1% patch rate held for one interval). The outbreak replays under your schedule, and it is scored on the same 100 runs as the rows above."; }
-      else if (userScore === null || cmpN < CMP_K) { s = zh ? "正在用同样的 100 次模拟给你的方案打分……" : "Scoring your schedule on the same 100 runs…"; }
+      if (!userTouched) { s = zh ? "向上拖动 (b) 里的六级台阶（也可以选中 (b) 后用方向键），把 " + BUDGET + " 点修补投入分到整个窗口，每 1 点让一段的修补率提高 1%。爆发会按你的方案重放。得分和上面几行一样，是同一模型下的期望成本：感染比例加上投入成本；投入成本随修补率的平方增长，所以把力气都压在一段上并不划算。" : "Drag the six steps in (b) upward, or select (b) and use the arrow keys, to spread " + BUDGET + " points of patching effort over the window (one point is a 1% patch rate held for one interval). The outbreak replays under your schedule. Your score is the expected cost under the same model as the rows above: the share infected plus an effort cost that grows with the square of each rate, so piling effort into one interval costs more than it saves."; }
+      else if (!costs || !userCost) { s = zh ? "正在计算你的方案……" : "Scoring your schedule…"; }
       else {
-        var u = userScore, h = cmpSum[HOLD] / cmpN, c = cmpSum[CONSTANT] / cmpN, left = BUDGET;
+        var u = userCost, h = costs[HOLD], c = costs[CONSTANT], gap = u.J - h.J, left = BUDGET, tip = "", said = false;
         for (var q = 0; q < K; q++) left -= userLv[q];
-        s = zh ? "你的方案：" + f(u) + "。" : "Your schedule: " + f(u) + ". ";
-        if (u < h - 0.0005) s += zh ? "在这 100 次模拟里，你赢过了优化后的分段常数方案（" + f(h) + "）！分段常数方案是在节点级模型上优化的，目标里除了感染，还有随修补率平方增长的投入成本；这里只按感染打分。" : "On these 100 runs you beat the optimized HOLD schedule (" + f(h) + ")! HOLD was tuned on the node-level model for infections plus an effort cost that grows with the square of the rate; this score counts infections only.";
-        else if (u - h < 0.01) s += zh ? "和优化后的分段常数方案（" + f(h) + "）只差不到一个百分点。" : "Within one percentage point of the optimized HOLD schedule (" + f(h) + ").";
-        else if (u < c - 0.0005) s += zh ? "比平均分配（" + f(c) + "）好，还能更接近 " + f(h) + " 吗？" : "Better than spending evenly (" + f(c) + "). Can you get closer to " + f(h) + "?";
-        else {
-          var tip = left > 0 ? (zh ? "先把预算用完试试。" : "Try spending the rest of your budget.") : userLv[0] >= 16 ? (zh ? "试试第一段之后别马上停手。" : "Try not to stop right after the first interval.") : (zh ? "试试早一点出手。" : "Try acting earlier.");
-          s += zh ? "还不如平均分配（" + f(c) + "），" + tip : "No better than spending evenly (" + f(c) + "). " + tip;
+        s = zh ? "你的方案：期望成本 " + p(u.J) + "（感染 " + p1(u.inf) + "% + 投入 " + p(u.eff) + "）。" : "Your schedule: expected cost " + p(u.J) + " (" + p1(u.inf) + "% infected + " + p(u.eff) + " effort). ";
+        if (gap < 0.001) s += zh ? "很接近了，只比分段常数方案（" + p(h.J) + "）高 " + p(gap) + "；那是六段保持能做到的最低成本。" : "Very close: only " + p(gap) + " above the HOLD schedule (" + p(h.J) + "), the lowest cost that six held rates can reach.";
+        else if (u.J < c.J) s += zh ? "比平均分配（" + p(c.J) + "）好，但比分段常数方案（" + p(h.J) + "）高 " + p(gap) + "；那是六段保持能做到的最低成本。" : "Better than spending evenly (" + p(c.J) + "), but " + p(gap) + " above the HOLD schedule (" + p(h.J) + "), the lowest cost that six held rates can reach.";
+        else s += zh ? "还不如平均分配（" + p(c.J) + "）；分段常数方案的成本是 " + p(h.J) + "。" : "No better than spending evenly (" + p(c.J) + "); the HOLD schedule costs " + p(h.J) + ".";
+        if (gap >= 0.001) {
+          if (left > 0 && u.inf > h.inf) { tip = zh ? "还有 " + left + " 点预算没用，先用完再试试。" : "You still have " + left + (left === 1 ? " point" : " points") + " left; try spending them."; said = true; }
+          else if (u.eff > h.eff + 0.002) tip = zh ? "投入太集中了：峰值的成本涨得比它省下的感染更快，试着分得平缓一些。" : "Your effort is too concentrated: the peaks cost more than the infections they prevent. Try spreading it a little.";
+          else if (userLv[0] < 14) tip = zh ? "试试在告警后的第一段多投入一些。" : "Try putting more into the first interval, right after the alert.";
+          else tip = zh ? "后面几段也留一点投入试试。" : "Try keeping some effort in the later intervals.";
+          s += zh ? tip : " " + tip;
         }
-        if (left > 0) s += zh ? "还有 " + left + " 点预算没用。" : " Unused budget: " + left + (left === 1 ? " point." : " points.");
+        if (left > 0 && !said) s += zh ? "还有 " + left + " 点预算没用。" : " Unused budget: " + left + (left === 1 ? " point." : " points.");
       }
       noteEl.textContent = s;
     }
@@ -2737,7 +2767,7 @@ h1,h2,h3,h4,.qq,.gt,.what,.lt,.pub-t,.case-k,.pub-note,.sub-h{text-wrap:balance}
     relabel();
     kick();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { drawPlot(); });
-    if (document.readyState === "complete") idle(compareSlice); else window.addEventListener("load", function () { idle(compareSlice); });
+    if (document.readyState === "complete") idle(computeCosts); else window.addEventListener("load", function () { idle(computeCosts); });
 
     return { relabel: relabel, recolor: recolor, setPlaying: function (on) { if (on) play(); else pause(); } };
   })();
